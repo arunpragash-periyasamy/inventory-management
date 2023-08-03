@@ -1,4 +1,5 @@
-
+<div class="page-wrapper">
+    
     <div class="content">
         <div class="page-header">
             <div class="page-title">
@@ -10,11 +11,11 @@
         <div class="card">
             <div class="card-body">
                 <div class="row">
-                    <form action="./add_product" method="post"></form>
+                    <form action="/product/add_product" method="post"></form>
                     <div class="col-lg-3 col-sm-6 col-12">
                         <div class="form-group">
                             <label>Product Name</label>
-                            <input type="text" name="product_name" value="product_name">
+                            <input type="text" name="product_name">
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 col-12">
@@ -124,7 +125,7 @@
                         </div>
                     </div>
                     <div class="col-lg-12">
-                        <a href="javascript:void(0);" class="btn btn-submit form-button me-2">Submit</a>
+                        <button type="submit" class="btn btn-submit me-2">submit</button>
                         <a href="productlist.html" class="btn btn-cancel">Cancel</a>
                     </div>
                     </form>
@@ -133,3 +134,4 @@
         </div>
 
     </div>
+</div>

@@ -1,12 +1,8 @@
 <?php
 $url = $_GET['url'];
-$path = $url . ".php";
 $url = explode("/", $url);
-$page = $url[1];
+$page_title = ucfirst(str_replace("_", " ", $url[1]));
 
-if ($_POST) {
-    echo "<script>console.log('data');</script>";
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +10,7 @@ if ($_POST) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><?php echo $page_title;?></title>
 
     <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png">
 
@@ -34,6 +30,7 @@ if ($_POST) {
 
     <link rel="stylesheet" href="/assets/css/style.css">
 
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
 
 </head>
 
@@ -46,14 +43,13 @@ if ($_POST) {
         <?php
         try {
             require "files/header.html";
+            require "files/sidebar.html";
             echo '<div class="page-wrapper"></div>';
         } catch (error $e) {
             echo $e;
         }
         ?>
     </div>
-
-    <script src="/assets/js/jquery-3.6.0.min.js"></script>
 
     <script src="/assets/js/feather.min.js"></script>
 
