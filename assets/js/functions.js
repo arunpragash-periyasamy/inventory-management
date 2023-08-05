@@ -27,35 +27,61 @@ change_content();
 
 $(document).ready(function () {
 
-  $("form#new_data").on("submit",(event) => {
-    event.preventDefault();
-    console.log("Form is tried to submit");
+
+  // this is safety that prevert the form tried to submit when button type is submit
+  $("form").on("submit keypress",(event) => {
+    if(event.type === 'submit' || event.type === 'keydown'){
+      event.preventDefault();
+    }
   })
 
-  $("form#new_data :input").on("keypress", function (event) {
-    // Check if the Enter key (key code 13) is pressed
-    if (event.which === 13) {
-      // Prevent the default Enter key behavior
-      event.preventDefault();
-      console.log("Enter preseed");
+  // this is the function when the 
+  // $("form#new_data :input").on("keypress", function (event) {
+  //   if (event.which === 13) {
+  //     event.preventDefault();
+  //     console.log("Enter preseed");
+  //   }
+  // });
+
+
+  isThrottle = false;
+  $(".submit-button").on("click",function () {
+    if(!isThrottle){
+      isThrottle = true;
+      $(".submit-button").prop("disabled", true);
+      var formData = $("form#new_data").serializeArray();
+      formDataObject = {};
+      formData.forEach((item) => {
+        formDataObject[item.name] = item.value;
+      });
+      console.log(formDataObject);
+      setTimeout(() => {
+        isThrottled = false;
+        $("form")[0].reset();
+        $(".submit-button").prop("disabled", false);
+        console.log("Submit button enabled");
+      }, 5000);
     }
   });
 
 
-  
-  $(".submit-button").on("click",_.throttle(function () {
-    $(".submit-button").prop("disabled", true);
-    var formData = $("form#new_data").serializeArray();
-    formDataObject = {};
-    formData.forEach((item) => {
-      formDataObject[item.name] = item.value;
-    });
-    console.log(formDataObject);
-    submit_ended();
-  },5000, { trailing: false }))
+  const submit_ended = () => {
+    $(".submit-button").prop("disabled",false);
+    console.log("throttle ended");
+  }
+
 });
 
-const submit_ended = () => {
-  $(".submit-button").prop("disabled",false);
-  console.log("throttle ended");
-}
+  
+//   $(".submit-button").on("click",_.throttle(function () {
+//     $(".submit-button").prop("disabled", true);
+//     var formData = $("form#new_data").serializeArray();
+//     formDataObject = {};
+//     formData.forEach((item) => {
+//       formDataObject[item.name] = item.value;
+//     });
+//     console.log(formDataObject);
+//     submit_ended();
+//     console.log($("form").reset());
+//   },5000, { trailing: false }))
+// });
