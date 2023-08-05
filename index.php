@@ -71,10 +71,11 @@ $page_title = ucfirst(str_replace("_", " ", $url[1]));
     
     <script src="/assets/js/script.js"></script>
 
-    <script src="/assets/js/functions.js"></script>
-
     <script src="/assets/plugins/owlcarousel/owl.carousel.min.js"></script>
 
+    <script src="/assets/js/loadash.min.js"></script>
+    
+    <script src="/assets/js/functions.js"></script>
     
 </body>
 
