@@ -10,13 +10,22 @@ const change_content = async () => {
     ) {
       $("*").removeClass("active");
       $(`#${page}`).addClass("active");
+
+      // request to get the page content
       await $.ajax({
-        url: path,
+        url: "/get_file.php?file="+path,
         type: "GET",
-        success: function (data) {
+        success: (data) => {
           $(".page-wrapper").replaceWith(data);
         },
+        error: function(jqXHR, textStatus, errorThrown) {
+          var errorMessage = jqXHR.responseText;
+          $(".main-wrapper").replaceWith(errorMessage);
+          console.log(errorMessage);
+      }
       });
+
+
     }
   } else {
     $("*").removeClass("active");
