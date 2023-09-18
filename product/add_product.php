@@ -21,7 +21,7 @@
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
                                 <label>Category</label>
-                                <select class="select" name="category" id="category">
+                                <select class="form-select" name="category" id="category">
                                     <option>Choose Category</option>
                                     <option>Computers</option>
                                 </select>
@@ -30,7 +30,7 @@
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
                                 <label>Sub Category</label>
-                                <select class="select"  name="sub_category" id="sub_category">
+                                <select class="form-select"  name="sub_category" id="sub_category">
                                     <option>Choose Sub Category</option>
                                     <option>Fruits</option>
                                 </select>
@@ -39,7 +39,7 @@
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
                                 <label>Brand</label>
-                                <select class="select" name="brand_name" id="brand_name">
+                                <select class="form-select" name="brand_name" id="brand_name">
                                     <option>Choose Brand</option>
                                     <option>Brand</option>
                                 </select>
@@ -48,7 +48,7 @@
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
                                 <label>Unit</label>
-                                <select class="select" name="unit" id="unit">
+                                <select class="form-select" name="unit" id="unit">
                                     <option>Choose Unit</option>
                                     <option>Unit</option>
                                 </select>
@@ -81,7 +81,7 @@
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
                                 <label>Tax</label>
-                                <select class="select" name="tax" id="tax">
+                                <select class="form-select" name="tax" id="tax">
                                     <option>Choose Tax</option>
                                     <option>2%</option>
                                 </select>
@@ -90,7 +90,7 @@
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
                                 <label>Discount Type</label>
-                                <select class="select" name="discount_type" id="discount_type">
+                                <select class="form-select" name="discount_type" id="discount_type">
                                     <option>Percentage</option>
                                     <option>10%</option>
                                     <option>20%</option>
@@ -106,7 +106,7 @@
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
                                 <label> Status</label>
-                                <select class="select" name="status" id="status">
+                                <select class="form-select" name="status" id="status">
                                     <option>Closed</option>
                                     <option>Open</option>
                                 </select>

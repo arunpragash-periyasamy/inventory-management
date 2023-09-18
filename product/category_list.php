@@ -50,7 +50,7 @@
                         <div class="row">
                             <div class="col-lg-2 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <select class="select">
+                                    <select class="form-select">
                                         <option>Choose Category</option>
                                         <option>Computers</option>
                                     </select>
@@ -58,7 +58,7 @@
                             </div>
                             <div class="col-lg-2 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <select class="select">
+                                    <select class="form-select">
                                         <option>Choose Sub Category</option>
                                         <option>Fruits</option>
                                     </select>
@@ -66,7 +66,7 @@
                             </div>
                             <div class="col-lg-2 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <select class="select">
+                                    <select class="form-select">
                                         <option>Choose Sub Brand</option>
                                         <option>Iphone</option>
                                     </select>

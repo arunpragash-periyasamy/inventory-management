@@ -10,7 +10,7 @@ $page_title = ucfirst(str_replace("_", " ", $url[1]));
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $page_title;?></title>
+    <title><?php echo $page_title; ?></title>
 
     <!-- css links  -->
     <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png">
@@ -36,39 +36,39 @@ $page_title = ucfirst(str_replace("_", " ", $url[1]));
         try {
             require "files/header.html";
             require "files/sidebar.html";
-            echo '<div class="page-wrapper"></div>';
+            echo '<div class="page-wrapper">
+            </div>';
         } catch (error $e) {
             echo $e;
         }
         ?>
     </div>
 
-    <script src="/assets/js/feather.min.js"></script>
+        <script src="/assets/js/feather.min.js"></script>
 
-    <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
 
-    <script src="/assets/js/jquery.dataTables.min.js"></script>
-    <script src="/assets/js/dataTables.bootstrap4.min.js"></script>
+        <script src="/assets/js/jquery.dataTables.min.js"></script>
+        <script src="/assets/js/dataTables.bootstrap4.min.js"></script>
 
-    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+        <script src="/assets/js/bootstrap.bundle.min.js"></script>
 
-    <script src="/assets/plugins/apexchart/apexcharts.min.js"></script>
-    <script src="/assets/plugins/apexchart/chart-data.js"></script>
 
-    
-    <script src="/assets/plugins/select2/js/select2.min.js"></script>
-    
-    <script src="/assets/plugins/sweetalert/sweetalert2.all.min.js"></script>
-    <script src="/assets/plugins/sweetalert/sweetalerts.min.js"></script>
-    
+
+        <script src="/assets/plugins/select2/js/select2.min.js"></script>
+
+        <script src="/assets/plugins/sweetalert/sweetalert2.all.min.js"></script>
+        <script src="/assets/plugins/sweetalert/sweetalerts.min.js"></script>
+
+
+        <script src="/assets/plugins/owlcarousel/owl.carousel.min.js"></script>
+
+        <script src="/assets/js/loadash.min.js"></script>
+
+        <script src="/assets/plugins/apexchart/apexcharts.min.js"></script>
+        <script src="/assets/plugins/apexchart/chart-data.js"></script>
     <script src="/assets/js/script.js"></script>
-
-    <script src="/assets/plugins/owlcarousel/owl.carousel.min.js"></script>
-
-    <script src="/assets/js/loadash.min.js"></script>
-    
-    <script src="/assets/js/functions.js"></script>
-    
+    <script src="/functions/functions.js"></script>
 </body>
 
 </html>

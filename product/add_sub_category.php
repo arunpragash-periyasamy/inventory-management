@@ -14,7 +14,7 @@
                     <div class="col-lg-4 col-sm-6 col-12">
                         <div class="form-group">
                             <label>Parent Category</label>
-                            <select class="select">
+                            <select class="form-select">
                                 <option>Choose Category</option>
                                 <option>Category</option>
                             </select>

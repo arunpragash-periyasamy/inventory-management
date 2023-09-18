@@ -51,7 +51,7 @@
                                 <div class="row">
                                     <div class="col-lg col-sm-6 col-12">
                                         <div class="form-group">
-                                            <select class="select">
+                                            <select class="form-select">
                                                 <option>Choose Product</option>
                                                 <option>Macbook pro</option>
                                                 <option>Orange</option>
@@ -60,7 +60,7 @@
                                     </div>
                                     <div class="col-lg col-sm-6 col-12">
                                         <div class="form-group">
-                                            <select class="select">
+                                            <select class="form-select">
                                                 <option>Choose Category</option>
                                                 <option>Computers</option>
                                                 <option>Fruits</option>
@@ -69,7 +69,7 @@
                                     </div>
                                     <div class="col-lg col-sm-6 col-12">
                                         <div class="form-group">
-                                            <select class="select">
+                                            <select class="form-select">
                                                 <option>Choose Sub Category</option>
                                                 <option>Computer</option>
                                             </select>
@@ -77,7 +77,7 @@
                                     </div>
                                     <div class="col-lg col-sm-6 col-12">
                                         <div class="form-group">
-                                            <select class="select">
+                                            <select class="form-select">
                                                 <option>Brand</option>
                                                 <option>N/D</option>
                                             </select>
@@ -85,7 +85,7 @@
                                     </div>
                                     <div class="col-lg col-sm-6 col-12 ">
                                         <div class="form-group">
-                                            <select class="select">
+                                            <select class="form-select">
                                                 <option>Price</option>
                                                 <option>150.00</option>
                                             </select>
