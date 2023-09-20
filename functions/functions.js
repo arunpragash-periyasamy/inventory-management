@@ -20,7 +20,7 @@ const change_content = () => {
 
   $(".page-wrapper").empty();
   let url = $(location).attr("pathname"); // get the page from the url
-  
+
   if (url != "/" && url != "/dashboard") {
     let path = url + ".php";
     let page = url.split("/")[2];
@@ -29,35 +29,24 @@ const change_content = () => {
       $(`#${page}`).addClass("active");
 
       // request to get the page content
-      $.ajax({
-        url: "/get_file.php?file=" + path,
-        type: "GET",
-        success: (data) => {
-          $(".page-wrapper").replaceWith(data);
-        },
-        error: (jqXHR, textStatus, errorThrown) => {
-          var errorMessage = jqXHR.responseText;
-          $(".main-wrapper").replaceWith(errorMessage);
+      $(".page-wrapper").load("/get_file.php?file=" + path, (response, status, xhr) => {
+        if (status == "error") {
+          $(".main-wrapper").html(response);
         }
       });
     } else {
-      console.error("Page not foun");
+      console.error("Page not found");
     }
 
   } else {
     $("*").removeClass("active");
     $("#dashboard").addClass("active");
-    $.ajax({
-      url: "/get_file.php?file=/dashboard.php",
-      type: "GET",
-      success: (data) => {
-        $(".page-wrapper").replaceWith(data);
-      },
-      error: (jqXHR, textStatus, errorThrown) => {
-        var errorMessage = jqXHR.responseText;
-        $(".main-wrapper").replaceWith(errorMessage);
+    $(".page-wrapper").load("/get_file.php?file=/dashboard.php", (response, status, xhr) => {
+      if (status == "error") {
+        $(".main-wrapper").html(response);
       }
     });
+
   }
 
 };
@@ -77,12 +66,12 @@ const getFormData = () => {
 
 // processing the form data by removing the empty field of the form.
 const handleForm = () => {
-
+  console.log("form submitted");
   let formData = getFormData();
 
   console.log(formData);
 
-  $("form")[0].reset();
+
   $(".select").each((index, element) => {
     $(element).prop("selectedIndex", 0);
   });
@@ -101,27 +90,9 @@ $(document).ready(function () {
       event.preventDefault(); // preventing automatic form subbmission
     }
   });
-
-
-  // handling submit form with throttle(loadash.js) function
-  $(".submit-button").on("click", _.throttle(handleForm, 5000, { trailing: false }));
-
-
-  // handling the page refresh
-  $("a.page_url").click(async function(event) {
-    event.preventDefault(); // Prevent the default link behavior (page reload)
-
-    // Get the target URL from the href attribute
-    var targetUrl = $(this).attr("href");
-    // Change the URL without a full page reload
-    window.history.pushState({}, "", targetUrl);
-    // You can also update the page content here if needed
-    // Optionally, trigger any other actions related to the link click
-    change_content();
-    // if($('#sales_charts').length>0){var options={series:[{name:'Sales',data:[50,45,60,70,50,45,60,70],},{name:'Purchase',data:[-21,-54,-45,-35,-21,-54,-45,-35]}],colors:['#28C76F','#EA5455'],chart:{type:'bar',height:300,stacked:true,zoom:{enabled:true}},responsive:[{breakpoint:280,options:{legend:{position:'bottom',offsetY:0}}}],plotOptions:{bar:{horizontal:false,columnWidth:'20%',endingShape:'rounded'},},xaxis:{categories:[' Jan ','feb','march','april','may','june','july','auguest'],},legend:{position:'right',offsetY:40},fill:{opacity:1}};var chart=new ApexCharts(document.querySelector("#sales_charts"),options);chart.render();}});
-    $(this).closest(".submenu").children("a").addClass("active subdrop");
-    if(targetUrl === "/dashboard" || targetUrl === "/") location.reload(true);
-    return false; // Prevent any other click handlers from executing
 });
 
+$(".submit-button").on("click", () => {
+  console.log("form buitton clicekd")
+  _.throttle(handleForm(), 5000, { trailing: false });
 });
