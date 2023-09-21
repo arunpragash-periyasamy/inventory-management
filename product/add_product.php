@@ -19,9 +19,9 @@
                     <div class="col-lg-3 col-sm-6 col-12">
                         <div class="form-group">
                             <label>Category</label>
-                            <select class=" select" name="category" id="category">
-                                <option>Choose Category</option>
-                                <option>Computers</option>
+                            <select class="form-select select" name="category" id="category">
+                                <option value="">Choose Category</option>
+                                <option value="computers">Computers</option>
                             </select>
                         </div>
                     </div>
@@ -29,8 +29,8 @@
                         <div class="form-group">
                             <label>Sub Category</label>
                             <select class="form-select select" name="sub_category" id="sub_category">
-                                <option>Choose Sub Category</option>
-                                <option>Fruits</option>
+                                <option value="">Choose Sub Category</option>
+                                <option value="Fruits">Fruits</option>
                             </select>
                         </div>
                     </div>
