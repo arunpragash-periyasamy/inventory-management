@@ -13,7 +13,19 @@ const getTime = () => {
   return formattedTime;
 }
 
+const getIp = async () => {
+  try {
+    const data = await $.getJSON('https://api.ipify.org?format=json');
+    const ipAddress = data.ip;
+    console.log(ipAddress);
+    return ipAddress;
+  } catch (error) {
+    console.error('Error getting IP address: ' + error.statusText);
+    throw error;
+  }
+}
 
+let currentPage = null;
 
 // function for change the content of the page
 const change_content = () => {
@@ -24,6 +36,7 @@ const change_content = () => {
   if (url != "/" && url != "/dashboard") {
     let path = url + ".php";
     let page = url.split("/")[2];
+    currentPage = page;
     if ($(".main-wrapper").find(".header") && $(".main-wrapper").find(".sidebar")) {
       $("*").removeClass("active");
       $(`#${page}`).addClass("active");
@@ -53,30 +66,78 @@ const change_content = () => {
 
 
 // processing the form data by removing the empty field of the form.
-const getFormData = () => {
-  let formData = $("form#new_data").serializeArray();
+// const getFormData = (id = "new_data") => {
+//   let formData = $(`form#${id}`).serializeArray();
 
-  formDataObject = {};
-  formDataObject.time = getTime();
+//   formDataObject = {};
+//   formDataObject.time = getTime();
+//   getIp().then((ipAddress) => {
+//     formDataObject.ip = ipAddress;
+//   }).catch((error)=>{
+//     formDataObject.ipAddress = "error";
+//   });
+
+//   formData.forEach((item) => {
+//     if (item.value !== "") {
+//       formDataObject[item.name] = item.value;
+//     }
+//   });
+//   return formDataObject;
+// }
+
+const getFormData = async (id = "new_data") => {
+  const formData = $(`form#${id}`).serializeArray();
+
+  const formDataObject = {
+    time: getTime(),
+  };
+
+  try {
+    const ipAddress = await getIp();
+    formDataObject.ip = ipAddress;
+  } catch (error) {
+    formDataObject.ip = "error";
+    console.error('Error:', error);
+  }
+
   formData.forEach((item) => {
-    formDataObject[item.name] = item.value;
+    if (item.value !== "") {
+      formDataObject[item.name] = item.value;
+    }
   });
+
   return formDataObject;
 }
 
-// processing the form data by removing the empty field of the form.
-const handleForm = () => {
-  console.log("form submitted");
-  let formData = getFormData();
 
-  console.log(formData);
-
-
-  $(".select").each((index, element) => {
-    $(element).prop("selectedIndex", 0);
-  });
+const resetForm = (id = "new_data") => {
+  // reset the form data 
+  $(`form#${id}`)[0].reset();
+  $('.select').val('').trigger('change.select2');
 }
 
+// processing the form data by removing the empty field of the form.
+const handleForm = async (id = "new_data") => {
+  let formData = await getFormData();
+  $.ajax({
+    url: '/functions/form_submit.php',
+    type: 'POST',
+    data: {
+      table_name: currentPage,
+      form: formData,
+    },
+    success: function (response) {
+      // Handle the success response from the server here
+      console.log(response);
+    },
+    error: function (xhr, status, error) {
+      // Handle any errors that occurred during the request here
+      console.error(error);
+    }
+  });
+
+  resetForm();
+}
 
 
 // function calling
@@ -90,9 +151,6 @@ $(document).ready(function () {
       event.preventDefault(); // preventing automatic form subbmission
     }
   });
-});
 
-$(".submit-button").on("click", () => {
-  console.log("form buitton clicekd")
-  _.throttle(handleForm(), 5000, { trailing: false });
+  $(".submit-button").on("click", _.throttle(handleForm, 5000, { trailing: false }));
 });
