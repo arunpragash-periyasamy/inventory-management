@@ -42,11 +42,16 @@ const change_content = () => {
       $(`#${page}`).addClass("active");
 
       // request to get the page content
-      $(".page-wrapper").load("/get_file.php?file=" + path, (response, status, xhr) => {
-        if (status == "error") {
-          $(".main-wrapper").html(response);
-        }
+      // $(".page-wrapper").load("/get_file.php?file=" + path, (response, status, xhr) => {
+      //   if (status == "error") {
+      //     $(".main-wrapper").html(response);
+      //   }
+      // });
+      $.get("/get_file.php?file=" + path, function (data) {
+        // Replace the entire #content element with the loaded content
+        $('.page-wrapper').replaceWith(data);
       });
+  
     } else {
       console.error("Page not found");
     }
@@ -54,10 +59,14 @@ const change_content = () => {
   } else {
     $("*").removeClass("active");
     $("#dashboard").addClass("active");
-    $(".page-wrapper").load("/get_file.php?file=/dashboard.php", (response, status, xhr) => {
-      if (status == "error") {
-        $(".main-wrapper").html(response);
-      }
+    // $(".page-wrapper").load("/get_file.php?file=/dashboard.php", (response, status, xhr) => {
+    //   if (status == "error") {
+    //     $(".main-wrapper").html(response);
+    //   }
+    // });
+    $.get("/get_file.php?file=/dashboard.php", function (data) {
+      // Replace the entire #content element with the loaded content
+      $('.page-wrapper').replaceWith(data);
     });
 
   }
@@ -66,7 +75,7 @@ const change_content = () => {
 
 
 // processing the form data by removing the empty field of the form.
-// const getFormData = (id = "new_data") => {
+// const getFormData = (id = "new_form") => {
 //   let formData = $(`form#${id}`).serializeArray();
 
 //   formDataObject = {};
@@ -85,7 +94,7 @@ const change_content = () => {
 //   return formDataObject;
 // }
 
-const getFormData = async (id = "new_data") => {
+const getFormData = async (id = "new_form") => {
   const formData = $(`form#${id}`).serializeArray();
 
   const formDataObject = {
@@ -110,14 +119,15 @@ const getFormData = async (id = "new_data") => {
 }
 
 
-const resetForm = (id = "new_data") => {
+const resetForm = (id = "new_form") => {
   // reset the form data 
   $(`form#${id}`)[0].reset();
   $('.select').val('').trigger('change.select2');
 }
 
 // processing the form data by removing the empty field of the form.
-const handleForm = async (id = "new_data") => {
+const handleForm = async (id = "new_form") => {
+  console.log("Form is going to submit");
   let formData = await getFormData();
   $.ajax({
     url: '/functions/form_submit.php',
@@ -152,5 +162,5 @@ $(document).ready(function () {
     }
   });
 
-  $(".submit-button").on("click", _.throttle(handleForm, 5000, { trailing: false }));
+  $(".btn-submit").on("click", _.throttle(handleForm, 5000, { trailing: false }));
 });

@@ -1,3 +1,4 @@
+<div class="page-wrapper">
 <div class="content">
     <div class="page-header">
         <div class="page-title">
@@ -38,7 +39,7 @@
                     </ul>
                 </div>
             </div>
-
+            <form enctype="multipart/form-data" action="/product/product_list" id="filter_form" method="post">
             <div class="card mb-0" id="filter_inputs">
                 <div class="card-body pb-0">
                     <div class="row">
@@ -46,7 +47,7 @@
                             <div class="row">
                                 <div class="col-lg col-sm-6 col-12">
                                     <div class="form-group">
-                                        <select class="form-select">
+                                        <select class="form-select" name="product_list" id="product_list">
                                             <option>Choose Product</option>
                                             <option>Macbook pro</option>
                                             <option>Orange</option>
@@ -55,7 +56,7 @@
                                 </div>
                                 <div class="col-lg col-sm-6 col-12">
                                     <div class="form-group">
-                                        <select class="form-select">
+                                        <select class="form-select" name="category_list" id="category_list">
                                             <option>Choose Category</option>
                                             <option>Computers</option>
                                             <option>Fruits</option>
@@ -64,7 +65,7 @@
                                 </div>
                                 <div class="col-lg col-sm-6 col-12">
                                     <div class="form-group">
-                                        <select class="form-select">
+                                        <select class="form-select" name="sub_category_list" id="sub_category_list">
                                             <option>Choose Sub Category</option>
                                             <option>Computer</option>
                                         </select>
@@ -72,7 +73,7 @@
                                 </div>
                                 <div class="col-lg col-sm-6 col-12">
                                     <div class="form-group">
-                                        <select class="form-select">
+                                        <select class="form-select" name="brand_list" id="brand_list">
                                             <option>Brand</option>
                                             <option>N/D</option>
                                         </select>
@@ -80,7 +81,7 @@
                                 </div>
                                 <div class="col-lg col-sm-6 col-12 ">
                                     <div class="form-group">
-                                        <select class="form-select">
+                                        <select class="form-select" name="price_list" id="price_list">
                                             <option>Price</option>
                                             <option>150.00</option>
                                         </select>
@@ -96,7 +97,8 @@
                     </div>
                 </div>
             </div>
-
+            </form>
+            <form enctype="multipart/form-data" action="/product/product_list" id="table_form" method="post">
             <div class="table-responsive">
                 <table class="table  datanew">
                     <thead>
@@ -474,7 +476,9 @@
                     </tbody>
                 </table>
             </div>
+            </form>
         </div>
     </div>
 
+</div>
 </div>

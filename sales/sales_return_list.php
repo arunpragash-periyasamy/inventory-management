@@ -2,11 +2,11 @@
     <div class="content">
         <div class="page-header">
             <div class="page-title">
-                <h4>Product Sub Category list</h4>
-                <h6>View/Search product Category</h6>
+                <h4>Sales Return List</h4>
+                <h6>Manage your Returns</h6>
             </div>
             <div class="page-btn">
-                <a href="subaddcategory.html" class="btn btn-added"><img src="/assets/img/icons/plus.svg" class="me-2" alt="img"> Add Sub Category</a>
+                <a href="createsalesreturn.html" class="btn btn-added"><img src="/assets/img/icons/plus.svg" alt="img" class="me-2">Add New Sales Return</a>
             </div>
         </div>
 
@@ -38,40 +38,46 @@
                         </ul>
                     </div>
                 </div>
-                <form enctype="multipart/form-data" action="/product/sub_category_list" id="filter_form" method="post">
+                <form enctype="multipart/form-data" action="/sales/sales_return_list" id="filter_form" method="post">
                 <div class="card" id="filter_inputs">
                     <div class="card-body pb-0">
                         <div class="row">
                             <div class="col-lg-2 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <label>Category</label>
-                                    <select class="form-select" name="category_list" id="category_list">
-                                        <option>Choose Category</option>
-                                        <option>Computers</option>
+                                    <input type="text" class="datetimepicker cal-icon" placeholder="Choose Date" name="date" id="date">
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter Reference" name="reference_number" id="reference_number">
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <select class="select form-select"  name="customer_list" id="customer_list">
+                                        <option>Choose Customer</option>
+                                        <option>Customer</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-lg-2 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <label>Sub Category</label>
-                                    <select class="form-select" name="sub_category_list" id="sub_category_list">
-                                        <option>Choose Sub Category</option>
-                                        <option>Fruits</option>
+                                    <select class="select form-select"  name="status" id="status">
+                                        <option>Choose Status</option>
+                                        <option>Inprogress</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-lg-2 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <label>Category Code</label>
-                                    <select class="form-select" name="category_code_list" id="category_code_list">
-                                        <option>CT001</option>
-                                        <option>CT002</option>
+                                    <select class="select form-select"  name="payment_status" id="payment_status">
+                                        <option>Choose Payment Status</option>
+                                        <option>Payment Status</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-lg-1 col-sm-6 col-12 ms-auto">
+                            <div class="col-lg-2 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <label>&nbsp;</label>
                                     <a class="btn btn-filters ms-auto"><img src="/assets/img/icons/search-whites.svg" alt="img"></a>
                                 </div>
                             </div>
@@ -79,9 +85,9 @@
                     </div>
                 </div>
                 </form>
-                <form enctype="multipart/form-data" action="/product/sub_category_list" id="table_form" method="post">
+                <form enctype="multipart/form-data" action="/sales/sales_return_list" id="table_form" method="post">
                 <div class="table-responsive">
-                    <table class="table  datanew">
+                    <table class="table datanew">
                         <thead>
                             <tr>
                                 <th>
@@ -90,12 +96,14 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </th>
-                                <th>Image</th>
-                                <th>Category</th>
-                                <th>Parent category</th>
-                                <th>Category Code</th>
-                                <th>Description</th>
-                                <th>Created By</th>
+                                <th>Product Name</th>
+                                <th>Date</th>
+                                <th>Customer</th>
+                                <th>Status</th>
+                                <th>Grand Total ($)</th>
+                                <th>Paid ($)</th>
+                                <th>Due ($)</th>
+                                <th>Payment Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -107,18 +115,21 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td>
-                                    <a class="product-img">
+                                <td class="productimgname">
+                                    <a href="javascript:void(0);" class="product-img">
                                         <img src="/assets/img/product/product1.jpg" alt="product">
                                     </a>
+                                    <a href="javascript:void(0);">Macbook pro</a>
                                 </td>
-                                <td>Computers</td>
-                                <td>Computers</td>
-                                <td>CT001</td>
-                                <td>Computers Description</td>
-                                <td>Admin</td>
+                                <td>19 Nov 2022</td>
+                                <td>Thomas</td>
+                                <td><span class="badges bg-lightgreen">Received</span></td>
+                                <td>550</td>
+                                <td>120</td>
+                                <td>550</td>
+                                <td><span class="badges bg-lightgreen">Paid</span></td>
                                 <td>
-                                    <a class="me-3" href="editsubcategory.html">
+                                    <a class="me-3" href="editsalesreturns.html">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -133,18 +144,21 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td>
-                                    <a class="product-img">
+                                <td class="productimgname">
+                                    <a href="javascript:void(0);" class="product-img">
                                         <img src="/assets/img/product/product2.jpg" alt="product">
                                     </a>
+                                    <a href="javascript:void(0);">Orange</a>
                                 </td>
-                                <td>Fruits</td>
-                                <td>Fruits</td>
-                                <td>CT002</td>
-                                <td>Fruits Description</td>
-                                <td>Admin</td>
+                                <td>19 Nov 2022</td>
+                                <td>Benjamin</td>
+                                <td><span class="badges bg-lightred">Pending</span></td>
+                                <td>550</td>
+                                <td>120</td>
+                                <td>550</td>
+                                <td><span class="badges bg-lightred">Unpaid</span></td>
                                 <td>
-                                    <a class="me-3" href="editsubcategory.html">
+                                    <a class="me-3" href="editsalesreturns.html">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -159,18 +173,21 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td>
-                                    <a class="product-img">
+                                <td class="productimgname">
+                                    <a href="javascript:void(0);" class="product-img">
                                         <img src="/assets/img/product/product3.jpg" alt="product">
                                     </a>
+                                    <a href="javascript:void(0);">Pineapple</a>
                                 </td>
-                                <td>Fruits</td>
-                                <td>Fruits</td>
-                                <td>CT003</td>
-                                <td>Fruits Description</td>
-                                <td>Admin</td>
+                                <td>19 Nov 2022</td>
+                                <td>James</td>
+                                <td><span class="badges bg-lightred">Pending</span></td>
+                                <td>210</td>
+                                <td>120</td>
+                                <td>210</td>
+                                <td><span class="badges bg-lightred">Unpaid</span></td>
                                 <td>
-                                    <a class="me-3" href="editsubcategory.html">
+                                    <a class="me-3" href="editsalesreturns.html">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -185,18 +202,21 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td>
-                                    <a class="product-img">
+                                <td class="productimgname">
+                                    <a href="javascript:void(0);" class="product-img">
                                         <img src="/assets/img/product/product4.jpg" alt="product">
                                     </a>
+                                    <a href="javascript:void(0);">Strawberry</a>
                                 </td>
-                                <td>Fruits</td>
-                                <td>Fruits</td>
-                                <td>CT004</td>
-                                <td>Fruits Description</td>
-                                <td>Admin</td>
+                                <td>19 Nov 2022</td>
+                                <td>Bruklin</td>
+                                <td><span class="badges bg-lightgreen">Received</span></td>
+                                <td>210</td>
+                                <td>120</td>
+                                <td>210</td>
+                                <td><span class="badges bg-lightgreen">Paid</span></td>
                                 <td>
-                                    <a class="me-3" href="editsubcategory.html">
+                                    <a class="me-3" href="editsalesreturns.html">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -211,18 +231,21 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td>
-                                    <a class="product-img">
+                                <td class="productimgname">
+                                    <a href="javascript:void(0);" class="product-img">
                                         <img src="/assets/img/product/product5.jpg" alt="product">
                                     </a>
+                                    <a href="javascript:void(0);">Avocat</a>
                                 </td>
-                                <td>Accessories</td>
-                                <td>Accessories</td>
-                                <td>CT005</td>
-                                <td>Accessories Description</td>
-                                <td>Admin</td>
+                                <td>19 Nov 2022</td>
+                                <td>Beverly</td>
+                                <td><span class="badges bg-lightred">Pending</span></td>
+                                <td>210</td>
+                                <td>120</td>
+                                <td>210</td>
+                                <td><span class="badges bg-lightred">UnPaid</span></td>
                                 <td>
-                                    <a class="me-3" href="editsubcategory.html">
+                                    <a class="me-3" href="editsalesreturns.html">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -237,18 +260,21 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td>
-                                    <a class="product-img">
+                                <td class="productimgname">
+                                    <a href="javascript:void(0);" class="product-img">
                                         <img src="/assets/img/product/product6.jpg" alt="product">
                                     </a>
+                                    <a href="javascript:void(0);">Macbook Pro</a>
                                 </td>
-                                <td>Shoes</td>
-                                <td>Shoes</td>
-                                <td>CT006</td>
-                                <td>Shoes Description</td>
-                                <td>Admin</td>
+                                <td>19 Nov 2022</td>
+                                <td>Best Power Tools</td>
+                                <td><span class="badges bg-lightgreen">Received</span></td>
+                                <td>210</td>
+                                <td>120</td>
+                                <td>210</td>
+                                <td><span class="badges bg-lightgreen">paid</span></td>
                                 <td>
-                                    <a class="me-3" href="editsubcategory.html">
+                                    <a class="me-3" href="editsalesreturns.html">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -263,18 +289,21 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td>
-                                    <a class="product-img">
+                                <td class="productimgname">
+                                    <a href="javascript:void(0);" class="product-img">
                                         <img src="/assets/img/product/product7.jpg" alt="product">
                                     </a>
+                                    <a href="javascript:void(0);">Apple Earpods</a>
                                 </td>
-                                <td>Fruits</td>
-                                <td>Fruits</td>
-                                <td>CT007</td>
-                                <td>Fruits Description</td>
-                                <td>Admin</td>
+                                <td>19 Nov 2022</td>
+                                <td>Apex Computers</td>
+                                <td><span class="badges bg-lightyellow">Ordered</span></td>
+                                <td>1000</td>
+                                <td>500</td>
+                                <td>1000</td>
+                                <td><span class="badges bg-lightyellow">Partial</span></td>
                                 <td>
-                                    <a class="me-3" href="editsubcategory.html">
+                                    <a class="me-3" href="editsalesreturns.html">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -289,18 +318,21 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td>
-                                    <a class="product-img">
-                                        <img src="/assets/img/product/product8.jpg" alt="product">
+                                <td class="productimgname">
+                                    <a href="javascript:void(0);" class="product-img">
+                                        <img src="/assets/img/product/product1.jpg" alt="product">
                                     </a>
+                                    <a href="javascript:void(0);">Macbook pro</a>
                                 </td>
-                                <td>Fruits</td>
-                                <td>Fruits</td>
-                                <td>CT008</td>
-                                <td>Fruits Description</td>
-                                <td>Admin</td>
+                                <td>19 Nov 2022</td>
+                                <td>Thomas</td>
+                                <td><span class="badges bg-lightgreen">Received</span></td>
+                                <td>550</td>
+                                <td>120</td>
+                                <td>550</td>
+                                <td><span class="badges bg-lightgreen">Paid</span></td>
                                 <td>
-                                    <a class="me-3" href="editsubcategory.html">
+                                    <a class="me-3" href="editsalesreturns.html">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -315,18 +347,21 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td>
-                                    <a class="product-img">
-                                        <img src="/assets/img/product/product9.jpg" alt="product">
+                                <td class="productimgname">
+                                    <a href="javascript:void(0);" class="product-img">
+                                        <img src="/assets/img/product/product2.jpg" alt="product">
                                     </a>
+                                    <a href="javascript:void(0);">Orange</a>
                                 </td>
-                                <td>Computers</td>
-                                <td>Computers</td>
-                                <td>CT009</td>
-                                <td>Computers Description</td>
-                                <td>Admin</td>
+                                <td>19 Nov 2022</td>
+                                <td>Benjamin</td>
+                                <td><span class="badges bg-lightyellow">Pending</span></td>
+                                <td>550</td>
+                                <td>120</td>
+                                <td>550</td>
+                                <td><span class="badges bg-lightyellow">Partial</span></td>
                                 <td>
-                                    <a class="me-3" href="editsubcategory.html">
+                                    <a class="me-3" href="editsalesreturns.html">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -341,18 +376,21 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td>
-                                    <a class="product-img">
-                                        <img src="/assets/img/product/product10.jpg" alt="product">
+                                <td class="productimgname">
+                                    <a href="javascript:void(0);" class="product-img">
+                                        <img src="/assets/img/product/product3.jpg" alt="product">
                                     </a>
+                                    <a href="javascript:void(0);">Pineapple</a>
                                 </td>
-                                <td>Health Care </td>
-                                <td>Health Care </td>
-                                <td>CT0010</td>
-                                <td>Health Care Description</td>
-                                <td>Admin</td>
+                                <td>19 Nov 2022</td>
+                                <td>James</td>
+                                <td><span class="badges bg-lightred">Pending</span></td>
+                                <td>210</td>
+                                <td>120</td>
+                                <td>210</td>
+                                <td><span class="badges bg-lightred">Unpaid</span></td>
                                 <td>
-                                    <a class="me-3" href="editsubcategory.html">
+                                    <a class="me-3" href="editsalesreturns.html">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -367,18 +405,21 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td>
-                                    <a class="product-img">
+                                <td class="productimgname">
+                                    <a href="javascript:void(0);" class="product-img">
                                         <img src="/assets/img/product/product4.jpg" alt="product">
                                     </a>
+                                    <a href="javascript:void(0);">Strawberry</a>
                                 </td>
-                                <td>Fruits</td>
-                                <td>Fruits</td>
-                                <td>CT004</td>
-                                <td>Fruits Description</td>
-                                <td>Admin</td>
+                                <td>19 Nov 2022</td>
+                                <td>Bruklin</td>
+                                <td><span class="badges bg-lightgreen">Received</span></td>
+                                <td>210</td>
+                                <td>120</td>
+                                <td>210</td>
+                                <td><span class="badges bg-lightgreen">Paid</span></td>
                                 <td>
-                                    <a class="me-3" href="editsubcategory.html">
+                                    <a class="me-3" href="editsalesreturns.html">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -393,18 +434,21 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td>
-                                    <a class="product-img">
+                                <td class="productimgname">
+                                    <a href="javascript:void(0);" class="product-img">
                                         <img src="/assets/img/product/product5.jpg" alt="product">
                                     </a>
+                                    <a href="javascript:void(0);">Avocat</a>
                                 </td>
-                                <td>Accessories</td>
-                                <td>Accessories</td>
-                                <td>CT005</td>
-                                <td>Accessories Description</td>
-                                <td>Admin</td>
+                                <td>19 Nov 2022</td>
+                                <td>Beverly</td>
+                                <td><span class="badges bg-lightred">Pending</span></td>
+                                <td>210</td>
+                                <td>120</td>
+                                <td>210</td>
+                                <td><span class="badges bg-lightred">UnPaid</span></td>
                                 <td>
-                                    <a class="me-3" href="editsubcategory.html">
+                                    <a class="me-3" href="editsalesreturns.html">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -419,18 +463,21 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td>
-                                    <a class="product-img">
+                                <td class="productimgname">
+                                    <a href="javascript:void(0);" class="product-img">
                                         <img src="/assets/img/product/product6.jpg" alt="product">
                                     </a>
+                                    <a href="javascript:void(0);">Macbook Pro</a>
                                 </td>
-                                <td>Shoes</td>
-                                <td>Shoes</td>
-                                <td>CT006</td>
-                                <td>Shoes Description</td>
-                                <td>Admin</td>
+                                <td>19 Nov 2022</td>
+                                <td>Best Power Tools</td>
+                                <td><span class="badges bg-lightgreen">Received</span></td>
+                                <td>210</td>
+                                <td>120</td>
+                                <td>210</td>
+                                <td><span class="badges bg-lightgreen">paid</span></td>
                                 <td>
-                                    <a class="me-3" href="editsubcategory.html">
+                                    <a class="me-3" href="editsalesreturns.html">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -445,96 +492,21 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td>
-                                    <a class="product-img">
+                                <td class="productimgname">
+                                    <a href="javascript:void(0);" class="product-img">
                                         <img src="/assets/img/product/product7.jpg" alt="product">
                                     </a>
+                                    <a href="javascript:void(0);">Apple Earpods</a>
                                 </td>
-                                <td>Fruits</td>
-                                <td>Fruits</td>
-                                <td>CT007</td>
-                                <td>Fruits Description</td>
-                                <td>Admin</td>
+                                <td>19 Nov 2022</td>
+                                <td>Apex Computers</td>
+                                <td><span class="badges bg-lightyellow">Ordered</span></td>
+                                <td>1000</td>
+                                <td>500</td>
+                                <td>1000</td>
+                                <td><span class="badges bg-lightyellow">Partial</span></td>
                                 <td>
-                                    <a class="me-3" href="editsubcategory.html">
-                                        <img src="/assets/img/icons/edit.svg" alt="img">
-                                    </a>
-                                    <a class="me-3 confirm-text" href="javascript:void(0);">
-                                        <img src="/assets/img/icons/delete.svg" alt="img">
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox">
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
-                                <td>
-                                    <a class="product-img">
-                                        <img src="/assets/img/product/product8.jpg" alt="product">
-                                    </a>
-                                </td>
-                                <td>Fruits</td>
-                                <td>Fruits</td>
-                                <td>CT008</td>
-                                <td>Fruits Description</td>
-                                <td>Admin</td>
-                                <td>
-                                    <a class="me-3" href="editsubcategory.html">
-                                        <img src="/assets/img/icons/edit.svg" alt="img">
-                                    </a>
-                                    <a class="me-3 confirm-text" href="javascript:void(0);">
-                                        <img src="/assets/img/icons/delete.svg" alt="img">
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox">
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
-                                <td>
-                                    <a class="product-img">
-                                        <img src="/assets/img/product/product9.jpg" alt="product">
-                                    </a>
-                                </td>
-                                <td>Computers</td>
-                                <td>Computers</td>
-                                <td>CT009</td>
-                                <td>Computers Description</td>
-                                <td>Admin</td>
-                                <td>
-                                    <a class="me-3" href="editsubcategory.html">
-                                        <img src="/assets/img/icons/edit.svg" alt="img">
-                                    </a>
-                                    <a class="me-3 confirm-text" href="javascript:void(0);">
-                                        <img src="/assets/img/icons/delete.svg" alt="img">
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox">
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
-                                <td>
-                                    <a class="product-img">
-                                        <img src="/assets/img/product/product10.jpg" alt="product">
-                                    </a>
-                                </td>
-                                <td>Health Care </td>
-                                <td>Health Care </td>
-                                <td>CT0010</td>
-                                <td>Health Care Description</td>
-                                <td>Admin</td>
-                                <td>
-                                    <a class="me-3" href="editsubcategory.html">
+                                    <a class="me-3" href="editsalesreturns.html">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">

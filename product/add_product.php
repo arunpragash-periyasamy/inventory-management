@@ -1,3 +1,5 @@
+<div class="page-wrapper">
+    
 <div class="content">
     <div class="page-header">
         <div class="page-title">
@@ -6,7 +8,7 @@
         </div>
     </div>
 
-    <form action="/product/add_product" id="new_data" method="post">
+    <form enctype="multipart/form-data" action="/product/add_product" id="new_form" method="post">
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -123,7 +125,7 @@
                         </div>
                     </div>
                     <div class="col-lg-12">
-                        <button type="button" class="btn btn-submit me-2 submit-button">submit</button>
+                        <button type="button" class="btn btn-submit me-2">submit</button>
                         <a href="productlist.html" class="btn btn-cancel">Cancel</a>
                     </div>
                 </div>
@@ -131,4 +133,6 @@
         </div>
 
     </form>
+</div>
+
 </div>

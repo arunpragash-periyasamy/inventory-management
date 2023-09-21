@@ -1,3 +1,4 @@
+<div class="page-wrapper">
 <div class="content">
     <div class="page-header">
         <div class="page-title">
@@ -39,13 +40,13 @@
                     </ul>
                 </div>
             </div>
-
+            <form enctype="multipart/form-data" action="/product/category_list" id="filter_form" method="post">
             <div class="card" id="filter_inputs">
                 <div class="card-body pb-0">
                     <div class="row">
                         <div class="col-lg-2 col-sm-6 col-12">
                             <div class="form-group">
-                                <select class="form-select">
+                                <select class="form-select" name="category_list" id="category_list">
                                     <option>Choose Category</option>
                                     <option>Computers</option>
                                 </select>
@@ -53,7 +54,7 @@
                         </div>
                         <div class="col-lg-2 col-sm-6 col-12">
                             <div class="form-group">
-                                <select class="form-select">
+                                <select class="form-select" name="sub_category_list" id="sub_category_list">
                                     <option>Choose Sub Category</option>
                                     <option>Fruits</option>
                                 </select>
@@ -61,7 +62,7 @@
                         </div>
                         <div class="col-lg-2 col-sm-6 col-12">
                             <div class="form-group">
-                                <select class="form-select">
+                                <select class="form-select" name="brand_list" id="brand_list">
                                     <option>Choose Sub Brand</option>
                                     <option>Iphone</option>
                                 </select>
@@ -75,7 +76,8 @@
                     </div>
                 </div>
             </div>
-
+            </form>
+            <form enctype="multipart/form-data" action="/product/category_list" id="table_form" method="post">
             <div class="table-responsive">
                 <table class="table  datanew">
                     <thead>
@@ -422,7 +424,9 @@
                     </tbody>
                 </table>
             </div>
+            </form>
         </div>
     </div>
 
+</div>
 </div>

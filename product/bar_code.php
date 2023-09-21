@@ -1,3 +1,4 @@
+<div class="page-wrapper">
 <div class="content">
     <div class="page-header">
         <div class="page-title">
@@ -5,7 +6,7 @@
             <h6>Print product barcodes</h6>
         </div>
     </div>
-
+    <form enctype="multipart/form-data" action="/product/bar_code" id="new_form" method="post">
     <div class="card">
         <div class="card-body">
             <div class="requiredfield">
@@ -14,7 +15,7 @@
             <div class="form-group">
                 <label>Product Name</label>
                 <div class="input-groupicon">
-                    <input type="text" placeholder="Please type product code and select...">
+                    <input type="text" placeholder="Please type product code and select..." name="product_name" id="product_name">
                     <div class="addonset">
                         <img src="/assets/img/icons/scanners.svg" alt="img">
                     </div>
@@ -62,7 +63,7 @@
                 <div class="col-lg-3 col-sm-6 col-12">
                     <div class="form-group">
                         <label>Paper Size</label>
-                        <select class="form-select">
+                        <select class="form-select" name="bar_code_size" id="bar_code_size">
                             <option>36mm (1.4 inch)</option>
                             <option>12mm (1 inch)</option>
                         </select>
@@ -75,7 +76,7 @@
             </div>
         </div>
     </div>
-
+    </form>
 </div>
 
 
@@ -172,4 +173,5 @@
             </div>
         </div>
     </div>
+</div>
 </div>

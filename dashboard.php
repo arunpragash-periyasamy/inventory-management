@@ -1,4 +1,5 @@
 
+  <div class="page-wrapper">
   <div class="content">
     <div class="row">
       <div class="col-lg-3 col-sm-6 col-12">
@@ -287,4 +288,5 @@
         </div>
       </div>
     </div>
+  </div>
   </div>

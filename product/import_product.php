@@ -1,3 +1,4 @@
+<div class="page-wrapper">
 <div class="content">
     <div class="page-header">
         <div class="page-title">
@@ -5,7 +6,7 @@
             <h6>Bulk upload your products</h6>
         </div>
     </div>
-
+    <form enctype="multipart/form-data" action="/product/import_product" id="new_form" method="post">
     <div class="card">
         <div class="card-body">
             <div class="requiredfield">
@@ -21,7 +22,7 @@
                     <div class="form-group">
                         <label> Upload CSV File</label>
                         <div class="image-upload">
-                            <input type="file">
+                            <input type="file" name="csv_file" id="csv_file">
                             <div class="image-uploads">
                                 <img src="/assets/img/icons/upload.svg" alt="img">
                                 <h4>Drag and drop a file to upload</h4>
@@ -102,5 +103,6 @@
             </div>
         </div>
     </div>
-
+    </form>
+</div>
 </div>

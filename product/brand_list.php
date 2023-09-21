@@ -1,3 +1,4 @@
+<div class="page-wrapper">
 <div class="content">
     <div class="page-header">
         <div class="page-title">
@@ -37,18 +38,18 @@
                     </ul>
                 </div>
             </div>
-
+            <form enctype="multipart/form-data" action="/product/brand_list" id="filter_form" method="post">
             <div class="card" id="filter_inputs">
                 <div class="card-body pb-0">
                     <div class="row">
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
-                                <input type="text" placeholder="Enter Brand Name">
+                                <input type="text" placeholder="Enter Brand Name" name="brand_name" id="brand_name">
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
-                                <input type="text" placeholder="Enter Brand Description">
+                                <input type="text" placeholder="Enter Brand Description" name="description" id="description">
                             </div>
                         </div>
                         <div class="col-lg-1 col-sm-6 col-12 ms-auto">
@@ -59,7 +60,8 @@
                     </div>
                 </div>
             </div>
-
+            </form>
+            <form enctype="multipart/form-data" action="/product/brand_list" id="table_form" method="post">
             <div class="table-responsive">
                 <table class="table datanew">
                     <thead>
@@ -152,4 +154,5 @@
         </div>
     </div>
 
+</div>
 </div>
