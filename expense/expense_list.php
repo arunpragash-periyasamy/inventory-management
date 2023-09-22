@@ -2,15 +2,14 @@
     <div class="content">
         <div class="page-header">
             <div class="page-title">
-                <h4>PURCHASE LIST</h4>
+                <h4>Expenses LIST </h4>
                 <h6>Manage your purchases</h6>
             </div>
             <div class="page-btn">
-                <a href="addpurchase.html" class="btn btn-added">
-                    <img src="assets/img/icons/plus.svg" alt="img">Add New Purchases
-                </a>
+                <a href="createexpense.html" class="btn btn-added"><img src="assets/img/icons/plus.svg" class="me-2" alt="img">Add New Expense</a>
             </div>
         </div>
+
         <div class="card">
             <div class="card-body">
                 <div class="table-top">
@@ -22,7 +21,9 @@
                             </a>
                         </div>
                         <div class="search-input">
-                            <a class="btn btn-searchset"><img src="assets/img/icons/search-white.svg" alt="img"></a>
+                            <a class="btn btn-searchset">
+                                <img src="assets/img/icons/search-white.svg" alt="img">
+                            </a>
                         </div>
                     </div>
                     <div class="wordset">
@@ -39,46 +40,43 @@
                         </ul>
                     </div>
                 </div>
-
-                <form enctype="multipart/form-data" action="/purchase/purchase_list" id="search_form" method="post">
+                <form enctype="multipart/form-data" action="/expense/expense_list" id="search_form" method="post">
                     <div class="card" id="filter_inputs">
                         <div class="card-body pb-0">
                             <div class="row">
-                                <div class="col-lg col-sm-6 col-12">
+                                <div class="col-lg-2 col-sm-6 col-12">
                                     <div class="form-group">
-                                        <input type="text" class="datetimepicker cal-icon" placeholder="Choose Date" name="date" id="date">
+                                        <div class="input-groupicon">
+                                            <input type="text" class="datetimepicker cal-icon" placeholder="Choose Date" name="date" id="date">
+                                            <div class="addonset">
+                                                <img src="assets/img/icons/calendars.svg" alt="img">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-lg col-sm-6 col-12">
+                                <div class="col-lg-2 col-sm-6 col-12">
                                     <div class="form-group">
                                         <input type="text" placeholder="Enter Reference" name="reference_number" id="reference_number">
                                     </div>
                                 </div>
-                                <div class="col-lg col-sm-6 col-12">
+                                <div class="col-lg-2 col-sm-6 col-12">
                                     <div class="form-group">
-                                        <select class="select form-select" name="supplier_list" id="supplier_list">
-                                            <option>Choose Supplier</option>
-                                            <option>Supplier</option>
+                                        <select class="select form-select" name="category_list" id="category_list">
+                                            <option>Choose Category</option>
+                                            <option>Computers</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-lg col-sm-6 col-12">
+                                <div class="col-lg-2 col-sm-6 col-12">
                                     <div class="form-group">
-                                        <select class="select form-select" name="status_list" id="status_list">
+                                        <select class="select form-select"  name="status_list" id="status_list">
                                             <option>Choose Status</option>
+                                            <option>Complete</option>
                                             <option>Inprogress</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-lg col-sm-6 col-12">
-                                    <div class="form-group">
-                                        <select class="select form-select" name="payment_status_list" id="payment_status_list">
-                                            <option>Choose Payment Status</option>
-                                            <option>Payment Status</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-1 col-sm-6 col-12">
+                                <div class="col-lg-1 col-sm-6 col-12 ms-auto">
                                     <div class="form-group">
                                         <a class="btn btn-filters ms-auto"><img src="assets/img/icons/search-whites.svg" alt="img"></a>
                                     </div>
@@ -87,8 +85,9 @@
                         </div>
                     </div>
                 </form>
+
                 <div class="table-responsive">
-                    <table class="table datanew">
+                    <table class="table  datanew">
                         <thead>
                             <tr>
                                 <th>
@@ -97,14 +96,12 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </th>
-                                <th>Supplier Name</th>
+                                <th>Category name</th>
                                 <th>Reference</th>
                                 <th>Date</th>
                                 <th>Status</th>
-                                <th>Grand Total</th>
-                                <th>Paid</th>
-                                <th>Due</th>
-                                <th>Payment Status</th>
+                                <th>Amount</th>
+                                <th>Description</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -116,16 +113,14 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td class="text-bolds">Apex Computers</td>
+                                <td>Employee Benefits</td>
                                 <td>PT001</td>
                                 <td>19 Nov 2022</td>
-                                <td><span class="badges bg-lightgreen">Received</span></td>
-                                <td>550</td>
+                                <td><span class="badges bg-lightgreen">Active</span></td>
                                 <td>120</td>
-                                <td>550</td>
-                                <td><span class="badges bg-lightgreen">Paid</span></td>
+                                <td>Employee Vehicle</td>
                                 <td>
-                                    <a class="me-3" href="editpurchase.html">
+                                    <a class="me-3" href="editexpense.html">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -140,16 +135,14 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td class="text-bolds">Modern Automobile</td>
+                                <td>Foods & Snacks</td>
                                 <td>PT002</td>
                                 <td>19 Nov 2022</td>
-                                <td><span class="badges bg-lightgreen">Received</span></td>
-                                <td>410</td>
-                                <td>410</td>
-                                <td>410</td>
-                                <td><span class="badges bg-lightgreen">Paid</span></td>
+                                <td><span class="badges bg-lightgreen">Active</span></td>
+                                <td>250</td>
+                                <td>Employee Foods</td>
                                 <td>
-                                    <a class="me-3" href="editpurchase.html">
+                                    <a class="me-3" href="editexpense.html">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -164,16 +157,14 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td class="text-bolds">AIM Infotech</td>
+                                <td>Entertainment</td>
                                 <td>PT003</td>
                                 <td>19 Nov 2022</td>
-                                <td><span class="badges bg-lightred">Pending</span></td>
-                                <td>210</td>
+                                <td><span class="badges bg-lightred">In Active</span></td>
                                 <td>120</td>
-                                <td>210</td>
-                                <td><span class="badges bg-lightred">Unpaid</span></td>
+                                <td>Office Vehicle</td>
                                 <td>
-                                    <a class="me-3" href="editpurchase.html">
+                                    <a class="me-3" href="editexpense.html">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -188,16 +179,14 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td class="text-bolds">Best Power Tools</td>
+                                <td>Office Expenses & Postage </td>
                                 <td>PT004</td>
                                 <td>19 Nov 2022</td>
-                                <td><span class="badges bg-lightgreen">Received</span></td>
-                                <td>210</td>
-                                <td>120</td>
-                                <td>210</td>
-                                <td><span class="badges bg-lightred">Unpaid</span></td>
+                                <td><span class="badges bg-lightgreen">Active</span></td>
+                                <td>320</td>
+                                <td>Employee Foods</td>
                                 <td>
-                                    <a class="me-3" href="editpurchase.html">
+                                    <a class="me-3" href="editexpense.html">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -212,16 +201,14 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td class="text-bolds">Best Power Tools</td>
+                                <td>Employee Benefits</td>
                                 <td>PT005</td>
                                 <td>19 Nov 2022</td>
-                                <td><span class="badges bg-lightred">Pending</span></td>
-                                <td>210</td>
-                                <td>120</td>
-                                <td>210</td>
-                                <td><span class="badges bg-lightred">UnPaid</span></td>
+                                <td><span class="badges bg-lightgreen">Active</span></td>
+                                <td>250</td>
+                                <td>Employee Vehicle</td>
                                 <td>
-                                    <a class="me-3" href="editpurchase.html">
+                                    <a class="me-3" href="editexpense.html">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -236,16 +223,14 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td class="text-bolds">Best Power Tools</td>
+                                <td>Foods & Snacks</td>
                                 <td>PT006</td>
                                 <td>19 Nov 2022</td>
-                                <td><span class="badges bg-lightgreen">Received</span></td>
-                                <td>210</td>
-                                <td>120</td>
-                                <td>210</td>
-                                <td><span class="badges bg-lightgreen">paid</span></td>
+                                <td><span class="badges bg-lightgreen">Active</span></td>
+                                <td>250</td>
+                                <td>Employee Foods</td>
                                 <td>
-                                    <a class="me-3" href="editpurchase.html">
+                                    <a class="me-3" href="editexpense.html">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -260,16 +245,14 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td class="text-bolds">Apex Computers</td>
+                                <td>Entertainment</td>
                                 <td>PT007</td>
                                 <td>19 Nov 2022</td>
-                                <td><span class="badges bg-lightyellow">Ordered</span></td>
-                                <td>1000</td>
-                                <td>500</td>
-                                <td>1000</td>
-                                <td><span class="badges bg-lightyellow">Partial</span></td>
+                                <td><span class="badges bg-lightred">In Active</span></td>
+                                <td>120</td>
+                                <td>Office Vehicle</td>
                                 <td>
-                                    <a class="me-3" href="editpurchase.html">
+                                    <a class="me-3" href="editexpense.html">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -284,16 +267,14 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td class="text-bolds">Apex Computers</td>
+                                <td>Office Expenses & Postage </td>
                                 <td>PT008</td>
                                 <td>19 Nov 2022</td>
-                                <td><span class="badges bg-lightgreen">Received</span></td>
-                                <td>550</td>
-                                <td>120</td>
-                                <td>550</td>
-                                <td><span class="badges bg-lightgreen">Paid</span></td>
+                                <td><span class="badges bg-lightgreen">Active</span></td>
+                                <td>320</td>
+                                <td>Employee Foods</td>
                                 <td>
-                                    <a class="me-3" href="editpurchase.html">
+                                    <a class="me-3" href="editexpense.html">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -308,16 +289,14 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td class="text-bolds">Modern Automobile</td>
+                                <td>Employee Benefits</td>
                                 <td>PT009</td>
                                 <td>19 Nov 2022</td>
-                                <td><span class="badges bg-lightgreen">Received</span></td>
-                                <td>410</td>
-                                <td>410</td>
-                                <td>410</td>
-                                <td><span class="badges bg-lightgreen">Paid</span></td>
+                                <td><span class="badges bg-lightgreen">Active</span></td>
+                                <td>120</td>
+                                <td>Employee Vehicle</td>
                                 <td>
-                                    <a class="me-3" href="editpurchase.html">
+                                    <a class="me-3" href="editexpense.html">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -332,16 +311,14 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td class="text-bolds">AIM Infotech</td>
+                                <td>Foods & Snacks</td>
                                 <td>PT010</td>
                                 <td>19 Nov 2022</td>
-                                <td><span class="badges bg-lightred">Pending</span></td>
-                                <td>210</td>
-                                <td>120</td>
-                                <td>210</td>
-                                <td><span class="badges bg-lightred">Unpaid</span></td>
+                                <td><span class="badges bg-lightgreen">Active</span></td>
+                                <td>250</td>
+                                <td>Employee Foods</td>
                                 <td>
-                                    <a class="me-3" href="editpurchase.html">
+                                    <a class="me-3" href="editexpense.html">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -356,16 +333,14 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td class="text-bolds">Best Power Tools</td>
+                                <td>Entertainment</td>
                                 <td>PT011</td>
                                 <td>19 Nov 2022</td>
-                                <td><span class="badges bg-lightgreen">Received</span></td>
-                                <td>210</td>
+                                <td><span class="badges bg-lightred">In Active</span></td>
                                 <td>120</td>
-                                <td>210</td>
-                                <td><span class="badges bg-lightred">Unpaid</span></td>
+                                <td>Office Vehicle</td>
                                 <td>
-                                    <a class="me-3" href="editpurchase.html">
+                                    <a class="me-3" href="editexpense.html">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -380,64 +355,14 @@
                                         <span class="checkmarks"></span>
                                     </label>
                                 </td>
-                                <td class="text-bolds">Best Power Tools</td>
+                                <td>Office Expenses & Postage </td>
                                 <td>PT012</td>
                                 <td>19 Nov 2022</td>
-                                <td><span class="badges bg-lightred">Pending</span></td>
-                                <td>210</td>
-                                <td>120</td>
-                                <td>210</td>
-                                <td><span class="badges bg-lightred">UnPaid</span></td>
+                                <td><span class="badges bg-lightgreen">Active</span></td>
+                                <td>320</td>
+                                <td>Employee Foods</td>
                                 <td>
-                                    <a class="me-3" href="editpurchase.html">
-                                        <img src="assets/img/icons/edit.svg" alt="img">
-                                    </a>
-                                    <a class="me-3 confirm-text" href="javascript:void(0);">
-                                        <img src="assets/img/icons/delete.svg" alt="img">
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox">
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
-                                <td class="text-bolds">Best Power Tools</td>
-                                <td>PT013</td>
-                                <td>19 Nov 2022</td>
-                                <td><span class="badges bg-lightgreen">Received</span></td>
-                                <td>210</td>
-                                <td>120</td>
-                                <td>210</td>
-                                <td><span class="badges bg-lightgreen">paid</span></td>
-                                <td>
-                                    <a class="me-3" href="editpurchase.html">
-                                        <img src="assets/img/icons/edit.svg" alt="img">
-                                    </a>
-                                    <a class="me-3 confirm-text" href="javascript:void(0);">
-                                        <img src="assets/img/icons/delete.svg" alt="img">
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox">
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
-                                <td class="text-bolds">Apex Computers</td>
-                                <td>PT014</td>
-                                <td>19 Nov 2022</td>
-                                <td><span class="badges bg-lightyellow">Ordered</span></td>
-                                <td>1000</td>
-                                <td>500</td>
-                                <td>1000</td>
-                                <td><span class="badges bg-lightyellow">Partial</span></td>
-                                <td>
-                                    <a class="me-3" href="editpurchase.html">
+                                    <a class="me-3" href="editexpense.html">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
