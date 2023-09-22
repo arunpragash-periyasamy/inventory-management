@@ -22,7 +22,7 @@
                                 </div>
                                 <div class="col-lg-2 col-sm-2 col-2 ps-0">
                                     <div class="add-icon">
-                                        <a href="javascript:void(0);"><img src="assets/img/icons/plus1.svg" alt="img"></a>
+                                        <a href="javascript:void(0);"><img src="/assets/img/icons/plus1.svg" alt="img"></a>
                                     </div>
                                 </div>
                             </div>
@@ -52,7 +52,7 @@
                             <div class="image-upload">
                                 <input type="file" name="csv_file" id="csv_file">
                                 <div class="image-uploads">
-                                    <img src="assets/img/icons/upload.svg" alt="img">
+                                    <img src="/assets/img/icons/upload.svg" alt="img">
                                     <h4>Drag and drop a file to upload</h4>
                                 </div>
                             </div>

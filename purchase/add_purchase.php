@@ -22,7 +22,7 @@
                                     </div>
                                     <div class="col-lg-2 col-sm-2 col-2 ps-0">
                                         <div class="add-icon">
-                                            <a href="javascript:void(0);"><img src="assets/img/icons/plus1.svg" alt="img"></a>
+                                            <a href="javascript:void(0);"><img src="/assets/img/icons/plus1.svg" alt="img"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -34,7 +34,7 @@
                                 <div class="input-groupicon">
                                     <input type="text" placeholder="DD-MM-YYYY" class="datetimepicker" name="purchase_date" id="purchase_date">
                                     <div class="addonset">
-                                        <img src="assets/img/icons/calendars.svg" alt="img">
+                                        <img src="/assets/img/icons/calendars.svg" alt="img">
                                     </div>
                                 </div>
                             </div>
@@ -60,7 +60,7 @@
                                 <div class="input-groupicon">
                                     <input type="text" placeholder="Scan/Search Product by code and select..." name="product_name" id="product_name">
                                     <div class="addonset">
-                                        <img src="assets/img/icons/scanners.svg" alt="img">
+                                        <img src="/assets/img/icons/scanners.svg" alt="img">
                                     </div>
                                 </div>
                             </div>
@@ -86,7 +86,7 @@
                                     <tr>
                                         <td class="productimgname">
                                             <a class="product-img">
-                                                <img src="assets/img/product/product7.jpg" alt="product">
+                                                <img src="/assets/img/product/product7.jpg" alt="product">
                                             </a>
                                             <a href="javascript:void(0);">Apple Earpods</a>
                                         </td>
@@ -98,13 +98,13 @@
                                         <td class="text-end">2000.00</td>
                                         <td class="text-end">2000.00</td>
                                         <td>
-                                            <a class="delete-set"><img src="assets/img/icons/delete.svg" alt="svg"></a>
+                                            <a class="delete-set"><img src="/assets/img/icons/delete.svg" alt="svg"></a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="productimgname">
                                             <a class="product-img">
-                                                <img src="assets/img/product/product6.jpg" alt="product">
+                                                <img src="/assets/img/product/product6.jpg" alt="product">
                                             </a>
                                             <a href="javascript:void(0);">Macbook Pro</a>
                                         </td>
@@ -116,7 +116,7 @@
                                         <td class="text-end">1000.00</td>
                                         <td class="text-end">1000.00</td>
                                         <td>
-                                            <a class="delete-set"><img src="assets/img/icons/delete.svg" alt="svg"></a>
+                                            <a class="delete-set"><img src="/assets/img/icons/delete.svg" alt="svg"></a>
                                         </td>
                                     </tr>
                                 </tbody>

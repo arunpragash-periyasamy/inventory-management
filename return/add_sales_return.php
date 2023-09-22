@@ -2,20 +2,38 @@
     <div class="content">
         <div class="page-header">
             <div class="page-title">
-                <h4>ADD Transfer</h4>
-                <h6>Transfer your stocks to one store another store.</h6>
+                <h4>Create Sales Return</h4>
+                <h6>Add/Update Sales Return</h6>
             </div>
         </div>
-        <form enctype="multipart/form-data" action="/transfer/add_transfer" id="new_form" method="post">
 
+        <form enctype="multipart/form-data" action="/return/add_sales_return" id="new_form" method="post">
             <div class="card">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
-                                <label>Date </label>
+                                <label>Customer Name</label>
+                                <div class="row">
+                                    <div class="col-lg-10 col-sm-10 col-10">
+                                        <select class="select form-select" name="customer_name" id="customer_name">
+                                            <option>Select Customer</option>
+                                            <option>Customer</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-2 col-sm-2 col-2 ps-0">
+                                        <div class="add-icon">
+                                            <a href="javascript:void(0);"><img src="/assets/img/icons/plus1.svg" alt="img"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>Quotation Date</label>
                                 <div class="input-groupicon">
-                                    <input type="text" placeholder="DD-MM-YYYY" class="datetimepicker" name="date" id="date">
+                                    <input type="text" placeholder="DD-MM-YYYY" class="datetimepicker" name="quotation_date" id="quotation_date">
                                     <div class="addonset">
                                         <img src="/assets/img/icons/calendars.svg" alt="img">
                                     </div>
@@ -24,30 +42,16 @@
                         </div>
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
-                                <label>From</label>
-                                <select class="select form-select" name="store_from" id="store_from">
-                                    <option>Choose</option>
-                                    <option>Store 1</option>
-                                    <option>Store 2</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-12">
-                            <div class="form-group">
-                                <label>To</label>
-                                <select class="select form-select" name="store_to" id="store_to">
-                                    <option>Choose</option>
-                                    <option>Store 1</option>
-                                    <option>Store 2</option>
-                                </select>
+                                <label>Reference No.</label>
+                                <input type="text" name="reference_number" id="reference_number">
                             </div>
                         </div>
                         <div class="col-lg-12 col-sm-6 col-12">
                             <div class="form-group">
-                                <label>Product Name</label>
+                                <label>Product</label>
                                 <div class="input-groupicon">
                                     <input type="text" placeholder="Scan/Search Product by code and select..." name="product_name" id="product_name">
-                                    <div class="addonset">
+                                    <div class="addonset ">
                                         <img src="/assets/img/icons/scanners.svg" alt="img">
                                     </div>
                                 </div>
@@ -55,46 +59,53 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="table-responsive ">
+                        <div class="table-responsive">
                             <table class="table">
                                 <thead>
                                     <tr>
                                         <th>Product Name</th>
-                                        <th>QTY</th>
-                                        <th>Price</th>
-                                        <th>Stock </th>
-                                        <th>Discount</th>
-                                        <th>Tax </th>
-                                        <th>Total Cost ($)</th>
+                                        <th>Net Unit Price($) </th>
+                                        <th>Stock</th>
+                                        <th>QTY </th>
+                                        <th>Discount($) </th>
+                                        <th>Tax % </th>
+                                        <th>Subtotal ($) </th>
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="bor-b1">
+                                    <tr>
                                         <td class="productimgname">
                                             <a class="product-img">
                                                 <img src="/assets/img/product/product7.jpg" alt="product">
                                             </a>
                                             <a href="javascript:void(0);">Apple Earpods</a>
                                         </td>
+                                        <td>150</td>
+                                        <td>500</td>
+                                        <td>500</td>
+                                        <td>100</td>
+                                        <td>50</td>
+                                        <td>250</td>
                                         <td>
-                                            <div class="input-group form-group mb-0">
-                                                <a class="scanner-set input-group-text">
-                                                    <img src="/assets/img/icons/plus1.svg" alt="img">
-                                                </a>
-                                                <input type="text" value="1" class="calc-no">
-                                                <a class="scanner-set input-group-text">
-                                                    <img src="/assets/img/icons/minus.svg" alt="img">
-                                                </a>
-                                            </div>
+                                            <a class="delete-set"><img src="/assets/img/icons/delete.svg" alt="svg"></a>
                                         </td>
-                                        <td>1500.00</td>
-                                        <td>50.00</td>
-                                        <td>0.00</td>
-                                        <td>0.00</td>
-                                        <td>1500.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="productimgname">
+                                            <a class="product-img">
+                                                <img src="/assets/img/product/product6.jpg" alt="product">
+                                            </a>
+                                            <a href="javascript:void(0);">Macbook Pro</a>
+                                        </td>
+                                        <td>150</td>
+                                        <td>500</td>
+                                        <td>500</td>
+                                        <td>100</td>
+                                        <td>50</td>
+                                        <td>250</td>
                                         <td>
-                                            <a href="javascript:void(0);" class="delete-set"><img src="/assets/img/icons/delete.svg" alt="svg"></a>
+                                            <a class="delete-set"><img src="/assets/img/icons/delete.svg" alt="svg"></a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -162,7 +173,7 @@
                         </div>
                         <div class="col-lg-12">
                             <a href="javascript:void(0);" class="btn btn-submit me-2">Submit</a>
-                            <a href="transferlist.html" class="btn btn-cancel">Cancel</a>
+                            <a href="salesreturnlist.html" class="btn btn-cancel">Cancel</a>
                         </div>
                     </div>
                 </div>

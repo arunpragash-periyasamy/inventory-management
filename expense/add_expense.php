@@ -25,7 +25,7 @@
                                 <div class="input-groupicon">
                                     <input type="text" placeholder="Choose Date" class="datetimepicker" name="date" id="date">
                                     <div class="addonset">
-                                        <img src="assets/img/icons/calendars.svg" alt="img">
+                                        <img src="/assets/img/icons/calendars.svg" alt="img">
                                     </div>
                                 </div>
                             </div>
@@ -36,7 +36,7 @@
                                 <div class="input-groupicon">
                                     <input type="text" name="amount" id="amount">
                                     <div class="addonset">
-                                        <img src="assets/img/icons/dollar.svg" alt="img">
+                                        <img src="/assets/img/icons/dollar.svg" alt="img">
                                     </div>
                                 </div>
                             </div>
