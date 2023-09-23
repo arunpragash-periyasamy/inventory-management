@@ -1,4 +1,9 @@
 RewriteEngine On
+Options -Indexes
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+ErrorDocument 403 /error/error-404
+ErrorDocument 404 /error/error-404
