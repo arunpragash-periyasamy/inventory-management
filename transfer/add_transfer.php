@@ -6,7 +6,7 @@
                 <h6>Transfer your stocks to one store another store.</h6>
             </div>
         </div>
-        <form enctype="multipart/form-data" action="/transfer/add_transfer" id="new_form" method="post">
+        <form enctype="multipart/form-data" action="/transfer/add_transfer" class="new_form" method="post">
 
             <div class="card">
                 <div class="card-body">

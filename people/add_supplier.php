@@ -6,7 +6,7 @@
                 <h6>Add/Update Customer</h6>
             </div>
         </div>
-        <form enctype="multipart/form-data" action="/people/add_supplier" id="new_form" method="post">
+        <form enctype="multipart/form-data" action="/people/add_supplier" class="new_form" method="post">
             <div class="card">
                 <div class="card-body">
                     <div class="row">

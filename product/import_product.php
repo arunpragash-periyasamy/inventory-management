@@ -6,7 +6,7 @@
             <h6>Bulk upload your products</h6>
         </div>
     </div>
-    <form enctype="multipart/form-data" action="/product/import_product" id="new_form" method="post">
+    <form enctype="multipart/form-data" action="/product/import_product" class="new_form" method="post">
     <div class="card">
         <div class="card-body">
             <div class="requiredfield">

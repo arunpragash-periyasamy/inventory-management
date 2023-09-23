@@ -6,7 +6,7 @@
                 <h6>Add/Update Purchase Return</h6>
             </div>
         </div>
-        <form enctype="multipart/form-data" action="/return/add_purchase_return" id="new_form" method="post">
+        <form enctype="multipart/form-data" action="/return/add_purchase_return" class="new_form" method="post">
 
             <div class="card">
                 <div class="card-body">

@@ -40,7 +40,7 @@
                         </ul>
                     </div>
                 </div>
-                <form enctype="multipart/form-data" action="/quotation/quotation_list" id="filter_form" method="post">
+                <form enctype="multipart/form-data" action="/quotation/quotation_list" class="filter_form" method="post">
                     <div class="card" id="filter_inputs">
                         <div class="card-body pb-0">
                             <div class="row">

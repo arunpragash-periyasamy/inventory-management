@@ -6,7 +6,7 @@
             <h6>Create new product Category</h6>
         </div>
     </div>
-    <form enctype="multipart/form-data" action="/product/add_sub_category" id="new_form" method="post">
+    <form enctype="multipart/form-data" action="/product/add_sub_category" class="new_form" method="post">
     <div class="card">
         <div class="card-body">
             <div class="row">

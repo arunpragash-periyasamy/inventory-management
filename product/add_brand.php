@@ -6,7 +6,7 @@
             <h6>Create new Brand</h6>
         </div>
     </div>
-    <form enctype="multipart/form-data" action="/product/add_brand" id="new_form" method="post">
+    <form enctype="multipart/form-data" action="/product/add_brand" class="new_form" method="post">
     <div class="card">
         <div class="card-body">
             <div class="row">

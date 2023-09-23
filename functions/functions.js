@@ -75,8 +75,8 @@ const change_content = () => {
 
 
 // processing the form data by removing the empty field of the form.
-// const getFormData = (id = "new_form") => {
-//   let formData = $(`form#${id}`).serializeArray();
+// const getFormData = (elementClass = "new_form") => {
+//   let formData = $(`form#${elementClass}`).serializeArray();
 
 //   formDataObject = {};
 //   formDataObject.time = getTime();
@@ -94,8 +94,8 @@ const change_content = () => {
 //   return formDataObject;
 // }
 
-const getFormData = async (id = "new_form") => {
-  const formData = $(`form#${id}`).serializeArray();
+const getFormData = async (elementClass="new_form") => {
+  const formData = $(`form.${elementClass}`).serializeArray();
 
   const formDataObject = {
     time: getTime(),
@@ -119,14 +119,14 @@ const getFormData = async (id = "new_form") => {
 }
 
 
-const resetForm = (id = "new_form") => {
+const resetForm = (elementClass = "new_form") => {
   // reset the form data 
-  $(`form#${id}`)[0].reset();
+  $(`form.${elementClass}`)[0].reset();
   $('.select').val('').trigger('change.select2');
 }
 
 // processing the form data by removing the empty field of the form.
-const handleForm = async (id = "new_form") => {
+const handleForm = async (elementClass = "new_form") => {
   console.log("Form is going to submit");
   let formData = await getFormData();
   $.ajax({

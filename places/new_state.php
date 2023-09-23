@@ -6,7 +6,7 @@
                 <h6>Add/Update Places</h6>
             </div>
         </div>
-        <form enctype="multipart/form-data" action="/places/new_state" id="new_form" method="post">
+        <form enctype="multipart/form-data" action="/places/new_state" class="new_form" method="post">
 
             <div class="card">
                 <div class="card-body">

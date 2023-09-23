@@ -39,7 +39,7 @@
                     </ul>
                 </div>
             </div>
-            <form enctype="multipart/form-data" action="/product/product_list" id="filter_form" method="post">
+            <form enctype="multipart/form-data" action="/product/product_list" class="filter_form" method="post">
             <div class="card mb-0" id="filter_inputs">
                 <div class="card-body pb-0">
                     <div class="row">

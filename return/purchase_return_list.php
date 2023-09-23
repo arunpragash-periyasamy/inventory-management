@@ -15,7 +15,7 @@
         <div class="card">
             <div class="card-body">
 
-        <form enctype="multipart/form-data" action="/return/purchase_return_list" id="search_form" method="post">
+        <form enctype="multipart/form-data" action="/return/purchase_return_list" class="search_form" method="post">
                 <div class="table-top">
                     <div class="search-set">
                         <div class="search-path">
@@ -44,7 +44,7 @@
                 </div>
         </form>
 
-                <form enctype="multipart/form-data" action="/return/purchase_return_list" id="filter_form" method="post">
+                <form enctype="multipart/form-data" action="/return/purchase_return_list" class="filter_form" method="post">
                 <div class="card" id="filter_inputs">
                     <div class="card-body pb-0">
                         <div class="row">

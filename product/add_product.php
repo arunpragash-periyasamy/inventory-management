@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <form enctype="multipart/form-data" action="/product/add_product" id="new_form" method="post">
+    <form enctype="multipart/form-data" action="/product/add_product" class="new_form" method="post">
         <div class="card">
             <div class="card-body">
                 <div class="row">

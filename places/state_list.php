@@ -14,7 +14,7 @@
 
                 <div class="card">
                     <div class="card-body">
-                    <form enctype="multipart/form-data" action="/places/state_list" id="search_form" method="post">
+                    <form enctype="multipart/form-data" action="/places/state_list" class="search_form" method="post">
 
                         <div class="table-top">
                             <div class="search-set">
@@ -48,7 +48,7 @@
                             </div>
                         </div>
                     </form>
-                    <form enctype="multipart/form-data" action="/places/state_list" id="filter_form" method="post">
+                    <form enctype="multipart/form-data" action="/places/state_list" class="filter_form" method="post">
 
                         <div class="card" id="filter_inputs">
                             <div class="card-body pb-0">

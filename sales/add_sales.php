@@ -6,7 +6,7 @@
                 <h6>Add/Update Sales Return</h6>
             </div>
         </div>
-        <form enctype="multipart/form-data" action="/sales/create_sales_returns" id="new_form" method="post">
+        <form enctype="multipart/form-data" action="/sales/create_sales_returns" class="new_form" method="post">
         <div class="card">
             <div class="card-body">
                 <div class="row">
