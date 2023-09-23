@@ -9,7 +9,7 @@
           </div>
           <div class="dash-widgetcontent">
             <h5>
-              $<span class="counters" data-count="307144.00">$307,144.00</span>
+            ₹<span class="counters" data-count="307144.00">307,144.00</span>
             </h5>
             <h6>Total Purchase Due</h6>
           </div>
@@ -22,7 +22,7 @@
           </div>
           <div class="dash-widgetcontent">
             <h5>
-              $<span class="counters" data-count="4385.00">$4,385.00</span>
+            ₹<span class="counters" data-count="4385.00">4,385.00</span>
             </h5>
             <h6>Total Sales Due</h6>
           </div>
@@ -35,7 +35,7 @@
           </div>
           <div class="dash-widgetcontent">
             <h5>
-              $<span class="counters" data-count="385656.50">385,656.50</span>
+            ₹<span class="counters" data-count="385656.50">385,656.50</span>
             </h5>
             <h6>Total Sale Amount</h6>
           </div>
@@ -48,7 +48,7 @@
           </div>
           <div class="dash-widgetcontent">
             <h5>
-              $<span class="counters" data-count="40000.00">400.00</span>
+            ₹<span class="counters" data-count="40000.00">4000.00</span>
             </h5>
             <h6>Total Sale Amount</h6>
           </div>
@@ -176,7 +176,7 @@
                       </a>
                       <a href="productlist.html">Apple Earpods</a>
                     </td>
-                    <td>$891.2</td>
+                    <td>₹891.2</td>
                   </tr>
                   <tr>
                     <td>2</td>
@@ -186,7 +186,7 @@
                       </a>
                       <a href="productlist.html">iPhone 11</a>
                     </td>
-                    <td>$668.51</td>
+                    <td>₹668.51</td>
                   </tr>
                   <tr>
                     <td>3</td>
@@ -196,7 +196,7 @@
                       </a>
                       <a href="productlist.html">samsung</a>
                     </td>
-                    <td>$522.29</td>
+                    <td>₹522.29</td>
                   </tr>
                   <tr>
                     <td>4</td>
@@ -206,7 +206,7 @@
                       </a>
                       <a href="productlist.html">Macbook Pro</a>
                     </td>
-                    <td>$291.01</td>
+                    <td>₹291.01</td>
                   </tr>
                 </tbody>
               </table>
