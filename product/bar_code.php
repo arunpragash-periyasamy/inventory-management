@@ -63,7 +63,7 @@
                 <div class="col-lg-3 col-sm-6 col-12">
                     <div class="form-group">
                         <label>Paper Size</label>
-                        <select class="form-select" name="bar_code_size" id="bar_code_size">
+                        <select class="select" name="bar_code_size" id="bar_code_size">
                             <option>36mm (1.4 inch)</option>
                             <option>12mm (1 inch)</option>
                         </select>

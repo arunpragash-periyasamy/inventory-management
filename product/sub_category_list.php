@@ -45,7 +45,7 @@
                             <div class="col-lg-2 col-sm-6 col-12">
                                 <div class="form-group">
                                     <label>Category</label>
-                                    <select class="form-select" name="category_list" id="category_list">
+                                    <select class="select" name="category_list" id="category_list">
                                         <option>Choose Category</option>
                                         <option>Computers</option>
                                     </select>
@@ -54,7 +54,7 @@
                             <div class="col-lg-2 col-sm-6 col-12">
                                 <div class="form-group">
                                     <label>Sub Category</label>
-                                    <select class="form-select" name="sub_category_list" id="sub_category_list">
+                                    <select class="select" name="sub_category_list" id="sub_category_list">
                                         <option>Choose Sub Category</option>
                                         <option>Fruits</option>
                                     </select>
@@ -63,7 +63,7 @@
                             <div class="col-lg-2 col-sm-6 col-12">
                                 <div class="form-group">
                                     <label>Category Code</label>
-                                    <select class="form-select" name="category_code_list" id="category_code_list">
+                                    <select class="select" name="category_code_list" id="category_code_list">
                                         <option>CT001</option>
                                         <option>CT002</option>
                                     </select>

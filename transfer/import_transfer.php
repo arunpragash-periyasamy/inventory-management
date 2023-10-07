@@ -13,7 +13,7 @@
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
                                 <label>From</label>
-                                <select class="select form-select" name="store_from" id="store_from">
+                                <select class="select " name="store_from" id="store_from">
                                     <option>Choose</option>
                                     <option>Store 1</option>
                                     <option>Store 2</option>
@@ -23,7 +23,7 @@
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
                                 <label>To</label>
-                                <select class="select form-select" name="store_to" id="store_to">
+                                <select class="select " name="store_to" id="store_to">
                                     <option>Choose</option>
                                     <option>Store 1</option>
                                     <option>Store 2</option>
@@ -33,7 +33,7 @@
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
                                 <label> Status </label>
-                                <select class="select form-select" name="status" id="status">
+                                <select class="select " name="status" id="status">
                                     <option>Select</option>
                                     <option>Completed</option>
                                     <option>Inprogress</option>

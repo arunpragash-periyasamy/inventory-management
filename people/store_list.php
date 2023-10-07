@@ -61,7 +61,7 @@
                                 </div>
                                 <div class="col-lg-2 col-sm-6 col-12">
                                     <div class="form-group">
-                                        <select class="select form-select" name="status" id="status">
+                                        <select class="select " name="status" id="status">
                                             <option>Disable</option>
                                             <option>Enable</option>
                                         </select>

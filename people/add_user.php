@@ -52,7 +52,7 @@
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
                                 <label>Role</label>
-                                <select class="select form-select" name="role" id="role">
+                                <select class="select " name="role" id="role">
                                     <option>Select</option>
                                     <option>Owner</option>
                                 </select>

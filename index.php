@@ -13,7 +13,7 @@ $page_title = ucfirst(str_replace("_", " ", $url[1]));
     <title><?php echo $page_title; ?></title>
 
     <!-- css links  -->
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/belgaum_plumbers/logo1.svg">
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/animate.css">
     <link rel="stylesheet" href="/assets/plugins/select2/css/select2.min.css">
@@ -45,6 +45,7 @@ $page_title = ucfirst(str_replace("_", " ", $url[1]));
         }
         ?>
     </div>
+    
     <script src="/assets/js/feather.min.js"></script>
     <script src="/assets/js/jquery.slimscroll.min.js"></script>
     <script src="/assets/js/jquery.dataTables.min.js"></script>

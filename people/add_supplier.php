@@ -31,7 +31,7 @@
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
                                 <label>Choose Country</label>
-                                <select class="select form-select" name="country" id="country">
+                                <select class="select " name="country" id="country">
                                     <option>Choose Country</option>
                                     <option>India</option>
                                     <option>USA</option>
@@ -41,7 +41,7 @@
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
                                 <label>City</label>
-                                <select class="select form-select" name="city" id="city">
+                                <select class="select " name="city" id="city">
                                     <option>Choose City</option>
                                     <option>City 1</option>
                                     <option>City 2</option>
