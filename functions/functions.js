@@ -75,24 +75,6 @@ const change_content = () => {
 
 
 // processing the form data by removing the empty field of the form.
-// const getFormData = (elementClass = "new_form") => {
-//   let formData = $(`form#${elementClass}`).serializeArray();
-
-//   formDataObject = {};
-//   formDataObject.time = getTime();
-//   getIp().then((ipAddress) => {
-//     formDataObject.ip = ipAddress;
-//   }).catch((error)=>{
-//     formDataObject.ipAddress = "error";
-//   });
-
-//   formData.forEach((item) => {
-//     if (item.value !== "") {
-//       formDataObject[item.name] = item.value;
-//     }
-//   });
-//   return formDataObject;
-// }
 
 const getFormData = async (elementClass="new_form") => {
   const formData = $(`form.${elementClass}`).serializeArray();
@@ -114,7 +96,7 @@ const getFormData = async (elementClass="new_form") => {
       formDataObject[item.name] = item.value;
     }
   });
-
+  console.log(formDataObject);
   return formDataObject;
 }
 
