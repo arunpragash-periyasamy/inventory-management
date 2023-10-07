@@ -16,7 +16,7 @@
                                 <label>Customer Name</label>
                                 <div class="row">
                                     <div class="col-lg-10 col-sm-10 col-10">
-                                        <select class="select form-select" name="customer_name" id="customer_name">
+                                        <select class="select " name="customer_name" id="customer_name">
                                             <option>Select Customer</option>
                                             <option>Customer</option>
                                         </select>
@@ -158,7 +158,7 @@
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
                                 <label>Status</label>
-                                <select class="select form-select" name="status" id="status">
+                                <select class="select " name="status" id="status">
                                     <option>Choose Status</option>
                                     <option>Completed</option>
                                     <option>Inprogress</option>

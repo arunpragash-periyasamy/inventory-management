@@ -13,7 +13,7 @@
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
                                 <label>Expense Category</label>
-                                <select class="select form-select" name="category" id="category">
+                                <select class="select " name="category" id="category">
                                     <option>Choose Category</option>
                                     <option>Category</option>
                                 </select>

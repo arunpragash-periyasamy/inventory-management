@@ -60,7 +60,7 @@
                             </div>
                             <div class="col-lg-2 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <select class="select form-select" name="supplier_list" id="supplier_list">
+                                    <select class="select " name="supplier_list" id="supplier_list">
                                         <option>Choose Supplier</option>
                                         <option>Supplier</option>
                                     </select>
@@ -68,7 +68,7 @@
                             </div>
                             <div class="col-lg-2 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <select class="select form-select" name="status_list" id="status_list">
+                                    <select class="select " name="status_list" id="status_list">
                                         <option>Choose Status</option>
                                         <option>Inprogress</option>
                                     </select>

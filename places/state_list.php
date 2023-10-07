@@ -55,7 +55,7 @@
                                 <div class="row">
                                     <div class="col-lg-2 col-sm-6 col-12">
                                         <div class="form-group">
-                                            <select class="select form-select" name="state" id="state">
+                                            <select class="select " name="state" id="state">
                                                 <option>Choose State</option>
                                                 <option>Beijing</option>
                                                 <option>Newyork</option>
@@ -65,7 +65,7 @@
                                     </div>
                                     <div class="col-lg-2 col-sm-6 col-12">
                                         <div class="form-group">
-                                            <select class="select form-select" name="country" id="country">
+                                            <select class="select " name="country" id="country">
                                                 <option>Choose Country</option>
                                                 <option>China</option>
                                                 <option>USA</option>
@@ -75,7 +75,7 @@
                                     </div>
                                     <div class="col-lg-2 col-sm-6 col-12">
                                         <div class="form-group">
-                                            <select class="select form-select" name="status" id="status">
+                                            <select class="select " name="status" id="status">
                                                 <option>Choose Status</option>
                                                 <option>Disable</option>
                                                 <option>Enable</option>

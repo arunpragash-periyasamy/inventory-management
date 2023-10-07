@@ -1,3 +1,4 @@
+
 // get the current date and time
 const getTime = () => {
   // Get the current date and time
@@ -17,12 +18,16 @@ const getIp = async () => {
   try {
     const data = await $.getJSON('https://api.ipify.org?format=json');
     const ipAddress = data.ip;
-    console.log(ipAddress);
     return ipAddress;
   } catch (error) {
     console.error('Error getting IP address: ' + error.statusText);
     throw error;
   }
+}
+
+
+const applyPlugins = () => {
+  $(".select").select2();
 }
 
 let currentPage = null;
@@ -37,21 +42,21 @@ const change_content = () => {
     let path = url + ".php";
     let page = url.split("/")[2];
     currentPage = page;
+    let requestData = {
+      path: path,
+      type: "file"
+    }
+    var queryString = $.param(requestData);
     if ($(".main-wrapper").find(".header") && $(".main-wrapper").find(".sidebar")) {
       $("*").removeClass("active");
       $(`#${page}`).addClass("active");
-
       // request to get the page content
-      // $(".page-wrapper").load("/get_file.php?file=" + path, (response, status, xhr) => {
-      //   if (status == "error") {
-      //     $(".main-wrapper").html(response);
-      //   }
-      // });
       $.get("/get_file.php?file=" + path, function (data) {
         // Replace the entire #content element with the loaded content
         $('.page-wrapper').replaceWith(data);
+        applyPlugins();
       });
-  
+
     } else {
       console.error("Page not found");
     }
@@ -59,42 +64,18 @@ const change_content = () => {
   } else {
     $("*").removeClass("active");
     $("#dashboard").addClass("active");
-    // $(".page-wrapper").load("/get_file.php?file=/dashboard.php", (response, status, xhr) => {
-    //   if (status == "error") {
-    //     $(".main-wrapper").html(response);
-    //   }
-    // });
     $.get("/get_file.php?file=/dashboard.php", function (data) {
       // Replace the entire #content element with the loaded content
       $('.page-wrapper').replaceWith(data);
     });
-
   }
 
 };
 
 
-// processing the form data by removing the empty field of the form.
-// const getFormData = (elementClass = "new_form") => {
-//   let formData = $(`form#${elementClass}`).serializeArray();
+// // processing the form data by removing the empty field of the form.
 
-//   formDataObject = {};
-//   formDataObject.time = getTime();
-//   getIp().then((ipAddress) => {
-//     formDataObject.ip = ipAddress;
-//   }).catch((error)=>{
-//     formDataObject.ipAddress = "error";
-//   });
-
-//   formData.forEach((item) => {
-//     if (item.value !== "") {
-//       formDataObject[item.name] = item.value;
-//     }
-//   });
-//   return formDataObject;
-// }
-
-const getFormData = async (elementClass="new_form") => {
+const getFormData = async (elementClass = "new_form") => {
   const formData = $(`form.${elementClass}`).serializeArray();
 
   const formDataObject = {
@@ -126,15 +107,16 @@ const resetForm = (elementClass = "new_form") => {
 }
 
 // processing the form data by removing the empty field of the form.
-const handleForm = async (elementClass = "new_form") => {
-  console.log("Form is going to submit");
+const handleForm = async (elementClass = "new_form", method = "insert") => {
   let formData = await getFormData();
+  console.log(formData);
   $.ajax({
     url: '/functions/form_submit.php',
     type: 'POST',
     data: {
-      table_name: currentPage,
+      page: currentPage,
       form: formData,
+      method: method
     },
     success: function (response) {
       // Handle the success response from the server here
@@ -150,6 +132,9 @@ const handleForm = async (elementClass = "new_form") => {
 }
 
 
+
+
+
 // function calling
 change_content();
 
@@ -163,4 +148,22 @@ $(document).ready(function () {
   });
 
   $(".btn-submit").on("click", _.throttle(handleForm, 5000, { trailing: false }));
+  applyPlugins();
+
+  // code for preventing the page reload and make the submenu active.
+  $("a.page_url").click(function (event) {
+    event.preventDefault(); // Prevent the default link behavior (page reload)
+
+    // Get the target URL from the href attribute
+    var targetUrl = $(this).attr("href");
+    console.log("target " + targetUrl);
+    // Change the URL without a full page reload
+    window.history.pushState({}, "", targetUrl);
+
+    // You can also update the page content here if needed
+    // Optionally, trigger any other actions related to the link click
+    change_content();
+    $(this).closest(".submenu").children("a").addClass("active subdrop");
+    return false; // Prevent any other click handlers from executing
+  });
 });

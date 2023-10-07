@@ -15,7 +15,7 @@
                                 <label>Supplier Name</label>
                                 <div class="row">
                                     <div class="col-lg-10 col-sm-10 col-10">
-                                        <select class="select form-select" name="supplier" id="supplier">
+                                        <select class="select " name="supplier" id="supplier">
                                             <option>Select</option>
                                             <option>Supplier</option>
                                         </select>
@@ -42,7 +42,7 @@
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
                                 <label>Product Name</label>
-                                <select class="select form-select" name="product_name" id="product_name">
+                                <select class="select " name="product_name" id="product_name">
                                     <option>Choose</option>
                                     <option>Supplier Name</option>
                                 </select>
@@ -169,7 +169,7 @@
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
                                 <label>Status</label>
-                                <select class="select form-select" name="status" id="status">
+                                <select class="select " name="status" id="status">
                                     <option>Choose Status</option>
                                     <option>Completed</option>
                                     <option>Inprogress</option>

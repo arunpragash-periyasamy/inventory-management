@@ -20,7 +20,7 @@
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
                                 <label>Country</label>
-                                <select class="select form-select" name="country_name" id="country_name">
+                                <select class="select " name="country_name" id="country_name">
                                     <option>Choose Country</option>
                                     <option>China</option>
                                     <option>USA</option>

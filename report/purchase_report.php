@@ -64,7 +64,7 @@
                                 </div>
                                 <div class="col-lg-2 col-sm-6 col-12">
                                     <div class="form-group">
-                                        <select class="select form-select" name="supplier" id="supplier">
+                                        <select class="select " name="supplier" id="supplier">
                                             <option>Choose Suppliers</option>
                                             <option>Suppliers</option>
                                         </select>

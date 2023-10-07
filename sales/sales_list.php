@@ -54,7 +54,7 @@
                             </div>
                             <div class="col-lg-2 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <select class="select form-select"  name="status" id="status">
+                                    <select class="select "  name="status" id="status">
                                         <option>Completed</option>
                                         <option>Pending</option>
                                     </select>
@@ -62,7 +62,7 @@
                             </div>
                             <div class="col-lg-2 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <select class="select form-select"  name="payment" id="payment">
+                                    <select class="select "  name="payment" id="payment">
                                         <option>Paid</option>
                                         <option>Due</option>
                                     </select>

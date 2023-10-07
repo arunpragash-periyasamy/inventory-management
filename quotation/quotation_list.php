@@ -56,7 +56,7 @@
                                 </div>
                                 <div class="col-lg-2 col-sm-6 col-12">
                                     <div class="form-group">
-                                        <select class="select form-select"  name="customer_list" id="customer_list">
+                                        <select class="select "  name="customer_list" id="customer_list">
                                             <option>Choose Customer</option>
                                             <option>Customer1</option>
                                         </select>
@@ -64,7 +64,7 @@
                                 </div>
                                 <div class="col-lg-2 col-sm-6 col-12">
                                     <div class="form-group">
-                                        <select class="select form-select" name="status_list" id="status_list">
+                                        <select class="select " name="status_list" id="status_list">
                                             <option>Choose Status</option>
                                             <option>Inprogress</option>
                                             <option>Complete</option>
