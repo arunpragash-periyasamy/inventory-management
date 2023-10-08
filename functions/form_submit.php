@@ -8,9 +8,9 @@ $data = json_decode(file_get_contents('php://input'), true); // For JSON request
         // header('Content-Type: application/json');
         http_response_code(200);
         echo "data received";
-        if(strtolower($_POST['method']) === 'insert'){
-            return insert($_POST['form'], $_POST['page']);
-        }
+        // if(strtolower($_POST['method']) === 'insert'){
+        //     return insert($_POST['form'], $_POST['page']);
+        // }
         
     }
     if($_SERVER["REQUEST_METHOD"] === "GET"){

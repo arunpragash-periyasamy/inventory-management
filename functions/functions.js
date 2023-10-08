@@ -157,7 +157,6 @@ const getFormData = async (elementClass="new_form") => {
       formDataObject[item.name] = item.value;
     }
   });
-  console.log(formDataObject);
   return formDataObject;
 }
 
@@ -171,7 +170,6 @@ const resetForm = (elementClass = "new_form") => {
 // processing the form data by removing the empty field of the form.
 const handleForm = async (elementClass = "new_form", method = "insert") => {
   let formData = await getFormData();
-  console.log(formData);
   $.ajax({
     url: '/functions/form_submit.php',
     type: 'POST',
