@@ -6,7 +6,7 @@
                 <h6>Transfer your stocks to one store another store.</h6>
             </div>
             <div class="page-btn">
-                <a href="addtransfer.html" class="btn btn-added"><img src="/assets/img/icons/plus.svg" alt="img" class="me-2">Add Transfer</a>
+                <a href="add_transfer" class="btn btn-added"><img src="/assets/img/icons/plus.svg" alt="img" class="me-2">Add Transfer</a>
             </div>
         </div>
 
@@ -109,7 +109,7 @@
                                 <td>1500.00</td>
                                 <td><span class="badges bg-lightgreen">Completed</span></td>
                                 <td>
-                                    <a class="me-3" href="edittransfer.html">
+                                    <a class="me-3" href="add_transfer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -132,7 +132,7 @@
                                 <td>45000.00</td>
                                 <td><span class="badges bg-lightgreen">Completed</span></td>
                                 <td>
-                                    <a class="me-3" href="edittransfer.html">
+                                    <a class="me-3" href="add_transfer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -155,7 +155,7 @@
                                 <td>2400.00</td>
                                 <td><span class="badges bg-lightgreen">Completed</span></td>
                                 <td>
-                                    <a class="me-3" href="edittransfer.html">
+                                    <a class="me-3" href="add_transfer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -178,7 +178,7 @@
                                 <td>2400.00</td>
                                 <td><span class="badges bg-lightgreen">Completed</span></td>
                                 <td>
-                                    <a class="me-3" href="edittransfer.html">
+                                    <a class="me-3" href="add_transfer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -201,7 +201,7 @@
                                 <td>2400.00</td>
                                 <td><span class="badges bg-lightgreen">Completed</span></td>
                                 <td>
-                                    <a class="me-3" href="edittransfer.html">
+                                    <a class="me-3" href="add_transfer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -224,7 +224,7 @@
                                 <td>8456.00</td>
                                 <td><span class="badges bg-lightgreen">Completed</span></td>
                                 <td>
-                                    <a class="me-3" href="edittransfer.html">
+                                    <a class="me-3" href="add_transfer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -247,7 +247,7 @@
                                 <td>150.00</td>
                                 <td><span class="badges bg-lightgreen">Completed</span></td>
                                 <td>
-                                    <a class="me-3" href="edittransfer.html">
+                                    <a class="me-3" href="add_transfer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -270,7 +270,7 @@
                                 <td>365.00</td>
                                 <td><span class="badges bg-lightred">Pending</span></td>
                                 <td>
-                                    <a class="me-3" href="edittransfer.html">
+                                    <a class="me-3" href="add_transfer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -293,7 +293,7 @@
                                 <td>365.00</td>
                                 <td><span class="badges bg-lightred">Pending</span></td>
                                 <td>
-                                    <a class="me-3" href="edittransfer.html">
+                                    <a class="me-3" href="add_transfer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -316,7 +316,7 @@
                                 <td>365.00</td>
                                 <td><span class="badges bg-lightred">Pending</span></td>
                                 <td>
-                                    <a class="me-3" href="edittransfer.html">
+                                    <a class="me-3" href="add_transfer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -339,7 +339,7 @@
                                 <td>365.00</td>
                                 <td><span class="badges bg-lightred">Pending</span></td>
                                 <td>
-                                    <a class="me-3" href="edittransfer.html">
+                                    <a class="me-3" href="add_transfer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -362,7 +362,7 @@
                                 <td>365.00</td>
                                 <td><span class="badges bg-lightred">Pending</span></td>
                                 <td>
-                                    <a class="me-3" href="edittransfer.html">
+                                    <a class="me-3" href="add_transfer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">

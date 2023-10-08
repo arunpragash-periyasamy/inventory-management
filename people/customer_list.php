@@ -6,7 +6,7 @@
                 <h6>Manage your Customers</h6>
             </div>
             <div class="page-btn">
-                <a href="addcustomer.html" class="btn btn-added"><img src="/assets/img/icons/plus.svg" alt="img">Add Customer</a>
+                <a href="add_customer" class="btn btn-added"><img src="/assets/img/icons/plus.svg" alt="img">Add Customer</a>
             </div>
         </div>
 
@@ -114,7 +114,7 @@
                                 </td>
                                 <td>USA</td>
                                 <td>
-                                    <a class="me-3" href="editcustomer.html">
+                                    <a class="me-3" href="add_customer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -142,7 +142,7 @@
                                 </td>
                                 <td>USA</td>
                                 <td>
-                                    <a class="me-3" href="editcustomer.html">
+                                    <a class="me-3" href="add_customer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -170,7 +170,7 @@
                                 </td>
                                 <td>USA</td>
                                 <td>
-                                    <a class="me-3" href="editcustomer.html">
+                                    <a class="me-3" href="add_customer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -198,7 +198,7 @@
                                 </td>
                                 <td>Thailand</td>
                                 <td>
-                                    <a class="me-3" href="editcustomer.html">
+                                    <a class="me-3" href="add_customer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -226,7 +226,7 @@
                                 </td>
                                 <td>Phuket island</td>
                                 <td>
-                                    <a class="me-3" href="editcustomer.html">
+                                    <a class="me-3" href="add_customer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -254,7 +254,7 @@
                                 </td>
                                 <td>Germany</td>
                                 <td>
-                                    <a class="me-3" href="editcustomer.html">
+                                    <a class="me-3" href="add_customer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -282,7 +282,7 @@
                                 </td>
                                 <td>Angola</td>
                                 <td>
-                                    <a class="me-3" href="editcustomer.html">
+                                    <a class="me-3" href="add_customer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -310,7 +310,7 @@
                                 </td>
                                 <td>Albania</td>
                                 <td>
-                                    <a class="me-3" href="editcustomer.html">
+                                    <a class="me-3" href="add_customer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -338,7 +338,7 @@
                                 </td>
                                 <td>Germany</td>
                                 <td>
-                                    <a class="me-3" href="editcustomer.html">
+                                    <a class="me-3" href="add_customer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -366,7 +366,7 @@
                                 </td>
                                 <td>Angola</td>
                                 <td>
-                                    <a class="me-3" href="editcustomer.html">
+                                    <a class="me-3" href="add_customer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -394,7 +394,7 @@
                                 </td>
                                 <td>Albania</td>
                                 <td>
-                                    <a class="me-3" href="editcustomer.html">
+                                    <a class="me-3" href="add_customer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -422,7 +422,7 @@
                                 </td>
                                 <td>Germany</td>
                                 <td>
-                                    <a class="me-3" href="editcustomer.html">
+                                    <a class="me-3" href="add_customer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -451,7 +451,7 @@
                                 <td>Angola</td>
                                 <td>
 
-                                    <a class="me-3" href="editcustomer.html">
+                                    <a class="me-3" href="add_customer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -479,7 +479,7 @@
                                 </td>
                                 <td>Albania</td>
                                 <td>
-                                    <a class="me-3" href="editcustomer.html">
+                                    <a class="me-3" href="add_customer">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">

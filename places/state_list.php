@@ -7,7 +7,7 @@
                         <h6>Manage your State</h6>
                     </div>
                     <div class="page-btn">
-                        <a href="newstate.html" class="btn btn-added"><img src="/assets/img/icons/plus.svg" alt="img"
+                        <a href="new_state" class="btn btn-added"><img src="/assets/img/icons/plus.svg" alt="img"
                                 class="me-2">Add State</a>
                     </div>
                 </div>
@@ -126,7 +126,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editstate.html">
+                                            <a class="me-3" href="edit_state">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -151,7 +151,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editstate.html">
+                                            <a class="me-3" href="edit_state">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -176,7 +176,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editstate.html">
+                                            <a class="me-3" href="edit_state">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -202,7 +202,7 @@
                                         </td>
                                         <td>
 
-                                            <a class="me-3" href="editstate.html">
+                                            <a class="me-3" href="edit_state">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -227,7 +227,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editstate.html">
+                                            <a class="me-3" href="edit_state">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -252,7 +252,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editstate.html">
+                                            <a class="me-3" href="edit_state">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -277,7 +277,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editstate.html">
+                                            <a class="me-3" href="edit_state">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -302,7 +302,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editstate.html">
+                                            <a class="me-3" href="edit_state">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -327,7 +327,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editstate.html">
+                                            <a class="me-3" href="edit_state">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -352,7 +352,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editstate.html">
+                                            <a class="me-3" href="edit_state">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -377,7 +377,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editstate.html">
+                                            <a class="me-3" href="edit_state">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -402,7 +402,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editstate.html">
+                                            <a class="me-3" href="edit_state">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -427,7 +427,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editstate.html">
+                                            <a class="me-3" href="edit_state">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -452,7 +452,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editstate.html">
+                                            <a class="me-3" href="edit_state">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">

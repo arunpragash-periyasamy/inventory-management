@@ -149,10 +149,10 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <li>
-                  <a href="productlist.html" class="dropdown-item">Product List</a>
+                  <a href="product_list" class="dropdown-item">Product List</a>
                 </li>
                 <li>
-                  <a href="addproduct.html" class="dropdown-item">Product Add</a>
+                  <a href="add_product" class="dropdown-item">Product Add</a>
                 </li>
               </ul>
             </div>
@@ -171,40 +171,40 @@
                   <tr>
                     <td>1</td>
                     <td class="productimgname">
-                      <a href="productlist.html" class="product-img">
+                      <a href="product_list" class="product-img">
                         <img src="/assets/img/product/product22.jpg" alt="product" />
                       </a>
-                      <a href="productlist.html">Apple Earpods</a>
+                      <a href="product_list">Apple Earpods</a>
                     </td>
                     <td>₹891.2</td>
                   </tr>
                   <tr>
                     <td>2</td>
                     <td class="productimgname">
-                      <a href="productlist.html" class="product-img">
+                      <a href="product_list" class="product-img">
                         <img src="/assets/img/product/product23.jpg" alt="product" />
                       </a>
-                      <a href="productlist.html">iPhone 11</a>
+                      <a href="product_list">iPhone 11</a>
                     </td>
                     <td>₹668.51</td>
                   </tr>
                   <tr>
                     <td>3</td>
                     <td class="productimgname">
-                      <a href="productlist.html" class="product-img">
+                      <a href="product_list" class="product-img">
                         <img src="/assets/img/product/product24.jpg" alt="product" />
                       </a>
-                      <a href="productlist.html">samsung</a>
+                      <a href="product_list">samsung</a>
                     </td>
                     <td>₹522.29</td>
                   </tr>
                   <tr>
                     <td>4</td>
                     <td class="productimgname">
-                      <a href="productlist.html" class="product-img">
+                      <a href="product_list" class="product-img">
                         <img src="/assets/img/product/product6.jpg" alt="product" />
                       </a>
-                      <a href="productlist.html">Macbook Pro</a>
+                      <a href="product_list">Macbook Pro</a>
                     </td>
                     <td>₹291.01</td>
                   </tr>
@@ -235,10 +235,10 @@
                 <td>1</td>
                 <td><a href="javascript:void(0);">IT0001</a></td>
                 <td class="productimgname">
-                  <a class="product-img" href="productlist.html">
+                  <a class="product-img" href="product_list">
                     <img src="/assets/img/product/product2.jpg" alt="product" />
                   </a>
-                  <a href="productlist.html">Orange</a>
+                  <a href="product_list">Orange</a>
                 </td>
                 <td>N/D</td>
                 <td>Fruits</td>
@@ -248,10 +248,10 @@
                 <td>2</td>
                 <td><a href="javascript:void(0);">IT0002</a></td>
                 <td class="productimgname">
-                  <a class="product-img" href="productlist.html">
+                  <a class="product-img" href="product_list">
                     <img src="/assets/img/product/product3.jpg" alt="product" />
                   </a>
-                  <a href="productlist.html">Pineapple</a>
+                  <a href="product_list">Pineapple</a>
                 </td>
                 <td>N/D</td>
                 <td>Fruits</td>
@@ -261,10 +261,10 @@
                 <td>3</td>
                 <td><a href="javascript:void(0);">IT0003</a></td>
                 <td class="productimgname">
-                  <a class="product-img" href="productlist.html">
+                  <a class="product-img" href="product_list">
                     <img src="/assets/img/product/product4.jpg" alt="product" />
                   </a>
-                  <a href="productlist.html">Stawberry</a>
+                  <a href="product_list">Stawberry</a>
                 </td>
                 <td>N/D</td>
                 <td>Fruits</td>
@@ -274,10 +274,10 @@
                 <td>4</td>
                 <td><a href="javascript:void(0);">IT0004</a></td>
                 <td class="productimgname">
-                  <a class="product-img" href="productlist.html">
+                  <a class="product-img" href="product_list">
                     <img src="/assets/img/product/product5.jpg" alt="product" />
                   </a>
-                  <a href="productlist.html">Avocat</a>
+                  <a href="product_list">Avocat</a>
                 </td>
                 <td>N/D</td>
                 <td>Fruits</td>

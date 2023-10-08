@@ -57,7 +57,7 @@
                     </div>
                     <div class="col-lg-12">
                         <a href="javascript:void(0);" class="btn btn-submit me-2">Submit</a>
-                        <a href="storelist.html" class="btn btn-cancel">Cancel</a>
+                        <a href="store_list" class="btn btn-cancel">Cancel</a>
                     </div>
                 </div>
             </div>

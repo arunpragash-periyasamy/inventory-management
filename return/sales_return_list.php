@@ -6,7 +6,7 @@
                 <h6>Manage your Returns</h6>
             </div>
             <div class="page-btn">
-                <a href="createsalesreturn.html" class="btn btn-added"><img src="/assets/img/icons/plus.svg" alt="img" class="me-2">Add New Sales Return</a>
+                <a href="add_sales_return" class="btn btn-added"><img src="/assets/img/icons/plus.svg" alt="img" class="me-2">Add New Sales Return</a>
             </div>
         </div>
 
@@ -133,7 +133,7 @@
                                 <td>550</td>
                                 <td><span class="badges bg-lightgreen">Paid</span></td>
                                 <td>
-                                    <a class="me-3" href="editsalesreturn.html">
+                                    <a class="me-3" href="add_sales_return">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -162,7 +162,7 @@
                                 <td>550</td>
                                 <td><span class="badges bg-lightred">Unpaid</span></td>
                                 <td>
-                                    <a class="me-3" href="editsalesreturn.html">
+                                    <a class="me-3" href="add_sales_return">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -191,7 +191,7 @@
                                 <td>210</td>
                                 <td><span class="badges bg-lightred">Unpaid</span></td>
                                 <td>
-                                    <a class="me-3" href="editsalesreturn.html">
+                                    <a class="me-3" href="add_sales_return">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -220,7 +220,7 @@
                                 <td>210</td>
                                 <td><span class="badges bg-lightgreen">Paid</span></td>
                                 <td>
-                                    <a class="me-3" href="editsalesreturn.html">
+                                    <a class="me-3" href="add_sales_return">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -249,7 +249,7 @@
                                 <td>210</td>
                                 <td><span class="badges bg-lightred">UnPaid</span></td>
                                 <td>
-                                    <a class="me-3" href="editsalesreturn.html">
+                                    <a class="me-3" href="add_sales_return">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -278,7 +278,7 @@
                                 <td>210</td>
                                 <td><span class="badges bg-lightgreen">paid</span></td>
                                 <td>
-                                    <a class="me-3" href="editsalesreturn.html">
+                                    <a class="me-3" href="add_sales_return">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -307,7 +307,7 @@
                                 <td>1000</td>
                                 <td><span class="badges bg-lightyellow">Partial</span></td>
                                 <td>
-                                    <a class="me-3" href="editsalesreturn.html">
+                                    <a class="me-3" href="add_sales_return">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -336,7 +336,7 @@
                                 <td>550</td>
                                 <td><span class="badges bg-lightgreen">Paid</span></td>
                                 <td>
-                                    <a class="me-3" href="editsalesreturn.html">
+                                    <a class="me-3" href="add_sales_return">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -365,7 +365,7 @@
                                 <td>550</td>
                                 <td><span class="badges bg-lightyellow">Partial</span></td>
                                 <td>
-                                    <a class="me-3" href="editsalesreturn.html">
+                                    <a class="me-3" href="add_sales_return">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -394,7 +394,7 @@
                                 <td>210</td>
                                 <td><span class="badges bg-lightred">Unpaid</span></td>
                                 <td>
-                                    <a class="me-3" href="editsalesreturn.html">
+                                    <a class="me-3" href="add_sales_return">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -423,7 +423,7 @@
                                 <td>210</td>
                                 <td><span class="badges bg-lightgreen">Paid</span></td>
                                 <td>
-                                    <a class="me-3" href="editsalesreturn.html">
+                                    <a class="me-3" href="add_sales_return">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -452,7 +452,7 @@
                                 <td>210</td>
                                 <td><span class="badges bg-lightred">UnPaid</span></td>
                                 <td>
-                                    <a class="me-3" href="editsalesreturn.html">
+                                    <a class="me-3" href="add_sales_return">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -481,7 +481,7 @@
                                 <td>210</td>
                                 <td><span class="badges bg-lightgreen">paid</span></td>
                                 <td>
-                                    <a class="me-3" href="editsalesreturn.html">
+                                    <a class="me-3" href="add_sales_return">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -510,7 +510,7 @@
                                 <td>1000</td>
                                 <td><span class="badges bg-lightyellow">Partial</span></td>
                                 <td>
-                                    <a class="me-3" href="editsalesreturn.html">
+                                    <a class="me-3" href="add_sales_return">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">

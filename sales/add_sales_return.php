@@ -2,11 +2,11 @@
     <div class="content">
         <div class="page-header">
             <div class="page-title">
-                <h4>Quotation Add</h4>
-                <h6>Add/Update Quotation</h6>
+                <h4>Create Sales Return</h4>
+                <h6>Add/Update Sales Return</h6>
             </div>
         </div>
-        <form enctype="multipart/form-data" action="/quotation/add_quotation" class="new_form" method="post">
+        <form enctype="multipart/form-data" action="/sales/add_sales_returns" class="new_form" method="post">
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -15,7 +15,7 @@
                             <label>Customer Name</label>
                             <div class="row">
                                 <div class="col-lg-10 col-sm-10 col-10">
-                                    <select class="select " name="customer" id="customer">
+                                    <select class="select " name="customer_name" id="customer_name">
                                         <option>Select Customer</option>
                                         <option>Customer</option>
                                     </select>
@@ -30,16 +30,16 @@
                     </div>
                     <div class="col-lg-3 col-sm-6 col-12">
                         <div class="form-group">
-                            <label>Quotation Date </label>
+                            <label>Quotation Date</label>
                             <div class="input-groupicon">
-                                <input type="text" placeholder="DD-MM-YYYY" class="datetimepicker" name="date" id="date">
+                                <input type="text" placeholder="DD-MM-YYYY" class="datetimepicker" name="quotation_date" id="quotation_date">
                                 <div class="addonset">
                                     <img src="/assets/img/icons/calendars.svg" alt="img">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-sm-6 col-12">
+                    <div class="col-lg-3 col-sm-6 col-12">
                         <div class="form-group">
                             <label>Reference No.</label>
                             <input type="text" name="reference_number" id="reference_number">
@@ -47,10 +47,10 @@
                     </div>
                     <div class="col-lg-12 col-sm-6 col-12">
                         <div class="form-group">
-                            <label>Product Name</label>
+                            <label>Product</label>
                             <div class="input-groupicon">
                                 <input type="text" placeholder="Scan/Search Product by code and select..." name="product_name" id="product_name">
-                                <div class="addonset">
+                                <div class="addonset ">
                                     <img src="/assets/img/icons/scanners.svg" alt="img">
                                 </div>
                             </div>
@@ -58,17 +58,17 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="table-responsive">
+                    <div class="table-responsive ">
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>Product</th>
+                                    <th>Product Name</th>
                                     <th>Net Unit Price($) </th>
                                     <th>Stock</th>
-                                    <th>Qty</th>
+                                    <th>QTY </th>
                                     <th>Discount($) </th>
                                     <th>Tax % </th>
-                                    <th class="text-end">Subtotal ($)</th>
+                                    <th>Subtotal ($) </th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -84,27 +84,27 @@
                                     <td>500</td>
                                     <td>500</td>
                                     <td>100</td>
+                                    <td>50</td>
                                     <td>250</td>
-                                    <td class="text-end">500</td>
                                     <td>
-                                        <a href="javascript:void(0);" class="delete-set"><img src="/assets/img/icons/delete.svg" alt="svg"></a>
+                                        <a class="delete-set"><img src="/assets/img/icons/delete.svg" alt="svg"></a>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr class="bor-b1">
                                     <td class="productimgname">
                                         <a class="product-img">
                                             <img src="/assets/img/product/product6.jpg" alt="product">
                                         </a>
                                         <a href="javascript:void(0);">Macbook Pro</a>
                                     </td>
-                                    <td>15.00</td>
-                                    <td>6000.00</td>
-                                    <td>100.00</td>
-                                    <td>0.00</td>
-                                    <td>0.00</td>
-                                    <td class="text-end">1000.00</td>
+                                    <td>150</td>
+                                    <td>500</td>
+                                    <td>500</td>
+                                    <td>100</td>
+                                    <td>50</td>
+                                    <td>250</td>
                                     <td>
-                                        <a href="javascript:void(0);" class="delete-set"><img src="/assets/img/icons/delete.svg" alt="svg"></a>
+                                        <a class="delete-set"><img src="/assets/img/icons/delete.svg" alt="svg"></a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -172,7 +172,7 @@
                     </div>
                     <div class="col-lg-12">
                         <a href="javascript:void(0);" class="btn btn-submit me-2">Submit</a>
-                        <a href="quotation_list" class="btn btn-cancel">Cancel</a>
+                        <a href="sales_return_list" class="btn btn-cancel">Cancel</a>
                     </div>
                 </div>
             </div>

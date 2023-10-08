@@ -6,7 +6,7 @@
                 <h6>Manage your User</h6>
             </div>
             <div class="page-btn">
-                <a href="newuser.html" class="btn btn-added"><img src="assets/img/icons/plus.svg" alt="img">Add
+                <a href="new_user" class="btn btn-added"><img src="assets/img/icons/plus.svg" alt="img">Add
                     User</a>
             </div>
         </div>
@@ -120,7 +120,7 @@
                                 <td>3/15/2022</td>
                                 <td><span class="bg-lightgreen badges">Active</span></td>
                                 <td>
-                                    <a class="me-3" href="newuseredit.html">
+                                    <a class="me-3" href="new_user">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -143,7 +143,7 @@
                                 <td>2/27/2022</td>
                                 <td><span class="bg-lightred badges">Restricted</span></td>
                                 <td>
-                                    <a class="me-3" href="newuseredit.html">
+                                    <a class="me-3" href="new_user">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -166,7 +166,7 @@
                                 <td>2/27/2022</td>
                                 <td><span class="bg-lightred badges">Restricted</span></td>
                                 <td>
-                                    <a class="me-3" href="newuseredit.html">
+                                    <a class="me-3" href="new_user">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -189,7 +189,7 @@
                                 <td>2/27/2022</td>
                                 <td><span class="bg-lightred badges">Restricted</span></td>
                                 <td>
-                                    <a class="me-3" href="newuseredit.html">
+                                    <a class="me-3" href="new_user">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -212,7 +212,7 @@
                                 <td>2/27/2022</td>
                                 <td><span class="bg-lightgreen badges">Active</span></td>
                                 <td>
-                                    <a class="me-3" href="newuseredit.html">
+                                    <a class="me-3" href="new_user">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -235,7 +235,7 @@
                                 <td>2/27/2022</td>
                                 <td><span class="bg-lightgreen badges">Active</span></td>
                                 <td>
-                                    <a class="me-3" href="newuseredit.html">
+                                    <a class="me-3" href="new_user">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -258,7 +258,7 @@
                                 <td>3/15/2022</td>
                                 <td><span class="bg-lightgreen badges">Active</span></td>
                                 <td>
-                                    <a class="me-3" href="newuseredit.html">
+                                    <a class="me-3" href="new_user">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -281,7 +281,7 @@
                                 <td>3/15/2022</td>
                                 <td><span class="bg-lightgreen badges">Active</span></td>
                                 <td>
-                                    <a class="me-3" href="newuseredit.html">
+                                    <a class="me-3" href="new_user">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -304,7 +304,7 @@
                                 <td>2/27/2022</td>
                                 <td><span class="bg-lightred badges">Restricted</span></td>
                                 <td>
-                                    <a class="me-3" href="newuseredit.html">
+                                    <a class="me-3" href="new_user">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -327,7 +327,7 @@
                                 <td>2/27/2022</td>
                                 <td><span class="bg-lightred badges">Restricted</span></td>
                                 <td>
-                                    <a class="me-3" href="newuseredit.html">
+                                    <a class="me-3" href="new_user">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -350,7 +350,7 @@
                                 <td>2/27/2022</td>
                                 <td><span class="bg-lightred badges">Restricted</span></td>
                                 <td>
-                                    <a class="me-3" href="newuseredit.html">
+                                    <a class="me-3" href="new_user">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -373,7 +373,7 @@
                                 <td>2/27/2022</td>
                                 <td><span class="bg-lightgreen badges">Active</span></td>
                                 <td>
-                                    <a class="me-3" href="newuseredit.html">
+                                    <a class="me-3" href="new_user">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -396,7 +396,7 @@
                                 <td>2/27/2022</td>
                                 <td><span class="bg-lightgreen badges">Active</span></td>
                                 <td>
-                                    <a class="me-3" href="newuseredit.html">
+                                    <a class="me-3" href="new_user">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -419,7 +419,7 @@
                                 <td>3/15/2022</td>
                                 <td><span class="bg-lightgreen badges">Active</span></td>
                                 <td>
-                                    <a class="me-3" href="newuseredit.html">
+                                    <a class="me-3" href="new_user">
                                         <img src="assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">

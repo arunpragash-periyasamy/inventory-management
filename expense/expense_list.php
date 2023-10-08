@@ -6,7 +6,7 @@
                 <h6>Manage your purchases</h6>
             </div>
             <div class="page-btn">
-                <a href="createexpense.html" class="btn btn-added"><img src="/assets/img/icons/plus.svg" class="me-2" alt="img">Add New Expense</a>
+                <a href="add_expense" class="btn btn-added"><img src="/assets/img/icons/plus.svg" class="me-2" alt="img">Add New Expense</a>
             </div>
         </div>
 
@@ -120,7 +120,7 @@
                                 <td>120</td>
                                 <td>Employee Vehicle</td>
                                 <td>
-                                    <a class="me-3" href="editexpense.html">
+                                    <a class="me-3" href="add_expense">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -142,7 +142,7 @@
                                 <td>250</td>
                                 <td>Employee Foods</td>
                                 <td>
-                                    <a class="me-3" href="editexpense.html">
+                                    <a class="me-3" href="add_expense">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -164,7 +164,7 @@
                                 <td>120</td>
                                 <td>Office Vehicle</td>
                                 <td>
-                                    <a class="me-3" href="editexpense.html">
+                                    <a class="me-3" href="add_expense">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -186,7 +186,7 @@
                                 <td>320</td>
                                 <td>Employee Foods</td>
                                 <td>
-                                    <a class="me-3" href="editexpense.html">
+                                    <a class="me-3" href="add_expense">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -208,7 +208,7 @@
                                 <td>250</td>
                                 <td>Employee Vehicle</td>
                                 <td>
-                                    <a class="me-3" href="editexpense.html">
+                                    <a class="me-3" href="add_expense">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -230,7 +230,7 @@
                                 <td>250</td>
                                 <td>Employee Foods</td>
                                 <td>
-                                    <a class="me-3" href="editexpense.html">
+                                    <a class="me-3" href="add_expense">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -252,7 +252,7 @@
                                 <td>120</td>
                                 <td>Office Vehicle</td>
                                 <td>
-                                    <a class="me-3" href="editexpense.html">
+                                    <a class="me-3" href="add_expense">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -274,7 +274,7 @@
                                 <td>320</td>
                                 <td>Employee Foods</td>
                                 <td>
-                                    <a class="me-3" href="editexpense.html">
+                                    <a class="me-3" href="add_expense">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -296,7 +296,7 @@
                                 <td>120</td>
                                 <td>Employee Vehicle</td>
                                 <td>
-                                    <a class="me-3" href="editexpense.html">
+                                    <a class="me-3" href="add_expense">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -318,7 +318,7 @@
                                 <td>250</td>
                                 <td>Employee Foods</td>
                                 <td>
-                                    <a class="me-3" href="editexpense.html">
+                                    <a class="me-3" href="add_expense">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -340,7 +340,7 @@
                                 <td>120</td>
                                 <td>Office Vehicle</td>
                                 <td>
-                                    <a class="me-3" href="editexpense.html">
+                                    <a class="me-3" href="add_expense">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -362,7 +362,7 @@
                                 <td>320</td>
                                 <td>Employee Foods</td>
                                 <td>
-                                    <a class="me-3" href="editexpense.html">
+                                    <a class="me-3" href="add_expense">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">

@@ -162,7 +162,7 @@
                         </div>
                         <div class="col-lg-12">
                             <a href="javascript:void(0);" class="btn btn-submit me-2">Submit</a>
-                            <a href="transferlist.html" class="btn btn-cancel">Cancel</a>
+                            <a href="transfer_list" class="btn btn-cancel">Cancel</a>
                         </div>
                     </div>
                 </div>

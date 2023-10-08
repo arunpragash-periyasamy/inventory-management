@@ -6,7 +6,7 @@
                 <h6>Manage your sales</h6>
             </div>
             <div class="page-btn">
-                <a href="add-sales.html" class="btn btn-added"><img src="/assets/img/icons/plus.svg" alt="img" class="me-1">Add Sales</a>
+                <a href="add_sales" class="btn btn-added"><img src="/assets/img/icons/plus.svg" alt="img" class="me-1">Add Sales</a>
             </div>
         </div>
 
@@ -123,11 +123,11 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a href="sales-details.html" class="dropdown-item"><img src="/assets/img/icons/eye1.svg" class="me-2" alt="img">Sale
+                                            <a href="sales_details" class="dropdown-item"><img src="/assets/img/icons/eye1.svg" class="me-2" alt="img">Sale
                                                 Detail</a>
                                         </li>
                                         <li>
-                                            <a href="edit-sales.html" class="dropdown-item"><img src="/assets/img/icons/edit.svg" class="me-2" alt="img">Edit
+                                            <a href="edit_sales" class="dropdown-item"><img src="/assets/img/icons/edit.svg" class="me-2" alt="img">Edit
                                                 Sale</a>
                                         </li>
                                         <li>
@@ -167,11 +167,11 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a href="sales-details.html" class="dropdown-item"><img src="/assets/img/icons/eye1.svg" class="me-2" alt="img">Sale
+                                            <a href="sales_details" class="dropdown-item"><img src="/assets/img/icons/eye1.svg" class="me-2" alt="img">Sale
                                                 Detail</a>
                                         </li>
                                         <li>
-                                            <a href="edit-sales.html" class="dropdown-item"><img src="/assets/img/icons/edit.svg" class="me-2" alt="img">Edit
+                                            <a href="edit_sales" class="dropdown-item"><img src="/assets/img/icons/edit.svg" class="me-2" alt="img">Edit
                                                 Sale</a>
                                         </li>
                                         <li>
@@ -211,11 +211,11 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a href="sales-details.html" class="dropdown-item"><img src="/assets/img/icons/eye1.svg" class="me-2" alt="img">Sale
+                                            <a href="sales_details" class="dropdown-item"><img src="/assets/img/icons/eye1.svg" class="me-2" alt="img">Sale
                                                 Detail</a>
                                         </li>
                                         <li>
-                                            <a href="edit-sales.html" class="dropdown-item"><img src="/assets/img/icons/edit.svg" class="me-2" alt="img">Edit
+                                            <a href="edit_sales" class="dropdown-item"><img src="/assets/img/icons/edit.svg" class="me-2" alt="img">Edit
                                                 Sale</a>
                                         </li>
                                         <li>
@@ -255,11 +255,11 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a href="sales-details.html" class="dropdown-item"><img src="/assets/img/icons/eye1.svg" class="me-2" alt="img">Sale
+                                            <a href="sales_details" class="dropdown-item"><img src="/assets/img/icons/eye1.svg" class="me-2" alt="img">Sale
                                                 Detail</a>
                                         </li>
                                         <li>
-                                            <a href="edit-sales.html" class="dropdown-item"><img src="/assets/img/icons/edit.svg" class="me-2" alt="img">Edit
+                                            <a href="edit_sales" class="dropdown-item"><img src="/assets/img/icons/edit.svg" class="me-2" alt="img">Edit
                                                 Sale</a>
                                         </li>
                                         <li>
@@ -299,11 +299,11 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a href="sales-details.html" class="dropdown-item"><img src="/assets/img/icons/eye1.svg" class="me-2" alt="img">Sale
+                                            <a href="sales_details" class="dropdown-item"><img src="/assets/img/icons/eye1.svg" class="me-2" alt="img">Sale
                                                 Detail</a>
                                         </li>
                                         <li>
-                                            <a href="edit-sales.html" class="dropdown-item"><img src="/assets/img/icons/edit.svg" class="me-2" alt="img">Edit
+                                            <a href="edit_sales" class="dropdown-item"><img src="/assets/img/icons/edit.svg" class="me-2" alt="img">Edit
                                                 Sale</a>
                                         </li>
                                         <li>
@@ -343,11 +343,11 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a href="sales-details.html" class="dropdown-item"><img src="/assets/img/icons/eye1.svg" class="me-2" alt="img">Sale
+                                            <a href="sales_details" class="dropdown-item"><img src="/assets/img/icons/eye1.svg" class="me-2" alt="img">Sale
                                                 Detail</a>
                                         </li>
                                         <li>
-                                            <a href="edit-sales.html" class="dropdown-item"><img src="/assets/img/icons/edit.svg" class="me-2" alt="img">Edit
+                                            <a href="edit_sales" class="dropdown-item"><img src="/assets/img/icons/edit.svg" class="me-2" alt="img">Edit
                                                 Sale</a>
                                         </li>
                                         <li>
@@ -387,11 +387,11 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a href="sales-details.html" class="dropdown-item"><img src="/assets/img/icons/eye1.svg" class="me-2" alt="img">Sale
+                                            <a href="sales_details" class="dropdown-item"><img src="/assets/img/icons/eye1.svg" class="me-2" alt="img">Sale
                                                 Detail</a>
                                         </li>
                                         <li>
-                                            <a href="edit-sales.html" class="dropdown-item"><img src="/assets/img/icons/edit.svg" class="me-2" alt="img">Edit
+                                            <a href="edit_sales" class="dropdown-item"><img src="/assets/img/icons/edit.svg" class="me-2" alt="img">Edit
                                                 Sale</a>
                                         </li>
                                         <li>
@@ -431,11 +431,11 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a href="sales-details.html" class="dropdown-item"><img src="/assets/img/icons/eye1.svg" class="me-2" alt="img">Sale
+                                            <a href="sales_details" class="dropdown-item"><img src="/assets/img/icons/eye1.svg" class="me-2" alt="img">Sale
                                                 Detail</a>
                                         </li>
                                         <li>
-                                            <a href="edit-sales.html" class="dropdown-item"><img src="/assets/img/icons/edit.svg" class="me-2" alt="img">Edit
+                                            <a href="edit_sales" class="dropdown-item"><img src="/assets/img/icons/edit.svg" class="me-2" alt="img">Edit
                                                 Sale</a>
                                         </li>
                                         <li>
@@ -475,11 +475,11 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a href="sales-details.html" class="dropdown-item"><img src="/assets/img/icons/eye1.svg" class="me-2" alt="img">Sale
+                                            <a href="sales_details" class="dropdown-item"><img src="/assets/img/icons/eye1.svg" class="me-2" alt="img">Sale
                                                 Detail</a>
                                         </li>
                                         <li>
-                                            <a href="edit-sales.html" class="dropdown-item"><img src="/assets/img/icons/edit.svg" class="me-2" alt="img">Edit
+                                            <a href="edit_sales" class="dropdown-item"><img src="/assets/img/icons/edit.svg" class="me-2" alt="img">Edit
                                                 Sale</a>
                                         </li>
                                         <li>
@@ -519,11 +519,11 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a href="sales-details.html" class="dropdown-item"><img src="/assets/img/icons/eye1.svg" class="me-2" alt="img">Sale
+                                            <a href="sales_details" class="dropdown-item"><img src="/assets/img/icons/eye1.svg" class="me-2" alt="img">Sale
                                                 Detail</a>
                                         </li>
                                         <li>
-                                            <a href="edit-sales.html" class="dropdown-item"><img src="/assets/img/icons/edit.svg" class="me-2" alt="img">Edit
+                                            <a href="edit_sales" class="dropdown-item"><img src="/assets/img/icons/edit.svg" class="me-2" alt="img">Edit
                                                 Sale</a>
                                         </li>
                                         <li>
@@ -563,11 +563,11 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a href="sales-details.html" class="dropdown-item"><img src="/assets/img/icons/eye1.svg" class="me-2" alt="img">Sale
+                                            <a href="sales_details" class="dropdown-item"><img src="/assets/img/icons/eye1.svg" class="me-2" alt="img">Sale
                                                 Detail</a>
                                         </li>
                                         <li>
-                                            <a href="edit-sales.html" class="dropdown-item"><img src="/assets/img/icons/edit.svg" class="me-2" alt="img">Edit
+                                            <a href="edit_sales" class="dropdown-item"><img src="/assets/img/icons/edit.svg" class="me-2" alt="img">Edit
                                                 Sale</a>
                                         </li>
                                         <li>

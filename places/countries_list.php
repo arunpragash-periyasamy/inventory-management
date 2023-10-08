@@ -7,7 +7,7 @@
                         <h6>Manage your Countries</h6>
                     </div>
                     <div class="page-btn">
-                        <a href="newcountry.html" class="btn btn-added">
+                        <a href="new_country" class="btn btn-added">
                             <img src="/assets/img/icons/plus.svg" alt="img" class="me-2">Add Country
                         </a>
                     </div>
@@ -123,7 +123,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editcountry.html">
+                                            <a class="me-3" href="new_country">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -148,7 +148,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editcountry.html">
+                                            <a class="me-3" href="new_country">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -173,7 +173,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editcountry.html">
+                                            <a class="me-3" href="new_country">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -198,7 +198,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editcountry.html">
+                                            <a class="me-3" href="new_country">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -223,7 +223,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editcountry.html">
+                                            <a class="me-3" href="new_country">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -248,7 +248,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editcountry.html">
+                                            <a class="me-3" href="new_country">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -273,7 +273,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editcountry.html">
+                                            <a class="me-3" href="new_country">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -298,7 +298,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editcountry.html">
+                                            <a class="me-3" href="new_country">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -323,7 +323,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editcountry.html">
+                                            <a class="me-3" href="new_country">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -348,7 +348,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editcountry.html">
+                                            <a class="me-3" href="new_country">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -373,7 +373,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editcountry.html">
+                                            <a class="me-3" href="new_country">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -398,7 +398,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editcountry.html">
+                                            <a class="me-3" href="new_country">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -423,7 +423,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editcountry.html">
+                                            <a class="me-3" href="new_country">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -448,7 +448,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a class="me-3" href="editcountry.html">
+                                            <a class="me-3" href="new_country">
                                                 <img src="/assets/img/icons/edit.svg" alt="img">
                                             </a>
                                             <a class="me-3 confirm-text" href="javascript:void(0);">

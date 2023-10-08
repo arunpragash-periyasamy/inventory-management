@@ -6,7 +6,7 @@
                 <h6>Manage your Supplier</h6>
             </div>
             <div class="page-btn">
-                <a href="addsupplier.html" class="btn btn-added"><img src="/assets/img/icons/plus.svg" alt="img">Add Supplier</a>
+                <a href="add_supplier" class="btn btn-added"><img src="/assets/img/icons/plus.svg" alt="img">Add Supplier</a>
             </div>
         </div>
 
@@ -112,7 +112,7 @@
                                 </td>
                                 <td>China</td>
                                 <td>
-                                    <a class="me-3" href="editsupplier.html">
+                                    <a class="me-3" href="add_supplier">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -139,7 +139,7 @@
                                 </td>
                                 <td>USA</td>
                                 <td>
-                                    <a class="me-3" href="editsupplier.html">
+                                    <a class="me-3" href="add_supplier">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -166,7 +166,7 @@
                                 </td>
                                 <td>USA</td>
                                 <td>
-                                    <a class="me-3" href="editsupplier.html">
+                                    <a class="me-3" href="add_supplier">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -193,7 +193,7 @@
                                 </td>
                                 <td>Thailand</td>
                                 <td>
-                                    <a class="me-3" href="editsupplier.html">
+                                    <a class="me-3" href="add_supplier">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -220,7 +220,7 @@
                                 </td>
                                 <td>Phuket island</td>
                                 <td>
-                                    <a class="me-3" href="editsupplier.html">
+                                    <a class="me-3" href="add_supplier">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -247,7 +247,7 @@
                                 </td>
                                 <td>Germany</td>
                                 <td>
-                                    <a class="me-3" href="editsupplier.html">
+                                    <a class="me-3" href="add_supplier">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -274,7 +274,7 @@
                                 </td>
                                 <td>Angola</td>
                                 <td>
-                                    <a class="me-3" href="editsupplier.html">
+                                    <a class="me-3" href="add_supplier">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -301,7 +301,7 @@
                                 </td>
                                 <td>Albania</td>
                                 <td>
-                                    <a class="me-3" href="editsupplier.html">
+                                    <a class="me-3" href="add_supplier">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -328,7 +328,7 @@
                                 </td>
                                 <td>Thailand</td>
                                 <td>
-                                    <a class="me-3" href="editsupplier.html">
+                                    <a class="me-3" href="add_supplier">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -355,7 +355,7 @@
                                 </td>
                                 <td>Phuket island</td>
                                 <td>
-                                    <a class="me-3" href="editsupplier.html">
+                                    <a class="me-3" href="add_supplier">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -382,7 +382,7 @@
                                 </td>
                                 <td>Germany</td>
                                 <td>
-                                    <a class="me-3" href="editsupplier.html">
+                                    <a class="me-3" href="add_supplier">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -409,7 +409,7 @@
                                 </td>
                                 <td>Angola</td>
                                 <td>
-                                    <a class="me-3" href="editsupplier.html">
+                                    <a class="me-3" href="add_supplier">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -436,7 +436,7 @@
                                 </td>
                                 <td>Albania</td>
                                 <td>
-                                    <a class="me-3" href="editsupplier.html">
+                                    <a class="me-3" href="add_supplier">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">

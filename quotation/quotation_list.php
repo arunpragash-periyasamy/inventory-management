@@ -6,7 +6,7 @@
                 <h6>Manage your Quotations</h6>
             </div>
             <div class="page-btn">
-                <a href="addquotation.html" class="btn btn-added">
+                <a href="add_quotation" class="btn btn-added">
                     <img src="/assets/img/icons/plus.svg" alt="img" class="me-2"> Add Quotation
                 </a>
             </div>
@@ -117,7 +117,7 @@
                                 <td><span class="badges bg-lightgreen">Sent</span></td>
                                 <td>550</td>
                                 <td>
-                                    <a class="me-3" href="editquotation.html">
+                                    <a class="me-3" href="add_quotation">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -143,7 +143,7 @@
                                 <td><span class="badges bg-lightyellow">Ordered</span></td>
                                 <td>410</td>
                                 <td>
-                                    <a class="me-3" href="editquotation.html">
+                                    <a class="me-3" href="add_quotation">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -169,7 +169,7 @@
                                 <td><span class="badges bg-lightred">Pending</span></td>
                                 <td>210</td>
                                 <td>
-                                    <a class="me-3" href="editquotation.html">
+                                    <a class="me-3" href="add_quotation">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -195,7 +195,7 @@
                                 <td><span class="badges bg-lightgreen">Sent</span></td>
                                 <td>500</td>
                                 <td>
-                                    <a class="me-3" href="editquotation.html">
+                                    <a class="me-3" href="add_quotation">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -221,7 +221,7 @@
                                 <td><span class="badges bg-lightred">Pending</span></td>
                                 <td>1050</td>
                                 <td>
-                                    <a class="me-3" href="editquotation.html">
+                                    <a class="me-3" href="add_quotation">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -247,7 +247,7 @@
                                 <td><span class="badges bg-lightgreen">Sent</span></td>
                                 <td>2530</td>
                                 <td>
-                                    <a class="me-3" href="editquotation.html">
+                                    <a class="me-3" href="add_quotation">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -273,7 +273,7 @@
                                 <td><span class="badges bg-lightgreen">Sent</span></td>
                                 <td>550</td>
                                 <td>
-                                    <a class="me-3" href="editquotation.html">
+                                    <a class="me-3" href="add_quotation">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -299,7 +299,7 @@
                                 <td><span class="badges bg-lightgreen">Ordered</span></td>
                                 <td>550</td>
                                 <td>
-                                    <a class="me-3" href="editquotation.html">
+                                    <a class="me-3" href="add_quotation">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -325,7 +325,7 @@
                                 <td><span class="badges bg-lightred">Pending</span></td>
                                 <td>210</td>
                                 <td>
-                                    <a class="me-3" href="editquotation.html">
+                                    <a class="me-3" href="add_quotation">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -351,7 +351,7 @@
                                 <td><span class="badges bg-lightgreen">Sent</span></td>
                                 <td>2530</td>
                                 <td>
-                                    <a class="me-3" href="editquotation.html">
+                                    <a class="me-3" href="add_quotation">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -377,7 +377,7 @@
                                 <td><span class="badges bg-lightgreen">Sent</span></td>
                                 <td>550</td>
                                 <td>
-                                    <a class="me-3" href="editquotation.html">
+                                    <a class="me-3" href="add_quotation">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -403,7 +403,7 @@
                                 <td><span class="badges bg-lightgreen">Ordered</span></td>
                                 <td>550</td>
                                 <td>
-                                    <a class="me-3" href="editquotation.html">
+                                    <a class="me-3" href="add_quotation">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">

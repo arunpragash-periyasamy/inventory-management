@@ -6,7 +6,7 @@
                 <h6>Manage your Store</h6>
             </div>
             <div class="page-btn">
-                <a href="addstore.html" class="btn btn-added"><img src="/assets/img/icons/plus.svg" alt="img" class="me-2">Add Store</a>
+                <a href="add_store" class="btn btn-added"><img src="/assets/img/icons/plus.svg" alt="img" class="me-2">Add Store</a>
             </div>
         </div>
 
@@ -114,7 +114,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a class="me-3" href="editstore.html">
+                                    <a class="me-3" href="add_store">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -141,7 +141,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a class="me-3" href="editstore.html">
+                                    <a class="me-3" href="add_store">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -168,7 +168,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a class="me-3" href="editstore.html">
+                                    <a class="me-3" href="add_store">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -195,7 +195,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a class="me-3" href="editstore.html">
+                                    <a class="me-3" href="add_store">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -222,7 +222,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a class="me-3" href="editstore.html">
+                                    <a class="me-3" href="add_store">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -249,7 +249,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a class="me-3" href="editstore.html">
+                                    <a class="me-3" href="add_store">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -276,7 +276,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a class="me-3" href="editstore.html">
+                                    <a class="me-3" href="add_store">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -303,7 +303,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a class="me-3" href="editstore.html">
+                                    <a class="me-3" href="add_store">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -330,7 +330,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a class="me-3" href="editstore.html">
+                                    <a class="me-3" href="add_store">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -357,7 +357,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a class="me-3" href="editstore.html">
+                                    <a class="me-3" href="add_store">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -384,7 +384,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a class="me-3" href="editstore.html">
+                                    <a class="me-3" href="add_store">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -411,7 +411,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a class="me-3" href="editstore.html">
+                                    <a class="me-3" href="add_store">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">

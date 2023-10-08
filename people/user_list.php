@@ -6,7 +6,7 @@
                 <h6>Manage your User</h6>
             </div>
             <div class="page-btn">
-                <a href="adduser.html" class="btn btn-added"><img src="/assets/img/icons/plus.svg" alt="img" class="me-2">Add User</a>
+                <a href="add_user" class="btn btn-added"><img src="/assets/img/icons/plus.svg" alt="img" class="me-2">Add User</a>
             </div>
         </div>
 
@@ -125,7 +125,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a class="me-3" href="edituser.html">
+                                    <a class="me-3" href="edit_user">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -158,7 +158,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a class="me-3" href="edituser.html">
+                                    <a class="me-3" href="edit_user">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -191,7 +191,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a class="me-3" href="edituser.html">
+                                    <a class="me-3" href="edit_user">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -224,7 +224,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a class="me-3" href="edituser.html">
+                                    <a class="me-3" href="edit_user">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -257,7 +257,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a class="me-3" href="edituser.html">
+                                    <a class="me-3" href="edit_user">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -290,7 +290,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a class="me-3" href="edituser.html">
+                                    <a class="me-3" href="edit_user">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -324,7 +324,7 @@
                                 </td>
                                 <td>
 
-                                    <a class="me-3" href="edituser.html">
+                                    <a class="me-3" href="edit_user">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -357,7 +357,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a class="me-3" href="edituser.html">
+                                    <a class="me-3" href="edit_user">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -390,7 +390,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a class="me-3" href="edituser.html">
+                                    <a class="me-3" href="edit_user">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -423,7 +423,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a class="me-3" href="edituser.html">
+                                    <a class="me-3" href="edit_user">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -456,7 +456,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a class="me-3" href="edituser.html">
+                                    <a class="me-3" href="edit_user">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -489,7 +489,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a class="me-3" href="edituser.html">
+                                    <a class="me-3" href="edit_user">
                                         <img src="/assets/img/icons/edit.svg" alt="img">
                                     </a>
                                     <a class="me-3 confirm-text" href="javascript:void(0);">

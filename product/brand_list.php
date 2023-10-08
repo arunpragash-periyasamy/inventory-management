@@ -6,7 +6,7 @@
             <h6>Manage your Brand</h6>
         </div>
         <div class="page-btn">
-            <a href="addbrand.html" class="btn btn-added"><img src="/assets/img/icons/plus.svg" class="me-2" alt="img">Add Brand</a>
+            <a href="add_brand" class="btn btn-added"><img src="/assets/img/icons/plus.svg" class="me-2" alt="img">Add Brand</a>
         </div>
     </div>
 
@@ -94,7 +94,7 @@
                             <td>Adidas</td>
                             <td>Shoes, sportswear</td>
                             <td>
-                                <a class="me-3" href="editbrand.html">
+                                <a class="me-3" href="add_brand">
                                     <img src="/assets/img/icons/edit.svg" alt="img">
                                 </a>
                                 <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -117,7 +117,7 @@
                             <td>Colgate</td>
                             <td>Oral hygiene. Toothbrushes</td>
                             <td>
-                                <a class="me-3" href="editbrand.html">
+                                <a class="me-3" href="add_brand">
                                     <img src="/assets/img/icons/edit.svg" alt="img">
                                 </a>
                                 <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -140,7 +140,7 @@
                             <td>samsung</td>
                             <td>Electronics</td>
                             <td>
-                                <a class="me-3" href="editbrand.html">
+                                <a class="me-3" href="add_brand">
                                     <img src="/assets/img/icons/edit.svg" alt="img">
                                 </a>
                                 <a class="me-3 confirm-text" href="javascript:void(0);">
