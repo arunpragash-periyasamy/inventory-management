@@ -1,4 +1,16 @@
 <?php
+
+
+$method = $_SERVER['REQUEST_METHOD'];
+$request = $_SERVER['REQUEST_URI'];
+$headers = getallheaders();
+
+if($_POST){
+    $var = ["method"=>$method, "post"=>$_POST, "request"=>$request, "headers"=>$headers];
+    print_r($var);
+    return;
+}
+
 $url = $_GET['url'];
 $url = explode("/", $url);
 $page_title = ucfirst(str_replace("_", " ", $url[1]));

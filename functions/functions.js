@@ -138,25 +138,28 @@ const change_content = () => {
 
 
 const getFormData = async (elementClass="new_form") => {
-  const formData = $(`form.${elementClass}`).serializeArray();
-
   const formDataObject = {
     time: getTime(),
   };
 
-  try {
-    const ipAddress = await getIp();
-    formDataObject.ip = ipAddress;
-  } catch (error) {
-    formDataObject.ip = "error";
-    console.error('Error:', error);
-  }
+  // try {
+  //   const ipAddress = await getIp();
+  //   formDataObject.ip = ipAddress;
+  // } catch (error) {
+  //   formDataObject.ip = "error";
+  //   console.error('Error:', error);
+  // }
 
-  formData.forEach((item) => {
-    if (item.value !== "") {
-      formDataObject[item.name] = item.value;
+  $(`form.${elementClass} :input`).each(function () {
+    const $input = $(this);
+    const name = $input.attr('name');
+    const value = $input.val();
+    
+    if (name && value !== "") {
+      formDataObject[name] = value;
     }
   });
+
   return formDataObject;
 }
 
@@ -171,7 +174,7 @@ const resetForm = (elementClass = "new_form") => {
 const handleForm = async (elementClass = "new_form", method = "insert") => {
   let formData = await getFormData();
   $.ajax({
-    url: '/functions/form_submit.php',
+    url: '/functions/form_submit',
     type: 'POST',
     data: {
       page: currentPage,
