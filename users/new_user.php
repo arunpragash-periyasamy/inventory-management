@@ -62,7 +62,7 @@
                             </div>
                         </div>
                         <div class="col-lg-12">
-                            <a href="javascript:void(0);" class="btn btn-submit me-2">Submit</a>
+                            <button type="button" class="btn btn-submit me-2">Submit</button>
                             <a href="javascript:void(0);" class="btn btn-cancel">Cancel</a>
                         </div>
                     </div>

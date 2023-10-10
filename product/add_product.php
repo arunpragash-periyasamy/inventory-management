@@ -125,7 +125,7 @@
                         </div>
                     </div>
                     <div class="col-lg-12">
-                        <button type="button" class="btn btn-submit me-2">submit</button>
+                        <button type="button" class="btn btn-submit me-2">Submit</button>
                         <a href="product_list" class="btn btn-cancel">Cancel</a>
                     </div>
                 </div>

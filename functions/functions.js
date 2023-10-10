@@ -3,28 +3,23 @@
 const getTime = () => {
   // Get the current date and time
   var currentTime = new Date();
-
+  
   // Extract the current time components (hours, minutes, seconds)
   var hours = currentTime.getHours();
   var minutes = currentTime.getMinutes();
   var seconds = currentTime.getSeconds();
-
+  
   // You can format the time as desired, e.g., to display it on a webpage
   var formattedTime = hours + ":" + minutes + ":" + seconds;
   return formattedTime;
 }
 
-const getIp = async () => {
-  try {
-    const data = await $.getJSON('https://api.ipify.org?format=json');
-    const ipAddress = data.ip;
-    return ipAddress;
-  } catch (error) {
-    console.error('Error getting IP address: ' + error.statusText);
-    throw error;
-  }
-}
-
+// storing the ip address
+let ipAddress;
+(async () => {
+  let data = await $.getJSON('https://api.ipify.org?format=json');
+  ipAddress = data.ip;
+})();
 
 const applyPlugins = () => {
   $(".select").select2();
@@ -114,6 +109,7 @@ const change_content = () => {
         // Replace the entire #content element with the loaded content
         $('.page-wrapper').replaceWith(data);
         applyPlugins();
+        methodsOnReady();  
       });
 
     } else {
@@ -142,13 +138,7 @@ const getFormData = async (elementClass="new_form") => {
     time: getTime(),
   };
 
-  // try {
-  //   const ipAddress = await getIp();
-  //   formDataObject.ip = ipAddress;
-  // } catch (error) {
-  //   formDataObject.ip = "error";
-  //   console.error('Error:', error);
-  // }
+  formDataObject.ip = ipAddress;
 
   $(`form.${elementClass} :input`).each(function () {
     const $input = $(this);
@@ -172,6 +162,7 @@ const resetForm = (elementClass = "new_form") => {
 
 // processing the form data by removing the empty field of the form.
 const handleForm = async (elementClass = "new_form", method = "insert") => {
+  alert("Submit button clicked");
   let formData = await getFormData();
   $.ajax({
     url: '/functions/form_submit',
@@ -196,13 +187,7 @@ const handleForm = async (elementClass = "new_form", method = "insert") => {
 
 
 
-
-
-// function calling
-change_content();
-
-
-$(document).ready(function () {
+const methodsOnReady = () =>{
 
   $("form").on("submit keypress", (event) => {
     if (event.type === "submit" || event.type === "keydown") {
@@ -225,4 +210,12 @@ $(document).ready(function () {
     $(this).closest(".submenu").children("a").addClass("active subdrop");
     return false; // Prevent any other click handlers from executing
   });
-});
+
+}
+
+
+
+
+
+// function calling
+change_content();
