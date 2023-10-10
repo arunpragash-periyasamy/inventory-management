@@ -162,7 +162,6 @@ const resetForm = (elementClass = "new_form") => {
 
 // processing the form data by removing the empty field of the form.
 const handleForm = async (elementClass = "new_form", method = "insert") => {
-  alert("Submit button clicked");
   let formData = await getFormData();
   $.ajax({
     url: '/functions/form_submit',
