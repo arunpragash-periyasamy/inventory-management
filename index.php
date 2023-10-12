@@ -1,17 +1,13 @@
 <?php
 
-
+$url = $_GET['url'];
 $method = $_SERVER['REQUEST_METHOD'];
 $request = $_SERVER['REQUEST_URI'];
 $headers = getallheaders();
-
-if($_POST){
-    $var = ["method"=>$method, "post"=>$_POST, "request"=>$request, "headers"=>$headers];
-    print_r($var);
+require "./config/request_handling.php";
+if($url == "request_handling" || $url=="form_data"){
     return;
-}
-
-$url = $_GET['url'];
+}else{
 $url = explode("/", $url);
 $page_title = ucfirst(str_replace("_", " ", $url[1]));
 
@@ -57,7 +53,7 @@ $page_title = ucfirst(str_replace("_", " ", $url[1]));
         }
         ?>
     </div>
-    
+
     <script src="/assets/js/feather.min.js"></script>
     <script src="/assets/js/jquery.slimscroll.min.js"></script>
     <script src="/assets/js/jquery.dataTables.min.js"></script>
@@ -77,3 +73,7 @@ $page_title = ucfirst(str_replace("_", " ", $url[1]));
 </body>
 
 </html>
+
+<?php
+}
+?>
