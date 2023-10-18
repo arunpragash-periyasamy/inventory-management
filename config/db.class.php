@@ -1,4 +1,5 @@
 <?php
+use MeekroDBExceptionHandling as MDBExpHand;
 /*
     Copyright (C) 2008 Sergey Tsalkov (stsalkov@gmail.com)
 
@@ -466,7 +467,11 @@ class MeekroDB {
     }
     
     $query = $update_part . ' WHERE ' . $where_part;
-    return $this->query($query);
+    try{
+      return $this->query($query);
+    }catch(Exception $e){
+      MDBExpHand::meekroDBException($e);
+    }
   }
 
   public function delete() {
@@ -482,7 +487,15 @@ class MeekroDB {
     } else {
       $where = call_user_func_array(array($this, 'parse'), $args);
     }
-    
+    // copy the data
+    try{
+      $result = $this->query("SELECT * FROM {$table} WHERE {$where}");
+      $tbl = $this->formatTableName("zd_".str_replace("`","",$table));
+      $result = MDBExpHand::changeId($result);
+      $this->insert($tbl, $result);
+    }catch(Exception $e){
+        MDBExpHand::meekroDBException($e);
+    }
     $query = "DELETE FROM {$table} WHERE {$where}";
     return $this->query($query);
   }
@@ -530,9 +543,27 @@ class MeekroDB {
       $which, $table, $keys, $values);
   }
   
-  public function insert($table, $data) { return $this->insertOrReplace('INSERT', $table, $data); }
-  public function insertIgnore($table, $data) { return $this->insertOrReplace('INSERT IGNORE', $table, $data); }
-  public function replace($table, $data) { return $this->insertOrReplace('REPLACE', $table, $data); }
+  public function insert($table, $data) {
+    try{
+      return $this->insertOrReplace('INSERT', $table, $data);
+    }catch(Exception $e){
+      MDBExpHand::meekroDBException($e);
+    }
+  }
+  public function insertIgnore($table, $data) { 
+    try{
+      return $this->insertOrReplace('INSERT IGNORE', $table, $data);
+    }catch(Exception $e){
+      MDBExpHand::meekroDBException($e);
+    }
+  }
+  public function replace($table, $data) {
+    try{
+      return $this->insertOrReplace('REPLACE', $table, $data);
+    }catch(Exception $e){
+      MDBExpHand::meekroDBException($e);
+    }
+    }
   
   public function insertUpdate() {
     $args = func_get_args();
@@ -550,7 +581,11 @@ class MeekroDB {
     if (is_array($args[0])) $update = $args[0];
     else $update = $args;
     
-    return $this->insertOrReplace('INSERT', $table, $data, array('update' => $update)); 
+    try{
+      return $this->insertOrReplace('INSERT', $table, $data, array('update' => $update));
+    }catch(Exception $e){
+      MDBExpHand::meekroDBException($e);
+    }
   }
   
   public function sqleval() {
@@ -1187,4 +1222,111 @@ class MeekroDBEval {
   }
 }
 
-?>
+
+class MeekroDBExceptionHandling
+{
+    private static function create_table($table, $fields)
+    {
+        try {
+            $fields = array_diff($fields, ["id", "`id`"]);
+            $query = "CREATE TABLE " . sprintf($table) . "(id int auto_increment PRIMARY KEY, ";
+            $query .= implode(" text, ", $fields) . " text, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP);";
+            DB::query($query);
+            return true;
+        } catch (Exception $exp) {
+            throw $exp;
+            return false; //Table 'data' already exists
+        }
+    }
+
+    private static function update_table($table, $fields)
+    {
+        /** @var array $dbfields */
+        $dbfields = DB::query("SHOW COLUMNS FROM $table");
+        $dbfields = array_column($dbfields, "Field");
+        $diff_fields = array_unique(array_diff($fields, $dbfields, ["id"]));
+        $query = "ALTER TABLE " . sprintf($table) . " ADD COLUMN ";
+        $query .= implode(" text, ADD COLUMN ", $diff_fields) . " text;";
+        try {
+            DB::query($query);
+            return true;
+        } catch (Exception $exp) {
+            throw $exp;
+            return false;
+        }
+    }
+
+    public static function meekroDBException($e)
+    {
+        try {
+            $errorMessage = $e->getMessage();
+            $sql = $e->getQuery();
+
+            // update table;
+            if (preg_match("/Unknown column '.+' in 'field list'/", $errorMessage)) {
+                $data = self::getTableData($sql);
+                self::update_table($data[0], $data[1]);
+                DB::query($sql);
+            }
+
+            // create table;
+            if (preg_match("/Table 'dummy\.([^']+)' doesn't exist/", $errorMessage, $matches)) {
+                $data = self::getTableData($sql);
+                self::create_table($data[0], $data[1]);
+                DB::query($sql);
+            }
+            // Extract table name and field names for an UPDATE statement
+        } catch (Exception $e) {
+            throw $e;
+        }
+    }
+
+    private static function getTableData($sql)
+    {
+        if (preg_match("/UPDATE `([^`]+)` SET (.+?) WHERE/", $sql, $matches)) {
+            $fieldNamesWithValues = $matches[2];
+            preg_match_all("/`([^`]+)`/", $fieldNamesWithValues, $fieldMatches);
+            $tableName = $matches[1];
+            $fieldNames = $fieldMatches[1];
+            return [$tableName, $fieldNames];
+        } else if (preg_match("/INSERT INTO `([^`]+)` \(([^)]+)\) VALUES \(.+?\)/", $sql, $matches)) {
+            return self::getFieldData($matches);
+        } else if (preg_match("/INSERT IGNORE INTO `([^`]+)` \(([^)]+)\) VALUES \(.+?\)/", $sql, $matches)) {
+            return self::getFieldData($matches);
+        } else if (preg_match("/INSERT INTO `([^`]+)` \(([^)]+)\) VALUES \(.+?\) ON DUPLICATE KEY UPDATE/", $sql, $matches)) {
+            return self::getFieldData($matches);
+        } else if (preg_match("/REPLACE INTO `([^`]+)` \(([^)]+)\) VALUES \(.+?\)/", $sql, $matches)) {
+            return self::getFieldData($matches);
+        } else {
+            echo $sql;
+            echo "SQL statement is not recognized as an INSERT, INSERT IGNORE, INSERT ON DUPLICATE KEY UPDATE, or REPLACE query.";
+        }
+    }
+
+    private static function getFieldData($matches)
+    {
+        $tableName = $matches[1];
+        $fieldNames = str_replace('`', '', $matches[2]);
+        $fieldNames = array_map('trim', explode(',', $fieldNames));
+        return [$tableName, $fieldNames];
+    }
+
+    public static function changeId($array){
+      if(is_array($array[0])){
+        $changed_array = array_map('self::mapReplaceId', $array);
+        return $changed_array; 
+      }else{
+        return self::mapReplaceId($array);
+      }
+    }
+
+    private static function mapReplaceId($item) {
+      if (isset($item['id'])) {
+          $item['tbl_id'] = $item['id'];
+          unset($item['id']);
+      }
+      return $item;
+  }
+  
+}
