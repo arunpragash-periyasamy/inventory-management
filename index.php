@@ -1,4 +1,7 @@
 <?php
+header("Access-Control-Allow-Origin: *"); // Allow requests from any origin
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS"); // Specify allowed HTTP methods
+header("Access-Control-Allow-Headers: Content-Type, Accept"); // Specify allowed HTTP headers
 $headers = getallheaders();
 // $headers = implode(", ", $headers);
 if(!$_GET)
