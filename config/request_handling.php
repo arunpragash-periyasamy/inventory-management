@@ -1,5 +1,4 @@
 <?php
-
 require("db.class.php");
 // $db = new DB("localhost", "arun", "arun", "dummy", 3306,);
 DB::$user = 'arun';
@@ -35,47 +34,31 @@ if ($method === "GET") {
 }
 
 if ($method === "POST") {
-    if ($_POST['form']) {
-        try {
-            $form = $_POST['form'];
-            $method = $_POST['method'];
-            $page = $_POST['page'];
-            print_r($_POST);
-            try {
-                if (strtolower($method) == "insert") {
-                    DB::insert($page, $form);
-                    echo "inserted";
-                } else if (strtolower($method) == "update") {
-                    DB::update($page, $form, $condition);
-                    echo "updated";
-                } else if (strtolower($method) == "insertignore") {
-                    DB::insertIgnore($page, $form);
-                    echo "insert and ignored";
-                } else if (strtolower($method) == "replace") {
-                    DB::replace($page, $form);
-                    echo "replaced";
-                } else if (strtolower($method) == "insertupdate") {
-                    DB::insertUpdate($page, $form);
-                    echo "insert and updated";
-                } else if (strtolower($method) == "delete") {
-                    DB::delete($page, $condition);
-                    echo "deleted";
-                } else {
-                    echo "error";
-                }
-            } catch (error $e) {
-                echo "Inserting Error " . $e;
+
+
+    if ($_FILES) {
+        echo " files";
+        $file_paths = upload_files($directory, $page);
+        $pathIndex = 1;
+        foreach ($_POST as $key => $value) {
+            if (strpos($key, 'image')) {
+                $_POST[$key] = $file_paths[$pathIndex];
+                $pathIndex++;
             }
-            // $data = DB::query(`SELECT * FROM fet_04 where name=%s","Arunpragash Annanperiasamy`);
-            // print_r($data);
-        } catch (error $e) {
-            echo $e;
         }
-        echo "form_data";
     }
-    echo "POST request";
+    
+    try {
+        $form = $_POST;
+        DB::insertUpdate($page, $form);
+    } catch (error $e) {
+        throw $e;
+    } catch (Exception $exp) {
+        throw $exp;
+    }
     exit();
 }
+
 
 if ($method === 'DELETE') {
     parse_str(file_get_contents('php://input'), $condition);
@@ -89,4 +72,48 @@ if ($method === 'PUT') {
     // DB::query("DELETE FROM add_catergory where id=1");
     DB::update($page, $data, $data['id']);
     exit();
+}
+
+
+function upload_files($directory, $page)
+{
+    $uploadDir = "./upload/$directory/$page/";
+    if (!file_exists($uploadDir)) {
+        if (!mkdir($uploadDir, 0777, true)) {
+            echo "Unable to create the directory";
+        }; // Create the directory if it doesn't exist
+    }
+
+    $uploadSuccess = true; // Assume success by default
+    $file_paths[] = [];
+    // Loop through all uploaded files
+    foreach ($_FILES as $fileField => $fileInfo) {
+        if ($fileInfo['error'] !== UPLOAD_ERR_OK) {
+            $errors[] = "Error uploading the file '$fileField': Error code " . $fileInfo['error'];
+            $uploadSuccess = false; // Set upload success to false if any file fails to upload
+            continue; // Skip the file if there's an error
+        }
+
+        $originalFileName = $fileInfo['name'];
+        $extension = pathinfo($originalFileName, PATHINFO_EXTENSION);
+
+        // Change the file name to something unique with the original extension
+        $newFileName = uniqid() . '_' . time() . '.' . $extension;
+        $targetPath = $uploadDir . $newFileName;
+        $file_paths[] = $targetPath;
+        if (!move_uploaded_file($fileInfo['tmp_name'], $targetPath)) {
+            echo "Error moving the file '$fileField' to the target directory.";
+            $uploadSuccess = false; // Set upload success to false
+        }
+    }
+
+    $permissions = fileperms($uploadDir);
+    if (($permissions & 0x0080) !== 0x0080) {
+        echo "Write permissions are not set for the target directory.";
+    }
+
+    if (!$uploadSuccess) {
+        echo "unable to upload the files";
+    }
+    return $file_paths;
 }

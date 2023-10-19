@@ -32,8 +32,8 @@
                     <div class="col-lg-12">
                         <div class="form-group">
                             <label> Product Image</label>
-                            <div class="image-upload" name="product_image" id="product_image">
-                                <input type="file">
+                            <div class="image-upload">
+                                <input type="file" name="product_image" id="product_image">
                                 <div class="image-uploads">
                                     <img src="/assets/img/icons/upload.svg" alt="img">
                                     <h4>Drag and drop a file to upload</h4>

@@ -3,12 +3,12 @@
 const getTime = () => {
   // Get the current date and time
   var currentTime = new Date();
-  
+
   // Extract the current time components (hours, minutes, seconds)
   var hours = currentTime.getHours();
   var minutes = currentTime.getMinutes();
   var seconds = currentTime.getSeconds();
-  
+
   // You can format the time as desired, e.g., to display it on a webpage
   var formattedTime = hours + ":" + minutes + ":" + seconds;
   return formattedTime;
@@ -25,62 +25,62 @@ const applyPlugins = () => {
   $(".select").select2();
 }
 
-const renderApexChart = () =>{
-  if($('#sales_charts').length>0){
-  var options = {
-    series: [
-      {
-        name: 'Sales',
-        data: [50, 45, 60, 70, 50, 45, 60, 70],
-      },
-      {
-        name: 'Purchase',
-        data: [-21, -54, -45, -35, -21, -54, -45, -35],
-      },
-    ],
-    colors: ['#28C76F', '#EA5455'],
-    chart: {
-      type: 'bar',
-      height: 300,
-      stacked: true,
-      zoom: {
-        enabled: true,
-      },
-    },
-    responsive: [
-      {
-        breakpoint: 280,
-        options: {
-          legend: {
-            position: 'bottom',
-            offsetY: 0,
-          },
+const renderApexChart = () => {
+  if ($('#sales_charts').length > 0) {
+    var options = {
+      series: [
+        {
+          name: 'Sales',
+          data: [50, 45, 60, 70, 50, 45, 60, 70],
+        },
+        {
+          name: 'Purchase',
+          data: [-21, -54, -45, -35, -21, -54, -45, -35],
+        },
+      ],
+      colors: ['#28C76F', '#EA5455'],
+      chart: {
+        type: 'bar',
+        height: 300,
+        stacked: true,
+        zoom: {
+          enabled: true,
         },
       },
-    ],
-    plotOptions: {
-      bar: {
-        horizontal: false,
-        columnWidth: '20%',
-        endingShape: 'rounded',
+      responsive: [
+        {
+          breakpoint: 280,
+          options: {
+            legend: {
+              position: 'bottom',
+              offsetY: 0,
+            },
+          },
+        },
+      ],
+      plotOptions: {
+        bar: {
+          horizontal: false,
+          columnWidth: '20%',
+          endingShape: 'rounded',
+        },
       },
-    },
-    xaxis: {
-      categories: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'August'],
-    },
-    legend: {
-      position: 'right',
-      offsetY: 40,
-    },
-    fill: {
-      opacity: 1,
-    },
-  };
-  
-// Initialize ApexCharts in the desired <div>
-var chart = new ApexCharts(document.querySelector("#sales_charts"), options);
-chart.render();
-}
+      xaxis: {
+        categories: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'August'],
+      },
+      legend: {
+        position: 'right',
+        offsetY: 40,
+      },
+      fill: {
+        opacity: 1,
+      },
+    };
+
+    // Initialize ApexCharts in the desired <div>
+    var chart = new ApexCharts(document.querySelector("#sales_charts"), options);
+    chart.render();
+  }
 }
 
 
@@ -109,7 +109,7 @@ const change_content = () => {
         // Replace the entire #content element with the loaded content
         $('.page-wrapper').replaceWith(data);
         applyPlugins();
-        methodsOnReady();  
+        methodsOnReady();
       });
 
     } else {
@@ -122,7 +122,7 @@ const change_content = () => {
     $.get("/get_file.php?file=/dashboard.php", function (data) {
       // Replace the entire #content element with the loaded content
       $('.page-wrapper').replaceWith(data);
-    }).done(()=>{
+    }).done(() => {
       renderApexChart();
     });
   }
@@ -133,24 +133,32 @@ const change_content = () => {
 // processing the form data by removing the empty field of the form.
 
 
-const getFormData = async (elementClass="new_form") => {
-  const formDataObject = {
-    time: getTime(),
-  };
+const getFormData = async (elementClass = "new_form") => {
+  const formData = new FormData(); // Initialize a FormData object
 
-  formDataObject.ip = ipAddress;
+  formData.append('time', getTime());
+  formData.append('ip', ipAddress);
 
   $(`form.${elementClass} :input`).each(function () {
     const $input = $(this);
     const name = $input.attr('name');
     const value = $input.val();
-    
+
     if (name && value !== "") {
-      formDataObject[name] = value;
+      formData.append(name, value);
     }
   });
 
-  return formDataObject;
+  $("input[type='file'][id$='image']").each(function () {
+    var id = $(this).attr("id");
+    var files = $(this)[0].files;
+
+    if (files.length > 0) {
+      formData.append(id, files[0]);
+    }
+  });
+
+  return formData; // Return the FormData object
 }
 
 
@@ -160,62 +168,65 @@ const resetForm = (elementClass = "new_form") => {
   $('.select').val('').trigger('change.select2');
 }
 
-// processing the form data by removing the empty field of the form.
-const handleForm = async (elementClass = "new_form", method = "insert") => {
-  let formData = await getFormData();
-  if(method == "delete"){
-    $.ajax({
-      url: '/',
-      type: "DELETE",
-      data: {id : 1},
-      success: (data)=>{
-        console.log(data)
-      },
-      error: function(jqXHR, textStatus, errorThrown) {
-        // Handle errors, if any
-        console.error('AJAX Error:', textStatus, errorThrown);
+
+const handleForm = async (event, elementClass = "new_form", method = "insert") => {
+  try {
+    let formData = await getFormData(); // Use the formData from getFormData function
+
+    if (method == "delete") {
+      $.ajax({
+        url: '/',
+        type: "DELETE",
+        data: { id: 1 },
+        success: (data) => {
+          console.log(data);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+          // Handle errors, if any
+          console.error('AJAX Error:', textStatus, errorThrown);
+        }
+      });
+      console.log("delete method called");
+    } else if (method == "update") {
+      $.ajax({
+        url: '/',
+        type: "PUT",
+        data: { id: 1 },
+        success: (data) => {
+          console.log(data);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+          // Handle errors, if any
+          console.error('AJAX Error:', textStatus, errorThrown);
+        }
+      });
+      console.log("update method called");
+    } else {
+      $.ajax({
+        url: '/',
+        type: 'POST',
+        data: formData, // Use the correct formData object
+        processData: false, // Prevent jQuery from processing the data
+        contentType: false, // Prevent jQuery from setting contentType
+        success: (response) => {
+          console.log(response);
+        },
+        error: (xhr, status, error) => {
+          // Handle any errors that occurred during the request here
+          console.error(error);
+        }
+      });
     }
-    });
-    console.log("delete method called");
-  }else if(method == "update"){
-    $.ajax({
-      url: '/',
-      type: "PUT",
-      data: {id : 1},
-      success: (data)=>{
-        console.log(data)
-      },
-      error: function(jqXHR, textStatus, errorThrown) {
-        // Handle errors, if any
-        console.error('AJAX Error:', textStatus, errorThrown);
-    }
-    });
-    console.log("delete method called");
-  }else{
-  $.ajax({
-    url: '/',
-    type: 'POST',
-    data: {
-      page: currentPage,
-      form: formData,
-      method: method
-    },
-    success: (response)=>{
-      // Handle the success response from the server here
-      console.log(response);
-    },
-    error: (xhr, status, error)=>{
-      // Handle any errors that occurred during the request here
-      console.error(error);
-    }
-  });
+  } catch (err) {
+    console.log(err);
   }
-  resetForm();
+
+  resetForm(elementClass);
 }
 
 
 
-const methodsOnReady = () =>{
+const methodsOnReady = () => {
 
   $("form").on("submit keypress", (event) => {
     if (event.type === "submit" || event.type === "keydown") {
@@ -230,7 +241,7 @@ const methodsOnReady = () =>{
   $("a.page_url").click(function (event) {
     event.preventDefault(); // Prevent the default link behavior (page reload)
 
-    
+
     var targetUrl = $(this).attr("href"); // Get the target URL from the href attribute
     window.history.pushState({}, "", targetUrl); // Change the URL without a full page reload
 
