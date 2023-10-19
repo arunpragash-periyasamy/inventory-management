@@ -163,24 +163,53 @@ const resetForm = (elementClass = "new_form") => {
 // processing the form data by removing the empty field of the form.
 const handleForm = async (elementClass = "new_form", method = "insert") => {
   let formData = await getFormData();
+  if(method == "delete"){
+    $.ajax({
+      url: '/',
+      type: "DELETE",
+      data: {id : 1},
+      success: (data)=>{
+        console.log(data)
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        // Handle errors, if any
+        console.error('AJAX Error:', textStatus, errorThrown);
+    }
+    });
+    console.log("delete method called");
+  }else if(method == "update"){
+    $.ajax({
+      url: '/',
+      type: "PUT",
+      data: {id : 1},
+      success: (data)=>{
+        console.log(data)
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        // Handle errors, if any
+        console.error('AJAX Error:', textStatus, errorThrown);
+    }
+    });
+    console.log("delete method called");
+  }else{
   $.ajax({
-    url: '/functions/form_submit',
+    url: '/',
     type: 'POST',
     data: {
       page: currentPage,
       form: formData,
       method: method
     },
-    success: function (response) {
+    success: (response)=>{
       // Handle the success response from the server here
       console.log(response);
     },
-    error: function (xhr, status, error) {
+    error: (xhr, status, error)=>{
       // Handle any errors that occurred during the request here
       console.error(error);
     }
   });
-
+  }
   resetForm();
 }
 
