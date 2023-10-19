@@ -1,16 +1,8 @@
 <?php
-
-
-$method = $_SERVER['REQUEST_METHOD'];
-$request = $_SERVER['REQUEST_URI'];
 $headers = getallheaders();
-
-if($_POST){
-    $var = ["method"=>$method, "post"=>$_POST, "request"=>$request, "headers"=>$headers];
-    print_r($var);
-    return;
-}
-
+// $headers = implode(", ", $headers);
+if(!$_GET)
+require('./config/request_handling.php');
 $url = $_GET['url'];
 $url = explode("/", $url);
 $page_title = ucfirst(str_replace("_", " ", $url[1]));
@@ -18,12 +10,12 @@ $page_title = ucfirst(str_replace("_", " ", $url[1]));
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+    
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $page_title; ?></title>
-
+    
     <!-- css links  -->
     <link rel="shortcut icon" type="image/x-icon" href="/assets/img/belgaum_plumbers/logo1.svg">
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
@@ -37,11 +29,11 @@ $page_title = ucfirst(str_replace("_", " ", $url[1]));
     <link rel="stylesheet" href="/assets/plugins/owlcarousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <script src="/assets/js/jquery-3.6.0.min.js"></script>
-
+    
 </head>
 
 <body>
-
+    
     <div id="global-loader">
         <div class="whirly-loader"></div>
     </div>
