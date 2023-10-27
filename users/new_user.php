@@ -7,7 +7,7 @@
             </div>
         </div>
 
-        <form enctype="multipart/form-data" action="/users/new_user" class="new_form" method="post">
+        <form enctype="multipart/form-data" action="/users/new_user" class="newForm" method="post">
             <div class="card">
                 <div class="card-body">
                     <div class="row">

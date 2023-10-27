@@ -6,7 +6,7 @@
             <h6>Print product barcodes</h6>
         </div>
     </div>
-    <form enctype="multipart/form-data" action="/product/bar_code" class="new_form" method="post">
+    <form enctype="multipart/form-data" action="/product/bar_code" class="newForm" method="post">
     <div class="card">
         <div class="card-body">
             <div class="requiredfield">

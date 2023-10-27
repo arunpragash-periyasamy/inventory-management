@@ -6,7 +6,7 @@
                 <h6>Add/Update Expenses</h6>
             </div>
         </div>
-        <form enctype="multipart/form-data" action="/expense/add_expense" class="new_form" method="post">
+        <form enctype="multipart/form-data" action="/expense/add_expense" class="newForm" method="post">
             <div class="card">
                 <div class="card-body">
                     <div class="row">

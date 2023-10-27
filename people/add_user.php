@@ -6,7 +6,7 @@
                 <h6>Add/Update User</h6>
             </div>
         </div>
-        <form enctype="multipart/form-data" action="/people/add_user" class="new_form" method="post">
+        <form enctype="multipart/form-data" action="/people/add_user" class="newForm" method="post">
             <div class="card">
                 <div class="card-body">
                     <div class="row">

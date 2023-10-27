@@ -6,7 +6,7 @@
                 <h6>Add/Update Transfer</h6>
             </div>
         </div>
-        <form enctype="multipart/form-data" action="/transfer/import_transfer" class="new_form" method="post">
+        <form enctype="multipart/form-data" action="/transfer/import_transfer" class="newForm" method="post">
             <div class="card">
                 <div class="card-body">
                     <div class="row">

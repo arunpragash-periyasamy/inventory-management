@@ -1440,9 +1440,11 @@ class MeekroDBExceptionHandling
     $fields = array_diff($fields, ['created_at', 'updated_at']);
     $field = implode(", ",$fields);
     $zd_field = "OLD." . implode(", OLD.",$fields);
-
+    
+    $trigger_name = "before_delete_".sprintf($table)."_copy_trigger";
+    echo DB::query("DROP TRIGGER IF EXISTS $trigger_name");
     $query = "
-    CREATE TRIGGER before_delete_".sprintf($table)."_copy_trigger
+    CREATE TRIGGER ".sprintf($trigger_name)."
     BEFORE DELETE
     ON ".sprintf($table)." FOR EACH ROW
     BEGIN
@@ -1450,7 +1452,7 @@ class MeekroDBExceptionHandling
     END;
     ";
     try{
-      DB::query($query);
+      echo DB::query($query);
     }catch(Exception $e){
       echo $e;
     }catch(error $err){

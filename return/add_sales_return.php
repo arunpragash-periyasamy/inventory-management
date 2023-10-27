@@ -7,7 +7,7 @@
             </div>
         </div>
 
-        <form enctype="multipart/form-data" action="/return/add_sales_return" class="new_form" method="post">
+        <form enctype="multipart/form-data" action="/return/add_sales_return" class="newForm" method="post">
             <div class="card">
                 <div class="card-body">
                     <div class="row">

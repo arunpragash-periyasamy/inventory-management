@@ -6,7 +6,7 @@
                 <h6>Add/Update Quotation</h6>
             </div>
         </div>
-        <form enctype="multipart/form-data" action="/quotation/add_quotation" class="new_form" method="post">
+        <form enctype="multipart/form-data" action="/quotation/add_quotation" class="newForm" method="post">
         <div class="card">
             <div class="card-body">
                 <div class="row">

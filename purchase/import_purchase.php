@@ -6,7 +6,7 @@
                 <h6>Add/Update Purchase</h6>
             </div>
         </div>
-        <form enctype="multipart/form-data" action="/purchase/import_purchase" class="new_form" method="post">
+        <form enctype="multipart/form-data" action="/purchase/import_purchase" class="newForm" method="post">
         <div class="card">
             <div class="card-body">
                 <div class="row">

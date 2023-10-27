@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <form enctype="multipart/form-data" action="/product/add_product" class="new_form" method="post">
+    <form enctype="multipart/form-data" action="/product/add_product" class="newForm" method="post">
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -40,7 +40,7 @@
                         <div class="form-group">
                             <label>Brand</label>
                             <select class="select" name="brand_name" id="brand_name">
-                                <option>Choose Brand</option>
+                                <option value="">Choose Brand</option>
                                 <option>Brand</option>
                             </select>
                         </div>
@@ -49,7 +49,7 @@
                         <div class="form-group">
                             <label>Unit</label>
                             <select class="select" name="unit" id="unit">
-                                <option>Choose Unit</option>
+                                <option value="">Choose Unit</option>
                                 <option>Unit</option>
                             </select>
                         </div>

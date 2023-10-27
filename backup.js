@@ -1,5 +1,5 @@
 // code for preventing the page reload and make the submenu active.
-$("a.page_url").click(function(event) {
+$("a.pageUrl").click(function(event) {
     event.preventDefault(); // Prevent the default link behavior (page reload)
 
     // Get the target URL from the href attribute

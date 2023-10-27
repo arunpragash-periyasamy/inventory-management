@@ -133,7 +133,7 @@ const change_content = () => {
 // processing the form data by removing the empty field of the form.
 
 
-const getFormData = async (elementClass = "new_form") => {
+const getFormData = async (elementClass = "newForm") => {
   const formData = new FormData(); // Initialize a FormData object
 
   formData.append('time', getTime());
@@ -162,14 +162,14 @@ const getFormData = async (elementClass = "new_form") => {
 }
 
 
-const resetForm = (elementClass = "new_form") => {
+const resetForm = (elementClass = "newForm") => {
   // reset the form data 
   $(`form.${elementClass}`)[0].reset();
   $('.select').val('').trigger('change.select2');
 }
 
 
-const handleForm = async (event, elementClass = "new_form", method = "insert") => {
+const handleForm = async (event, elementClass = "newForm", method = "insert") => {
   try {
     let formData = await getFormData(); // Use the formData from getFormData function
 
@@ -209,7 +209,9 @@ const handleForm = async (event, elementClass = "new_form", method = "insert") =
         processData: false, // Prevent jQuery from processing the data
         contentType: false, // Prevent jQuery from setting contentType
         success: (response) => {
-          console.log(response);
+          if(response !== ""){
+            console.log(response);
+          }
         },
         error: (xhr, status, error) => {
           // Handle any errors that occurred during the request here
@@ -238,7 +240,7 @@ const methodsOnReady = () => {
   applyPlugins();
 
   // code for preventing the page reload and make the submenu active.
-  $("a.page_url").click(function (event) {
+  $("a.pageUrl").click(function (event) {
     event.preventDefault(); // Prevent the default link behavior (page reload)
 
 

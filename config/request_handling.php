@@ -2,7 +2,7 @@
 require("db.class.php");
 // $db = new DB("localhost", "arun", "arun", "dummy", 3306,);
 DB::$user = 'arun';
-DB::$password = 'arun';
+DB::$password = 'arun@1234';
 DB::$dbName = 'dummy';
 DB::$encoding = 'utf8';
 
@@ -31,13 +31,15 @@ if ($method === "GET") {
         }
         exit();
     }
+    if($_GET['option']){
+        
+    }
 }
 
 if ($method === "POST") {
 
 
     if ($_FILES) {
-        echo " files";
         $file_paths = upload_files($directory, $page);
         $pathIndex = 1;
         foreach ($_POST as $key => $value) {
