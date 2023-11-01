@@ -1,5 +1,6 @@
 <?php
 require("db.class.php");
+require("db_structure.php");
 // $db = new DB("localhost", "arun", "arun", "dummy", 3306,);
 DB::$user = 'arun';
 DB::$password = 'arun@1234';
@@ -19,7 +20,7 @@ $page = $path[2];
 if ($method === "GET") {
     // file request handling
     if ($_GET['file']) {
-        $file = "." . $_GET['file'];
+        $file = ".." . $_GET['file'];
         if (file_exists($file)) {
             http_response_code(200); // File exists
             header('Content-Type: text/html');
@@ -31,8 +32,16 @@ if ($method === "GET") {
         }
         exit();
     }
-    if($_GET['option']){
-        
+    if ($_GET['option']) {
+        if ($get_table_data[$page]) {
+            foreach ($get_table_data[$page]["tables"] as $table => $data) {
+                $fields = implode(" ,", $data["columns"]);
+                $result = DB::query("select  $fields from $table");
+                $results[$data["name"]] = $result;
+            }
+            print_r(json_encode($results,true));
+        }
+        exit();
     }
 }
 
@@ -49,9 +58,10 @@ if ($method === "POST") {
             }
         }
     }
-    
+
     try {
         $form = $_POST;
+        echo $page;
         DB::insertUpdate($page, $form);
     } catch (error $e) {
         throw $e;

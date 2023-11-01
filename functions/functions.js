@@ -23,6 +23,9 @@ let ipAddress;
 
 const applyPlugins = () => {
   $(".select").select2();
+  $('.datetimepicker').datetimepicker({
+    format: 'MM/DD/YYYY', 
+  });
 }
 
 const renderApexChart = () => {
@@ -100,14 +103,13 @@ const change_content = () => {
       path: path,
       type: "file"
     }
-    var queryString = $.param(requestData);
     if ($(".main-wrapper").find(".header") && $(".main-wrapper").find(".sidebar")) {
       $("*").removeClass("active");
       $(`#${page}`).addClass("active");
       // request to get the page content
-      $.get("/get_file.php?file=" + path, function (data) {
+      $.get("/config/request_handling.php?file=" + path, function (data) {
         // Replace the entire #content element with the loaded content
-        $('.page-wrapper').replaceWith(data);
+        $('.page_content').html(data);
         applyPlugins();
         methodsOnReady();
       });
@@ -119,7 +121,7 @@ const change_content = () => {
   } else {
     $("*").removeClass("active");
     $("#dashboard").addClass("active");
-    $.get("/get_file.php?file=/dashboard.php", function (data) {
+    $.get("/config/request_handling.php?file=/dashboard.php", function (data) {
       // Replace the entire #content element with the loaded content
       $('.page-wrapper').replaceWith(data);
     }).done(() => {
@@ -255,8 +257,20 @@ const methodsOnReady = () => {
 }
 
 
+const getOptions = async() =>{
+  let options ="";
+  await $.get("/get_file.php?option=''", function (data) {
+    options = data;
+  });
+  return JSON.parse(options);
 
+}
 
 
 // function calling
 change_content();
+
+
+
+// var queryString = $.param(requestData); //it contains the path and file type in get request
+// console.log(queryString);

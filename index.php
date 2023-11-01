@@ -4,7 +4,7 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS"); // Specify allowed H
 header("Access-Control-Allow-Headers: Content-Type, Accept"); // Specify allowed HTTP headers
 $headers = getallheaders();
 // $headers = implode(", ", $headers);
-if(!$_GET)
+if(!$_GET['file'])
 require('./config/request_handling.php');
 $url = $_GET['url'];
 $url = explode("/", $url);
@@ -45,8 +45,8 @@ $page_title = ucfirst(str_replace("_", " ", $url[1]));
         try {
             require "files/header.html";
             require "files/sidebar.html";
-            echo '<div class="page-wrapper">
-            </div>';
+            echo '<div class="page_content"><div class="page-wrapper">
+            </div></div>';
         } catch (error $e) {
             echo $e;
         }
@@ -71,4 +71,7 @@ $page_title = ucfirst(str_replace("_", " ", $url[1]));
     <script src="/functions/functions.js"></script>
 </body>
 
+<div id="scripts">
+
+</div>
 </html>
