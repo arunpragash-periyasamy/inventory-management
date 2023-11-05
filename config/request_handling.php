@@ -21,10 +21,17 @@ if ($method === "GET") {
     // file request handling
     if ($_GET['file']) {
         $file = ".." . $_GET['file'];
+        print_r($_GET);
         if (file_exists($file)) {
+            $html_content = file_get_contents($file);
+            if($_GET["id"]){
+                $id=$_GET["id"];
+                $html_content = str_replace('value="0"', 'value="' . $id . '"', $html_content);
+            }
             http_response_code(200); // File exists
             header('Content-Type: text/html');
-            readfile($file);
+            // readfile($file);
+            echo $html_content;
         } else {
             http_response_code(200); // File not found
             readfile("./error/error-404.php");
@@ -34,7 +41,17 @@ if ($method === "GET") {
     }
     if ($_GET['option']) {
         if ($get_table_data[$page]) {
-            foreach ($get_table_data[$page]["tables"] as $table => $data) {
+            if($_GET['id']){
+                $id = $_GET['id'];
+                foreach ($get_table_data[$page]["tables"]["form_data"] as $table => $data) {
+                    $fields = implode(" ,", $data["columns"]);
+                    $condition = $data["where"];
+                    $result = DB::query("select  * from add_category where $condition=$id");
+                    $results[$data["name"]] = $result;
+                    $results["query"] = "select  * from add_category where $condition=$id";
+                }
+            }
+            foreach ($get_table_data[$page]["tables"]["options"] as $table => $data) {
                 $fields = implode(" ,", $data["columns"]);
                 $result = DB::query("select  $fields from $table");
                 $results[$data["name"]] = $result;

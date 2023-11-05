@@ -24,9 +24,18 @@ $post_table_data = [
 $get_table_data = [
     "add_sub_category" => [
         "tables" => [
-            "add_category" => [
-                "columns" => ["id", "category_name", "category_code"],
-                "name" => "category"
+            "options" => [
+                "add_category" => [
+                    "columns" => ["id", "category_name", "category_code"],
+                    "name" => "category"
+                ],
+            ],
+            "form_data" => [
+                "add_sub_category" => [
+                    "columns" => ["id"],
+                    "where" => "id",
+                    "name" => "form_data"
+                ]
             ],
         ],
     ],
@@ -48,6 +57,3 @@ $get_table_data = [
         ],
     ],
 ];
-
-
-?>

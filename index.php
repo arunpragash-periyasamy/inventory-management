@@ -4,8 +4,9 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS"); // Specify allowed H
 header("Access-Control-Allow-Headers: Content-Type, Accept"); // Specify allowed HTTP headers
 $headers = getallheaders();
 // $headers = implode(", ", $headers);
-if(!$_GET['file'])
-require('./config/request_handling.php');
+if(!$_GET['file'] || $_GET['option']){
+    require('./config/request_handling.php');
+}
 $url = $_GET['url'];
 $url = explode("/", $url);
 $page_title = ucfirst(str_replace("_", " ", $url[1]));
@@ -17,7 +18,7 @@ $page_title = ucfirst(str_replace("_", " ", $url[1]));
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $page_title; ?></title>
+    <title>Inventory</title>
     
     <!-- css links  -->
     <link rel="shortcut icon" type="image/x-icon" href="/assets/img/belgaum_plumbers/logo1.svg">
@@ -72,6 +73,5 @@ $page_title = ucfirst(str_replace("_", " ", $url[1]));
 </body>
 
 <div id="scripts">
-
 </div>
 </html>

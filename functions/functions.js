@@ -94,25 +94,40 @@ const change_content = () => {
 
   $(".page-wrapper").empty();
   let url = $(location).attr("pathname"); // get the page from the url
-
+  let search = $(location).attr("search").replace(/\?/g, '');
   if (url != "/" && url != "/dashboard") {
-    let path = url + ".php";
     let page = url.split("/")[2];
+    let path = url+"/"+page;
+    document.title = page.split("_").join(' ');
     currentPage = page;
-    let requestData = {
-      path: path,
-      type: "file"
-    }
     if ($(".main-wrapper").find(".header") && $(".main-wrapper").find(".sidebar")) {
       $("*").removeClass("active");
       $(`#${page}`).addClass("active");
       // request to get the page content
-      $.get("/config/request_handling.php?file=" + path, function (data) {
+      let contentPage = path+".html";
+      let scriptPage = path+".script";
+      let phpPage = path+".php";
+      $.get(`/config/request_handling.php?file=${contentPage+"&"+search}`, function (data) {
         // Replace the entire #content element with the loaded content
+        console.log(data);
         $('.page_content').html(data);
         applyPlugins();
         methodsOnReady();
       });
+      // $.get(`/config/request_handling.php?file=${scriptPage}`, function (data) {
+      //   // Replace the entire #content element with the loaded content
+      //   console.log(data);
+      //   $('.script').html(data);
+      //   applyPlugins();
+      //   methodsOnReady();
+      // });
+      // $.get(`/config/request_handling.php?file=${phpPage}`, function (data) {
+      //   // Replace the entire #content element with the loaded content
+      //   console.log(data);
+      //   $('.php_content').html(data);
+      //   applyPlugins();
+      //   methodsOnReady();
+      // });
 
     } else {
       console.error("Page not found");
@@ -259,8 +274,10 @@ const methodsOnReady = () => {
 
 const getOptions = async() =>{
   let options ="";
-  await $.get("/get_file.php?option=''", function (data) {
+  let id = $("#id").val();
+  await $.get(`/?option=''&id=${id}`, function (data) {
     options = data;
+    console.log(options);
   });
   return JSON.parse(options);
 
