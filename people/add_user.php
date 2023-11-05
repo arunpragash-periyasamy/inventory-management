@@ -77,6 +77,6 @@
                     </div>
                 </div>
             </div>
-        </form>
+         <input type="text" name="id" value="0" hidden></form>
     </div>
 </div>
