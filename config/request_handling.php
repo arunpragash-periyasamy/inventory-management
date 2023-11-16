@@ -19,9 +19,8 @@ $page = $path[2];
 
 if ($method === "GET") {
     // file request handling
-    if ($_GET['file']) {
-        $file = ".." . $_GET['file'];
-        print_r($_GET);
+    if ($_GET['file_name']) {
+        $file = ".." . $_GET['file_name'];
         if (file_exists($file)) {
             $html_content = file_get_contents($file);
             if($_GET["id"]){
@@ -32,7 +31,10 @@ if ($method === "GET") {
             header('Content-Type: text/html');
             // readfile($file);
             echo $html_content;
-        } else {
+        }else if(preg_match('/\.(script|php|js)$/', $file)){
+            echo " ";
+        } 
+        else {
             http_response_code(200); // File not found
             readfile("./error/error-404.php");
             echo $file;
@@ -78,8 +80,8 @@ if ($method === "POST") {
 
     try {
         $form = $_POST;
-        echo $page;
-        DB::insertUpdate($page, $form);
+        DB::insert($page, $form);
+        print_r(DB::query("SELECT * FROM $page"));
     } catch (error $e) {
         throw $e;
     } catch (Exception $exp) {
