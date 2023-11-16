@@ -88,7 +88,6 @@ const renderApexChart = () => {
 
 // function for change the content of the page
 const change_content = async () => {
-  $("#global-loader").fadeIn("fast");
   $('.page_content').html("");
   $(".page-wrapper").empty();
   let url = $(location).attr("pathname"); // get the page from the url
@@ -136,13 +135,6 @@ const change_content = async () => {
       renderApexChart();
     });
   }
-
-  setTimeout(function () {
-    $("#global-loader");
-    setTimeout(function () {
-      $("#global-loader").fadeOut("slow");
-    }, 100);
-  }, 500);
 };
 
 
