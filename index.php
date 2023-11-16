@@ -4,7 +4,7 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS"); // Specify allowed H
 header("Access-Control-Allow-Headers: Content-Type, Accept"); // Specify allowed HTTP headers
 $headers = getallheaders();
 // $headers = implode(", ", $headers);
-if(!$_GET['file'] || $_GET['option']){
+if(!$_GET['file'] || $_GET['file_name'] || $_GET['option']){
     require('./config/request_handling.php');
 }
 $url = $_GET['url'];
