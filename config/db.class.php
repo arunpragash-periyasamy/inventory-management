@@ -1406,7 +1406,6 @@ class MeekroDBExceptionHandling
     } catch (Exception $exp) {
       echo $exp;
       throw $exp;
-      return false; //Table 'data' already exists
     }
   }
 
@@ -1432,7 +1431,6 @@ class MeekroDBExceptionHandling
       return true;
     } catch (Exception $exp) {
       throw $exp;
-      return false;
     }
   }
 
