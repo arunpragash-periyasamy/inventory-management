@@ -86,20 +86,19 @@ const renderApexChart = () => {
   }
 }
 
-
-let currentPage = null;
-
 // function for change the content of the page
-const change_content = () => {
-
+const change_content = async () => {
+  $("#global-loader").fadeIn("fast");
+  $('.page_content').html("");
   $(".page-wrapper").empty();
   let url = $(location).attr("pathname"); // get the page from the url
+  url = url.endsWith('/') ? url.slice(0, -1) : url;
+
   let search = $(location).attr("search").replace(/\?/g, '');
   if (url != "/" && url != "/dashboard") {
     let page = url.split("/")[2];
     let path = url+"/"+page;
     document.title = page.split("_").join(' ');
-    currentPage = page;
     if ($(".main-wrapper").find(".header") && $(".main-wrapper").find(".sidebar")) {
       $("*").removeClass("active");
       $(`#${page}`).addClass("active");
@@ -107,27 +106,21 @@ const change_content = () => {
       let contentPage = path+".html";
       let scriptPage = path+".script";
       let phpPage = path+".php";
-      $.get(`/config/request_handling.php?file=${contentPage+"&"+search}`, function (data) {
+      console.log(path + "  " + contentPage);
+      await $.get(`/config/request_handling.php?file_name=${contentPage+"&"+search}`, (data)=> {
         // Replace the entire #content element with the loaded content
-        console.log(data);
         $('.page_content').html(data);
-        applyPlugins();
-        methodsOnReady();
       });
-      // $.get(`/config/request_handling.php?file=${scriptPage}`, function (data) {
-      //   // Replace the entire #content element with the loaded content
-      //   console.log(data);
-      //   $('.script').html(data);
-      //   applyPlugins();
-      //   methodsOnReady();
-      // });
-      // $.get(`/config/request_handling.php?file=${phpPage}`, function (data) {
-      //   // Replace the entire #content element with the loaded content
-      //   console.log(data);
-      //   $('.php_content').html(data);
-      //   applyPlugins();
-      //   methodsOnReady();
-      // });
+      await $.get(`/config/request_handling.php?file_name=${scriptPage}`, (data)=>{
+        // Replace the entire #content element with the loaded content
+        $('.script').html(data);
+      });
+      await $.get(`/config/request_handling.php?file_name=${phpPage}`, (data)=>{
+        // Replace the entire #content element with the loaded content
+        $('.php_content').html(data);
+      })
+      applyPlugins();
+      methodsOnReady();
 
     } else {
       console.error("Page not found");
@@ -136,7 +129,7 @@ const change_content = () => {
   } else {
     $("*").removeClass("active");
     $("#dashboard").addClass("active");
-    $.get("/config/request_handling.php?file=/dashboard.php", function (data) {
+    await $.get("/config/request_handling.php?file_name=/dashboard.php", function (data) {
       // Replace the entire #content element with the loaded content
       $('.page-wrapper').replaceWith(data);
     }).done(() => {
@@ -144,6 +137,12 @@ const change_content = () => {
     });
   }
 
+  setTimeout(function () {
+    $("#global-loader");
+    setTimeout(function () {
+      $("#global-loader").fadeOut("slow");
+    }, 100);
+  }, 500);
 };
 
 
@@ -189,7 +188,6 @@ const resetForm = (elementClass = "newForm") => {
 const handleForm = async (event, elementClass = "newForm", method = "insert") => {
   try {
     let formData = await getFormData(); // Use the formData from getFormData function
-
     if (method == "delete") {
       $.ajax({
         url: '/',
@@ -219,6 +217,7 @@ const handleForm = async (event, elementClass = "newForm", method = "insert") =>
       });
       console.log("update method called");
     } else {
+      console.log(formData);
       $.ajax({
         url: '/',
         type: 'POST',
@@ -243,8 +242,6 @@ const handleForm = async (event, elementClass = "newForm", method = "insert") =>
   resetForm(elementClass);
 }
 
-
-
 const methodsOnReady = () => {
 
   $("form").on("submit keypress", (event) => {
@@ -255,19 +252,6 @@ const methodsOnReady = () => {
 
   $(".btn-submit").on("click", _.throttle(handleForm, 5000, { trailing: false }));
   applyPlugins();
-
-  // code for preventing the page reload and make the submenu active.
-  $("a.pageUrl").click(function (event) {
-    event.preventDefault(); // Prevent the default link behavior (page reload)
-
-
-    var targetUrl = $(this).attr("href"); // Get the target URL from the href attribute
-    window.history.pushState({}, "", targetUrl); // Change the URL without a full page reload
-
-    change_content();
-    $(this).closest(".submenu").children("a").addClass("active subdrop");
-    return false; // Prevent any other click handlers from executing
-  });
 
 }
 
