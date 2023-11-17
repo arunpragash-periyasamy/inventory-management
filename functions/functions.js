@@ -88,13 +88,10 @@ const renderApexChart = () => {
 
 // function for change the content of the page
 const change_content = async () => {
-  $('.page_content').html("");
-  $(".page-wrapper").empty();
   let url = $(location).attr("pathname"); // get the page from the url
   url = url.endsWith('/') ? url.slice(0, -1) : url;
-
   let search = $(location).attr("search").replace(/\?/g, '');
-  if (url != "/" && url != "/dashboard") {
+  if (url != "") {
     let page = url.split("/")[2];
     let path = url+"/"+page;
     document.title = page.split("_").join(' ');
@@ -105,7 +102,6 @@ const change_content = async () => {
       let contentPage = path+".html";
       let scriptPage = path+".script";
       let phpPage = path+".php";
-      console.log(path + "  " + contentPage);
       await $.get(`/config/request_handling.php?file_name=${contentPage+"&"+search}`, (data)=> {
         // Replace the entire #content element with the loaded content
         $('.page_content').html(data);
@@ -130,7 +126,7 @@ const change_content = async () => {
     $("#dashboard").addClass("active");
     await $.get("/config/request_handling.php?file_name=/dashboard.php", function (data) {
       // Replace the entire #content element with the loaded content
-      $('.page-wrapper').replaceWith(data);
+      $('.page_content').replaceWith(data);
     }).done(() => {
       renderApexChart();
     });
@@ -246,7 +242,6 @@ const methodsOnReady = () => {
   applyPlugins();
 
 }
-
 
 const getOptions = async() =>{
   let options ="";
