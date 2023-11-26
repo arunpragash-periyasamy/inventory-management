@@ -99,21 +99,11 @@ const change_content = async () => {
       $("*").removeClass("active");
       $(`#${page}`).addClass("active");
       // request to get the page content
-      let contentPage = path+".html";
-      let scriptPage = path+".script";
-      let phpPage = path+".php";
-      await $.get(`/config/request_handling.php?file_name=${contentPage+"&"+search}`, (data)=> {
+      let contentPage = path+".php";
+      await $.get(`/config/request_handling.php?file_name=${url+".php&"+search}`, (data)=> {
         // Replace the entire #content element with the loaded content
         $('.page_content').html(data);
       });
-      await $.get(`/config/request_handling.php?file_name=${scriptPage}`, (data)=>{
-        // Replace the entire #content element with the loaded content
-        $('.script').html(data);
-      });
-      await $.get(`/config/request_handling.php?file_name=${phpPage}`, (data)=>{
-        // Replace the entire #content element with the loaded content
-        $('.php_content').html(data);
-      })
       applyPlugins();
       methodsOnReady();
 

@@ -1,0 +1,158 @@
+Table product {
+  id integer [primary key]
+  product_name text
+  category integer
+  sub_category integer
+  tax integer
+  discount_type integer
+  sku text
+  brand text
+  price integer
+  unit text
+  quantity text
+  description text
+  product_image text
+  created_by integer
+  created_at timestamp 
+}
+
+Table category {
+  id integer [primary key]
+  category_name text
+  category_code integer
+  description text
+  product_image text
+  created_by integer
+  created_at timestamp 
+}
+
+Table sub_category {
+  id integer [primary key]
+  category_name integer
+  sub_category_name text
+  category_code integer
+  description text
+  product_image text
+  created_by integer
+  created_at timestamp 
+}
+
+Table brand{
+  id integer [primary key]
+  brand_name text
+  description text
+  product_image text
+  created_by integer
+}
+
+Table sales{
+  id integer [primary key]
+  customer_name integer
+  Date timestamp
+  supplier_name integer
+  product_name text
+  product_details json
+  order_tax  integer
+  discount integer
+  shipping text
+  status text
+  created_by integer
+}
+
+
+Table purchase{
+  id integer [primary key]
+  supplier_name integer
+  purchase_date timestamp
+  product_name text
+  product_details json
+  order_tax  integer
+  discount integer
+  shipping text
+  status text
+  created_by integer
+}
+
+
+
+Table quotation{
+  id integer [primary key]
+  customer_name integer
+  quotation_date timestamp
+  reference_no integer
+  product_details json
+  order_tax  integer
+  discount integer
+  shipping text
+  status text
+  created_by integer
+}
+
+
+
+Table customer{
+  id integer [primary key]
+  customer_name integer
+  email text
+  mobile_number integer
+  city text
+  address text
+  description text
+  status text
+  created_by integer
+}
+
+
+Table supplier{
+  id integer [primary key]
+  supplier_name integer
+  email text
+  mobile_number integer
+  city text
+  address text
+  description text
+  status text
+  created_by integer
+}
+
+
+Table user{
+  id integer [primary key]
+  first_name text
+  last_name text
+  username text
+  password text
+  mobile_number text
+  email text
+  created_by integer
+}
+
+Ref: product.category > category.id // many-to-one
+Ref: product.brand > brand.id // many-to-one
+Ref: product.sub_category > sub_category.id // many-to-one
+Ref: product.created_by > user.id // many-to-one
+
+Ref: sub_category.category_name > category.id // many-to-one
+Ref: sub_category.created_by > user.id // many-to-one
+
+Ref: purchase.supplier_name > supplier.id // many-to-one
+Ref: purchase.product_details > product.id // many-to-one
+Ref: purchase.created_by > user.id // many-to-one
+
+Ref: sales.supplier_name > supplier.id // many-to-one
+Ref: sales.customer_name > customer.id // many-to-one
+Ref: sales.product_details > product.id // many-to-one
+Ref: sales.created_by > user.id // many-to-one
+
+Ref: quotation.customer_name > customer.id // many-to-one
+Ref: quotation.product_details > product.id // many-to-one
+Ref: quotation.created_by > user.id // many-to-one
+
+Ref: customer.created_by > user.id // many-to-one
+
+Ref: brand.created_by > user.id // many-to-one
+
+Ref: category.created_by > user.id // many-to-one
+
+Ref: supplier.created_by > user.id // many-to-one
+
