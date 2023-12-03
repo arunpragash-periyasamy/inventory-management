@@ -1,4 +1,8 @@
+<?php
+$sub_category = DB::query("select id, category_name from add_category");
+?>
 <div class="page-wrapper">
+
     <div class="content">
         <div class="page-header">
             <div class="page-title">
@@ -20,7 +24,8 @@
                         <div class="col-lg-4 col-sm-6 col-12">
                             <div class="form-group">
                                 <label>Category Name</label>
-                                <input type="text" name="sub_category_name" id="sub_category_name">
+                                <input type="text" name="sub_category_name" id="sub_category_name"
+                                    value="<?php echo $data['sub_category_name']; ?>">
                             </div>
                         </div>
                         <div class="col-lg-4 col-sm-6 col-12">
@@ -46,15 +51,16 @@
         </form>
     </div>
 </div>
+
+
+
 <script>
-    $(document).ready(async () => {
-        data = await getOptions();
-        data = data.category;
-        await $.each(data, function(index, item) {
-            $("#category_name").append($("<option>", {
-                value: item.id,
-                text: item.category_name
-            }));
-        });
-    });
+        var category_name = $("#category_name");
+        <?php
+        // Dynamically adding option
+        $category = DB::query('select id, category_name from add_category');
+        foreach ($category as $row) {
+            echo 'category_name.append($("<option>",{value:' . $row["id"] . ', text:"' . $row["category_name"] . '"}));';
+        }
+        ?>
 </script>

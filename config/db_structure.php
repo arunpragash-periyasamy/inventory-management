@@ -18,6 +18,13 @@ $post_table_data = [
             ],
         ],
     ],
+    "new_user" => [
+        "tables" => [
+            "user" => [
+                "columns" => ["user_name", "mobile_number", "email", "role", "password"],
+            ],
+        ],
+    ],
 ];
 
 

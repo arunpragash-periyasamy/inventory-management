@@ -66,7 +66,6 @@ if ($method === "GET") {
 
 if ($method === "POST") {
 
-
     if ($_FILES) {
         $file_paths = upload_files($directory, $page);
         $pathIndex = 1;
@@ -80,8 +79,8 @@ if ($method === "POST") {
 
     try {
         $form = $_POST;
-        DB::insert($page, $form);
-        print_r(DB::query("SELECT * FROM $page"));
+        $form['created_by'] = $_SESSION['user'];
+        DB::insertUpdate($page, $form);
     } catch (error $e) {
         throw $e;
     } catch (Exception $exp) {

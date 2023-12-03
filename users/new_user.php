@@ -19,7 +19,6 @@
                             <div class="form-group">
                                 <label>Email</label>
                                 <input type="text" name="email_id" id="email_id">
-                            </div>
                             <div class="form-group">
                                 <label>Password</label>
                                 <div class="pass-group">
